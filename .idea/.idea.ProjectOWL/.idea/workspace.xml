@@ -15,7 +15,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/TempScripts/TestSwipeMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Lanes/LaneManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Inputs/ParticleSwipe.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Player/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1yMRySdaoi0RH5UtI4J5nRokZ91" />
   <component name="ProjectViewState">
@@ -65,6 +67,8 @@
       <updated>1632059731166</updated>
       <workItem from="1632059737848" duration="4929000" />
       <workItem from="1632430718650" duration="2537000" />
+      <workItem from="1632444634401" duration="3226000" />
+      <workItem from="1632450977361" duration="1200000" />
     </task>
     <servers />
   </component>
