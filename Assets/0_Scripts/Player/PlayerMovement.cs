@@ -25,7 +25,14 @@ public class PlayerMovement : MonoBehaviour
 
     public void VerticalAction(int direction)
     {
-        transform.position += new Vector3(0, 2.4f, 0);
-        _playerObserver.NotifySubscribers("Jump");
+        if (direction == 1)
+        {
+            transform.position += new Vector3(0, 2.4f, 0);
+            _playerObserver.NotifySubscribers("Jump");
+        }
+        else
+        {
+            _playerObserver.NotifySubscribers("Slide");
+        }
     }
 }

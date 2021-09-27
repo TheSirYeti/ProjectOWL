@@ -38,6 +38,11 @@ public class PlayerController : MonoBehaviour
         {
             movement.VerticalAction(1);
         }
+        
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            movement.VerticalAction(-1);
+        }
     }
 
     void StartPlayerAction(Vector2 position)
