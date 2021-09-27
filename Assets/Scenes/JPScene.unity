@@ -674,7 +674,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 2.5e-44}
+  m_BoundingSphereOverride: {x: 8.786725e+34, y: 3.60066e-40, z: 1.53e-43, w: 1e-45}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -7914,6 +7914,7 @@ GameObject:
   - component: {fileID: 3166231814649685413}
   - component: {fileID: 8296172667828861646}
   - component: {fileID: 8296172667828861645}
+  - component: {fileID: 8296172667828861649}
   - component: {fileID: 8296172667828861647}
   - component: {fileID: 8296172667828861648}
   m_Layer: 0
@@ -7953,8 +7954,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minimumSwipeTriggerValue: 4.02
   movement: {fileID: 8296172667828861645}
-  test1: {fileID: 1159424574}
-  test2: {fileID: 1505522063}
 --- !u!65 &8296172667828861647
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7984,6 +7983,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
+--- !u!114 &8296172667828861649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172667828861644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24482ed1efe884f4e973ba3b205eef5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 3166231814649685413}
+  _playerMovement: {fileID: 8296172667828861645}
 --- !u!1 &8400429088576069984
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,14 +5,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public Action artificialUpdate;
+    private Action artificialUpdate;
     [SerializeField] float minimumSwipeTriggerValue;
     [SerializeField] private PlayerMovement movement;
 
     private Vector2 playerStartAction;
     private Vector2 playerEndAction;
-
-    public GameObject test1, test2;
     private void Start()
     {
         SwipeManager.instance.OnEndTouch += CheckInputs;
@@ -35,18 +33,21 @@ public class PlayerController : MonoBehaviour
             movement.ChangeLane(-1);
             Debug.Log("IZQ");
         }
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            movement.VerticalAction(1);
+        }
     }
 
     void StartPlayerAction(Vector2 position)
     {
         playerStartAction = position;
-        test1.transform.position = position;
     }
 
     private void UpdatePlayerAction(Vector2 position)
     {
         playerEndAction = position;
-        test2.transform.position = position;
     }
     
     void CheckInputs(Vector2 position)
