@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovingObjects : MonoBehaviour
+public class MovingObjects : MonoBehaviour, IPooledObject
 {
   
     public float  speed;
     
-    void Update()
+    public void OnObjectSpawn()
     {
         transform.position -= transform.forward * speed * Time.deltaTime; 
         Destroy(gameObject, 5f);
