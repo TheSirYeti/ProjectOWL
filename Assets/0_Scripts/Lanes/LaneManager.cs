@@ -7,22 +7,17 @@ public class LaneManager : MonoBehaviour
 {
     public int currentLane;
     public int amountOfLanes;
-    
-    public static LaneManager instance;
-    private void Awake()
-    {
-        if (instance == null) instance = this;
-        else {Debug.Log("There's already an instance of LaneManager in the scene."); Destroy(gameObject);}
-    }
 
     public void AddLanes(int amount)
     {
         amountOfLanes += amount;
     }   
 
-    public bool IsLaneChangeAllowed(bool direction)
+    public bool IsLaneChangeAllowed(int direction)
     {
-        return default;
+        if ((direction == 1 && currentLane < amountOfLanes) || (direction == -1 && currentLane > 1))
+            return true;
+        else return false;
     }
 
     public void SetCurrentLane(int id)
