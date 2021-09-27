@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using Cinemachine.Utility;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour, IPublisher
+public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float moveAmount;
     [SerializeField] private float jumpForce;
-    
-    [SerializeField] private List<ISubscriber> _subscribers = new List<ISubscriber>();
-    
+
     [SerializeField] private LaneManager lanes;
-    
+
+    [SerializeField] private PlayerObserver _playerObserver;
+
     public void ChangeLane(int direction)
     {
         if (lanes.IsLaneChangeAllowed(direction))
@@ -25,25 +25,14 @@ public class PlayerMovement : MonoBehaviour, IPublisher
 
     public void VerticalAction(int direction)
     {
-        transform.position += new Vector3(0, 2.4f, 0);
-        NotifySubscribers("Jump");
-    }
-    
-    public void Subscribe(ISubscriber subscriber)
-    {
-        _subscribers.Add(subscriber);
-    }
-
-    public void Unsubscribe(ISubscriber subscriber)
-    {
-        _subscribers.Remove(subscriber);
-    }
-
-    public void NotifySubscribers(string id)
-    {
-        foreach (ISubscriber subscriber in _subscribers)
+        if (direction == 1)
         {
-            subscriber.OnNotify(id);
+            transform.position += new Vector3(0, 2.4f, 0);
+            _playerObserver.NotifySubscribers("Jump");
+        }
+        else
+        {
+            _playerObserver.NotifySubscribers("Slide");
         }
     }
 }

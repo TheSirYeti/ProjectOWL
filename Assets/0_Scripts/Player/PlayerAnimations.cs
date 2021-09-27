@@ -7,12 +7,11 @@ public class PlayerAnimations : MonoBehaviour, ISubscriber
 {
     [SerializeField] private Animator _animator;
     
-    public IPublisher _playerMovement;
+    public PlayerObserver _playerObserver;
 
     private void Awake()
     {
-        _playerMovement = FindObjectOfType<PlayerMovement>();
-        _playerMovement.Subscribe(this);
+        _playerObserver.Subscribe(this);
     }
 
     public void PlayAnimation(string animationID)
