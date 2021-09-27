@@ -24,13 +24,8 @@ public class PlayerMovement : MonoBehaviour
         } else Debug.Log("NOP");
     }
 
-    void Jump()
+    public void VerticalAction(int direction)
     {
-        
-    }
-
-    void Slide()
-    {
-        
+        transform.position += new Vector3(0, 2.4f, 0);
     }
 }

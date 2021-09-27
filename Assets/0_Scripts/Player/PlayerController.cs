@@ -11,9 +11,12 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 playerStartAction;
     private Vector2 playerEndAction;
+
+    public GameObject test1, test2;
     private void Start()
     {
         SwipeManager.instance.OnEndTouch += CheckInputs;
+        SwipeManager.instance.OnUpdateTouch += UpdatePlayerAction;
         SwipeManager.instance.OnStartTouch += StartPlayerAction;
         //artificialUpdate = CheckInputs;
     }
@@ -37,18 +40,31 @@ public class PlayerController : MonoBehaviour
     void StartPlayerAction(Vector2 position)
     {
         playerStartAction = position;
+        test1.transform.position = position;
+    }
+
+    private void UpdatePlayerAction(Vector2 position)
+    {
+        playerEndAction = position;
+        test2.transform.position = position;
     }
     
     void CheckInputs(Vector2 position)
     {
-        Debug.Log(position);
-        if (position.x >= minimumSwipeTriggerValue)
+        if (Vector3.Distance(playerStartAction, playerEndAction) >= minimumSwipeTriggerValue)
         {
-            movement.ChangeLane(-1);
-        }
-        if (position.x <= (minimumSwipeTriggerValue * -1))
-        {
-            movement.ChangeLane(1);
+            if (Mathf.Abs(playerEndAction.y - playerStartAction.y) >= minimumSwipeTriggerValue)
+            {
+                float differenceY = playerEndAction.y - playerStartAction.y;
+                if(Mathf.Abs(differenceY) >= minimumSwipeTriggerValue)
+                    movement.VerticalAction(1 * (int)Mathf.Sign(differenceY));
+            }
+            else
+            {
+                float differenceX = playerEndAction.x - playerStartAction.x;
+                if(Mathf.Abs(differenceX) >= minimumSwipeTriggerValue)
+                    movement.ChangeLane(1 * (int)Mathf.Sign(differenceX));
+            }
         }
     }
 
