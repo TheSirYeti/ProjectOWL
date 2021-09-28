@@ -1,17 +1,27 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Cinemachine.Utility;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, ISubscriber
 {
     [SerializeField] private float speed;
     [SerializeField] private float moveAmount;
     [SerializeField] private float jumpForce;
+    [SerializeField] private Rigidbody rb;
 
     [SerializeField] private LaneManager lanes;
-
+    [SerializeField] private bool isGrounded;
+    
+    
     [SerializeField] private PlayerObserver _playerObserver;
+    [SerializeField] private GroundStatus _groundStatus;
+    
+    private void Awake()
+    {
+        _groundStatus.Subscribe(this);
+    }
 
     public void ChangeLane(int direction)
     {
@@ -25,14 +35,27 @@ public class PlayerMovement : MonoBehaviour
 
     public void VerticalAction(int direction)
     {
-        if (direction == 1)
+        if (direction == 1 && isGrounded)
         {
-            transform.position += new Vector3(0, 2.4f, 0);
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             _playerObserver.NotifySubscribers("Jump");
         }
-        else
+        else if(direction == -1 && isGrounded)
         {
             _playerObserver.NotifySubscribers("Slide");
+        }
+    }
+
+    public void OnNotify(string eventID)
+    {
+        if (eventID == "enterGround")
+        {
+            isGrounded = true;
+        }
+        
+        if (eventID == "leftGround")
+        {
+            isGrounded = false;
         }
     }
 }

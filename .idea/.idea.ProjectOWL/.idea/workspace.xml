@@ -21,6 +21,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Inputs/ParticleSwipe.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Player/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Interfaces/Observer/IPublisher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Player/GroundCheck/GroundStatus.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1yMRySdaoi0RH5UtI4J5nRokZ91" />
   <component name="ProjectViewState">
@@ -74,7 +75,8 @@
       <workItem from="1632450977361" duration="1200000" />
       <workItem from="1632690246041" duration="8918000" />
       <workItem from="1632752260985" duration="4472000" />
-      <workItem from="1632766308549" duration="9199000" />
+      <workItem from="1632766308549" duration="10005000" />
+      <workItem from="1632800890432" duration="4265000" />
     </task>
     <servers />
   </component>
