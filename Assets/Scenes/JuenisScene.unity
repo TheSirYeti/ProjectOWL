@@ -244,10 +244,6 @@ MonoBehaviour:
   - tag: Cube
     prefab: {fileID: 301116904092697977, guid: acb3fb192b381a14391c35b936d2c552, type: 3}
     size: 3
-  - tag: Rectangle
-    prefab: {fileID: 7348874937120164524, guid: 46af5b592494e5f4397cef11f4874e50,
-      type: 3}
-    size: 3
 --- !u!4 &515494743
 Transform:
   m_ObjectHideFlags: 0
