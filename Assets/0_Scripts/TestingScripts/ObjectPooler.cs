@@ -27,7 +27,6 @@ public class ObjectPooler : MonoBehaviour
     public List<Pool> pools;
     public Dictionary<string, Queue<GameObject>> poolDictionary;
 
-
     
     void Start()
     {
@@ -55,7 +54,6 @@ public class ObjectPooler : MonoBehaviour
             Debug.LogWarning("Pool con tag " + tag + " no existe");
             return null;
         }
-
         
         GameObject objectToSpawn = poolDictionary[tag].Dequeue();
 
