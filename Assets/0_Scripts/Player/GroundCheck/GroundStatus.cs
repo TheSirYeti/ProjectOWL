@@ -13,7 +13,6 @@ public class GroundStatus : MonoBehaviour, IPublisher
         {
             foreach (ISubscriber sub in _subscribers)
             {
-                Debug.Log("TOY EN EL SOPI");
                 sub.OnNotify("enterGround");
             }
         }
@@ -25,7 +24,6 @@ public class GroundStatus : MonoBehaviour, IPublisher
         {
             foreach (ISubscriber sub in _subscribers)
             {
-                Debug.Log("ME FUI DEL SOPI");
                 sub.OnNotify("leftGround");
             }
         }

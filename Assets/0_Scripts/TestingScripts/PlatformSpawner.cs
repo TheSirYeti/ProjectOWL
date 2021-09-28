@@ -10,12 +10,13 @@ public class PlatformSpawner : MonoBehaviour
     private void Start()
     {
         objectPooler = ObjectPooler.Instance;
+        objectPooler.SpawnFromPool("Cube", transform.position, Quaternion.identity);
+        objectPooler.SpawnFromPool("Rectangle", transform.position, Quaternion.identity);
     } 
     
     // Update is called once per frame
     void FixedUpdate()
     {   
-        objectPooler.SpawnFromPool("Cube", transform.position, Quaternion.identity);
-        objectPooler.SpawnFromPool("Rectangle", transform.position, Quaternion.identity);
+
     }
 }
