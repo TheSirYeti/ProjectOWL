@@ -34,7 +34,7 @@ public static class EventManager
             _events[eventType](parameters);
     }
 
-    public static void resetEventDictionary()
+    public static void ResetEventDictionary()
     {
         _events = new Dictionary<string, EventReceiver>();
     }
