@@ -6,6 +6,6 @@ public class Token : Collectible
 {
     public override void OnCollect()
     {
-        throw new System.NotImplementedException();
+        EventManager.Trigger("UpdateScore", value);
     }
 }

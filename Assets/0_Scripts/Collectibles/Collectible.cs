@@ -8,7 +8,10 @@ public abstract class Collectible : MonoBehaviour
     public int value;
     private void OnTriggerEnter(Collider other)
     {
-        OnCollect();
+        if (other.gameObject.CompareTag("Player"))
+        {
+            OnCollect();
+        }
     }
     public abstract void OnCollect();
 }
