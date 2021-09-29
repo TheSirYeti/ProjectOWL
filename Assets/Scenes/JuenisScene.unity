@@ -243,7 +243,11 @@ MonoBehaviour:
   pools:
   - tag: Cube
     prefab: {fileID: 301116904092697977, guid: acb3fb192b381a14391c35b936d2c552, type: 3}
-    size: 3
+    size: 50
+  - tag: Rectangle
+    prefab: {fileID: 7348874937120164524, guid: 46af5b592494e5f4397cef11f4874e50,
+      type: 3}
+    size: 50
 --- !u!4 &515494743
 Transform:
   m_ObjectHideFlags: 0
@@ -511,9 +515,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoints:
-  - {fileID: 1504715378}
-  - {fileID: 929077192}
-  - {fileID: 689762525}
+  - {x: 2.138207e+18, y: 7.85e-43, z: 7.0062382e+22}
+  - {x: 0, y: 0.000000017043476, z: 7.85e-43}
+  - {x: 4.6e-44, y: 0, z: 2.138207e+18}
 --- !u!33 &889458533690941408
 MeshFilter:
   m_ObjectHideFlags: 0

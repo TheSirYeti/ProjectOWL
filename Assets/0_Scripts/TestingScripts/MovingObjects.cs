@@ -7,7 +7,9 @@ public class MovingObjects : MonoBehaviour, IPooledObject
 {
     [SerializeField] private float timeToUpdate;
     [SerializeField] private float speed;
+
     private bool movingCondition = true;
+
     public void OnObjectSpawn()
     {
         StartCoroutine(StartMovement());
@@ -28,5 +30,9 @@ public class MovingObjects : MonoBehaviour, IPooledObject
         StartCoroutine(ObjectMovement());
         yield return new WaitForSeconds(5f);
         movingCondition = false;
+        if(movingCondition = false)
+        {
+           Destroy(this);
+        }
     }
 }

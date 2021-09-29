@@ -85,12 +85,12 @@ PrefabInstance:
     - target: {fileID: 7348874937120164525, guid: 46af5b592494e5f4397cef11f4874e50,
         type: 3}
       propertyPath: timeToUpdate
-      value: 0.0001
+      value: 0.00000001
       objectReference: {fileID: 0}
     - target: {fileID: 7348874937120164525, guid: 46af5b592494e5f4397cef11f4874e50,
         type: 3}
       propertyPath: speed
-      value: 7
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -2361792030717790534, guid: 46af5b592494e5f4397cef11f4874e50, type: 3}
