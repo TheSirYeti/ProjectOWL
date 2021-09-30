@@ -10,6 +10,7 @@ TagManager:
   - Rectangle
   - Cop
   - Bus
+  - Sign
   layers:
   - Default
   - TransparentFX

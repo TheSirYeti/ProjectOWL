@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6204215731301947187}
   - component: {fileID: 6204215731303077363}
   - component: {fileID: 7409272336204536423}
+  - component: {fileID: 3181369253625311392}
   m_Layer: 0
   m_Name: cop_mesh
   m_TagString: Cop
@@ -93,3 +94,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToUpdate: 0.00001
   speed: 10
+--- !u!65 &3181369253625311392
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6204215731301075761}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.32962, y: 2.672575, z: 5.740063}
+  m_Center: {x: 0, y: 1.3356538, z: 0.00000023841858}

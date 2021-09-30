@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2896977362172518566}
   - component: {fileID: 2896977362173649510}
   - component: {fileID: 4661560660677635573}
+  - component: {fileID: 3299104044770646526}
   m_Layer: 0
   m_Name: Prop_Tree_01
   m_TagString: Tree
@@ -93,3 +94,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToUpdate: 0.00001
   speed: 10
+--- !u!65 &3299104044770646526
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2896977362171722918}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.667232, y: 4.6805453, z: 3.697494}
+  m_Center: {x: -0.00061160326, y: 2.3261201, z: 0.0043133497}

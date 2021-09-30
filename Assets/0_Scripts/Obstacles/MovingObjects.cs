@@ -40,7 +40,7 @@ public class MovingObjects : MonoBehaviour, IPooledObject
     {
         if(other.gameObject.tag.Equals("Player"))
         {
-            EventManager.Trigger("SetHP", -1);
+            EventManager.Trigger("SetHP", -1f);
         }
     }
 }

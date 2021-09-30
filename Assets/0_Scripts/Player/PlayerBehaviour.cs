@@ -25,4 +25,5 @@ public class PlayerBehaviour : MonoBehaviour
         
         EventManager.Trigger("UpdateUIhp", hp);
     }
+
 }
