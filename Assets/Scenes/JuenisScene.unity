@@ -241,13 +241,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pools:
-  - tag: Cube
-    prefab: {fileID: 301116904092697977, guid: acb3fb192b381a14391c35b936d2c552, type: 3}
-    size: 50
-  - tag: Rectangle
-    prefab: {fileID: 7348874937120164524, guid: 46af5b592494e5f4397cef11f4874e50,
+  - tag: Tree
+    prefab: {fileID: 2896977362171722918, guid: 23f4396abfaadc340801e2f13dff1f7b,
       type: 3}
-    size: 50
+    size: 20
+  - tag: Cop
+    prefab: {fileID: 6204215731301075761, guid: dfbdba1dfcd53b04fbfc9f75e69473c3,
+      type: 3}
+    size: 20
+  - tag: Bus
+    prefab: {fileID: 5060205511492017760, guid: 1161c4f1273519846956807002d11213,
+      type: 3}
+    size: 20
+  - tag: Car
+    prefab: {fileID: 4760527874321801363, guid: 8ae4dc70daa96ff49b3357fe2fb77cd7,
+      type: 3}
+    size: 20
 --- !u!4 &515494743
 Transform:
   m_ObjectHideFlags: 0
@@ -286,7 +295,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689762525}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.26, y: -1.208225, z: 0.75681305}
+  m_LocalPosition: {x: -0.26, y: -0.1, z: 0.75681305}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2125692106}
@@ -316,7 +325,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 929077192}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.73, y: -1.2082251, z: 0.75681305}
+  m_LocalPosition: {x: -1.73, y: -0.099999905, z: 0.75681305}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2125692106}
@@ -379,7 +388,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504715378}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.27, y: -1.2082251, z: 0.75681305}
+  m_LocalPosition: {x: -3.27, y: -0.099999905, z: 0.75681305}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2125692106}
@@ -493,7 +502,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125692105}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7015495, y: 0.84, z: 34.120186}
+  m_LocalPosition: {x: 1.7015495, y: -1.2, z: 34.120186}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1504715379}
@@ -515,9 +524,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoints:
-  - {x: 2.138207e+18, y: 7.85e-43, z: 7.0062382e+22}
-  - {x: 0, y: 0.000000017043476, z: 7.85e-43}
-  - {x: 4.6e-44, y: 0, z: 2.138207e+18}
+  - {fileID: 1504715379}
+  - {fileID: 929077193}
+  - {fileID: 689762526}
+  spawnTime: 2
+  spawnDelay: 1.5
 --- !u!33 &889458533690941408
 MeshFilter:
   m_ObjectHideFlags: 0

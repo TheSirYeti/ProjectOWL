@@ -4,9 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Cube
-  - Rectangle
   - Floor
+  - Tree
+  - Car
+  - Rectangle
+  - Cop
+  - Bus
   layers:
   - Default
   - TransparentFX
