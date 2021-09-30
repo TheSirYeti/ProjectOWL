@@ -94,6 +94,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToUpdate: 0.00001
   speed: 10
+  originalPosition: {fileID: 4760527874321841331, guid: 8ae4dc70daa96ff49b3357fe2fb77cd7,
+    type: 3}
 --- !u!65 &3299104044770646526
 BoxCollider:
   m_ObjectHideFlags: 0

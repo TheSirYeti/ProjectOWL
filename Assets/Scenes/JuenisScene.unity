@@ -244,19 +244,19 @@ MonoBehaviour:
   - tag: Tree
     prefab: {fileID: 2896977362171722918, guid: 23f4396abfaadc340801e2f13dff1f7b,
       type: 3}
-    size: 20
+    size: 3
   - tag: Cop
     prefab: {fileID: 6204215731301075761, guid: dfbdba1dfcd53b04fbfc9f75e69473c3,
       type: 3}
-    size: 20
+    size: 3
   - tag: Bus
     prefab: {fileID: 5060205511492017760, guid: 1161c4f1273519846956807002d11213,
       type: 3}
-    size: 20
+    size: 3
   - tag: Car
     prefab: {fileID: 4760527874321801363, guid: 8ae4dc70daa96ff49b3357fe2fb77cd7,
       type: 3}
-    size: 20
+    size: 3
 --- !u!4 &515494743
 Transform:
   m_ObjectHideFlags: 0
@@ -962,7 +962,7 @@ PrefabInstance:
     - target: {fileID: 2168190925042513393, guid: ce8b6cf915c592b4bbee45cde1a1cf62,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.69
+      value: 12.65
       objectReference: {fileID: 0}
     - target: {fileID: 2168190925042513393, guid: ce8b6cf915c592b4bbee45cde1a1cf62,
         type: 3}

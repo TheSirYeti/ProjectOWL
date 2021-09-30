@@ -11,6 +11,7 @@ public abstract class Collectible : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             OnCollect();
+            gameObject.SetActive(false);
         }
     }
     public abstract void OnCollect();
