@@ -8,11 +8,13 @@ public class HUDStats : MonoBehaviour
 {
     [SerializeField] private Text scoreText;
     [SerializeField] private Text distanceText;
+    [SerializeField] private Text hpText;
 
     private void Awake()
     {
         EventManager.Subscribe("UpdateUIDistance", UpdateDistanceText);
         EventManager.Subscribe("UpdateUIScore", UpdateScoreText);
+        EventManager.Subscribe("UpdateUIhp", UpdateHpText);
     }
 
     void UpdateScoreText(object[] parameters)
@@ -23,5 +25,10 @@ public class HUDStats : MonoBehaviour
     void UpdateDistanceText(object[] parameters)
     {
         distanceText.text = "DISTANCE: " + parameters[0] +  "m";
+    }
+
+    void UpdateHpText(object[] parameters)
+    {
+        hpText.text = "HP: " + parameters[0];
     }
 }
