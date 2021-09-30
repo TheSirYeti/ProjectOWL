@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2896977362171224198}
   - component: {fileID: 2896977362172518566}
   - component: {fileID: 2896977362173649510}
-  - component: {fileID: 3293589207587701233}
+  - component: {fileID: 4661560660677635573}
   m_Layer: 0
   m_Name: Prop_Tree_01
   m_TagString: Tree
@@ -79,7 +79,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3293589207587701233
+--- !u!114 &4661560660677635573
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -88,7 +88,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2896977362171722918}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c816edfd66389c4b8bf5fae28904e22, type: 3}
+  m_Script: {fileID: 11500000, guid: 95f33f32bef86294cbbf7996538a848a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeToUpdate: 0.00001

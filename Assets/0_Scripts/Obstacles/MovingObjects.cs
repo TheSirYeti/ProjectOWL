@@ -35,4 +35,12 @@ public class MovingObjects : MonoBehaviour, IPooledObject
            Destroy(this);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag.Equals("Player"))
+        {
+            EventManager.Trigger("SetHP", -1);
+        }
+    }
 }
