@@ -5,16 +5,20 @@ using UnityEngine;
 
 public class LoopingFloor : MonoBehaviour
 {
+    public List<Transform> roads = new List<Transform>();
     public Transform startPos, endPos;
     public float speed;
 
     private void Update()
     {
-        transform.position -= Vector3.forward * speed * Time.fixedDeltaTime;
-
-        if (transform.position.z <= endPos.position.z)
+        foreach (Transform t in roads)
         {
-            transform.position = startPos.position;
+            t.position -= Vector3.forward * speed * Time.fixedDeltaTime;
+
+            if (t.position.z <= endPos.position.z)
+            {
+                t.position = startPos.position;
+            }
         }
     }
 }

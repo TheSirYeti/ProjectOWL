@@ -11,11 +11,10 @@ GameObject:
   - component: {fileID: 4031110745426130302}
   - component: {fileID: 4031110745425327454}
   - component: {fileID: 4031110745424361374}
-  - component: {fileID: 3731742545434331103}
   - component: {fileID: 5041561172771557547}
   m_Layer: 0
   m_Name: Road
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,21 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3731742545434331103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4031110745426356574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8e1094967eeb654badde3156778588c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startPos: {fileID: 0}
-  endPos: {fileID: 0}
-  speed: 0
 --- !u!65 &5041561172771557547
 BoxCollider:
   m_ObjectHideFlags: 0

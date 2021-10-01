@@ -19,7 +19,6 @@ public class PlatformSpawner : MonoBehaviour
 
     void SpawnObstacles()
     {
-        
         Transform _sp = spawnPoints[ Random.Range (0, spawnPoints.Length)];
         objectPooler = ObjectPooler.Instance;
         int rand = Random.Range (0, ObjectPooler.Instance.pools.Count);

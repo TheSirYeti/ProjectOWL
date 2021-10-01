@@ -8,6 +8,7 @@ public class MovingObjects : MonoBehaviour, IPooledObject
 {
     [SerializeField] private float timeToUpdate;
     [SerializeField] private float speed;
+    [SerializeField] private float timeToDespawn;
 
 
     private bool movingCondition = true;
@@ -30,7 +31,7 @@ public class MovingObjects : MonoBehaviour, IPooledObject
     {
         movingCondition = true;
         StartCoroutine(ObjectMovement());
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(timeToDespawn);
         movingCondition = false;
         gameObject.SetActive(false);
     }

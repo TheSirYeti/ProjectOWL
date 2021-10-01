@@ -18,6 +18,17 @@ public class GroundStatus : MonoBehaviour, IPublisher
         }
     }
     
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Floor")
+        {
+            foreach (ISubscriber sub in _subscribers)
+            {
+                sub.OnNotify("enterGround");
+            }
+        }
+    }
+    
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Floor")
