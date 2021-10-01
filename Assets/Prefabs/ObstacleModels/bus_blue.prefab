@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5060205511489045088}
   - component: {fileID: 5060205511490011296}
   - component: {fileID: 4867256757293625240}
-  - component: {fileID: 2939919668460237334}
+  - component: {fileID: 2444843487830022766}
   m_Layer: 0
   m_Name: bus_blue
   m_TagString: Bus
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5060205511492017760}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.6412487, y: -1.2709872, z: 19.036469}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -93,7 +93,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.6244605, y: 3.2666614, z: 8.857323}
   m_Center: {x: 0.0345093, y: 1.6343178, z: -0.07053216}
---- !u!114 &2939919668460237334
+--- !u!114 &2444843487830022766
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,9 +102,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5060205511492017760}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95f33f32bef86294cbbf7996538a848a, type: 3}
+  m_Script: {fileID: 11500000, guid: d59de852f2bdca14892fdfd6164fc79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeToUpdate: 0.00001
-  speed: 15
+  speed: 40
   timeToDespawn: 20
+  movingCondition: 1

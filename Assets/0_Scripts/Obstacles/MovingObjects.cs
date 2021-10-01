@@ -2,22 +2,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.WSA;
 
-public class MovingObjects : MonoBehaviour, IPooledObject
+public abstract class MovingObjects : MonoBehaviour, IPooledObject, IMovable
 {
     [SerializeField] private float timeToUpdate;
     [SerializeField] private float speed;
     [SerializeField] private float timeToDespawn;
 
 
-    private bool movingCondition = true;
+    public bool movingCondition = true;
 
     public void OnObjectSpawn()
     {
-        StartCoroutine(StartMovement());
+        StartMoving();
     }
 
+    public void StartMoving()
+    {
+        StartCoroutine(StartMovement());
+    }
+    
     IEnumerator ObjectMovement()
     {
         while (movingCondition)
@@ -34,13 +38,5 @@ public class MovingObjects : MonoBehaviour, IPooledObject
         yield return new WaitForSeconds(timeToDespawn);
         movingCondition = false;
         gameObject.SetActive(false);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag.Equals("Player"))
-        {
-            EventManager.Trigger("SetHP", -1f);
-        }
     }
 }

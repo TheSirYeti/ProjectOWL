@@ -89,9 +89,10 @@ GameObject:
   - component: {fileID: 6535286372835392516}
   - component: {fileID: 7847902284739186198}
   - component: {fileID: 3604971074279348323}
+  - component: {fileID: 5156449148216346790}
   m_Layer: 0
   m_Name: CoinPrefab
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,8 +105,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7847902284739186199}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 1.82, z: -5.138403}
-  m_LocalScale: {x: 0.33463, y: 0.33463, z: 0.33463}
+  m_LocalPosition: {x: -0.02, y: 5.39, z: -5.138403}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3665050050176724796}
   m_Father: {fileID: 0}
@@ -143,3 +144,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 100
+  speed: 40
+--- !u!65 &5156449148216346790
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7847902284739186199}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5737165, y: 2.8403044, z: 0.45640564}
+  m_Center: {x: 0, y: 0, z: 0}

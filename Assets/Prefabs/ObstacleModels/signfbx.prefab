@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8429730202220769221}
   - component: {fileID: 695643740472022515}
   - component: {fileID: 6529064012918089994}
-  - component: {fileID: 5908250057110078272}
+  - component: {fileID: 4496023181605662578}
   - component: {fileID: 2732576025679184187}
   m_Layer: 0
   m_Name: signfbx
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4802863792228064726}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 11.67, y: -0.48, z: -3.8}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 1.2, y: 2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -80,7 +80,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5908250057110078272
+--- !u!114 &4496023181605662578
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,12 +89,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4802863792228064726}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95f33f32bef86294cbbf7996538a848a, type: 3}
+  m_Script: {fileID: 11500000, guid: d59de852f2bdca14892fdfd6164fc79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeToUpdate: 0.00001
-  speed: 10
-  timeToDespawn: 0
+  speed: 40
+  timeToDespawn: 20
+  movingCondition: 1
 --- !u!65 &2732576025679184187
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -103,8 +104,8 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4802863792228064726}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.2444656, y: 0.6670221, z: 0.19975683}
-  m_Center: {x: 0, y: 1.5022852, z: 0}
+  m_Size: {x: 3.2444658, y: 0.7920397, z: 0.7161609}
+  m_Center: {x: 0, y: 1.5647945, z: -0.038196817}
