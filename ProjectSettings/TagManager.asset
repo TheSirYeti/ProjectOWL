@@ -12,6 +12,8 @@ TagManager:
   - Bus
   - Sign
   - Coin
+  - ExtraLife
+  - PP
   layers:
   - Default
   - TransparentFX
@@ -21,7 +23,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - PP
   - 
   - 
   - 
