@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToUpdate: 0.00001
-  speed: 40
+  speed: 60
   timeToDespawn: 20
   movingCondition: 1
 --- !u!65 &2732576025679184187
