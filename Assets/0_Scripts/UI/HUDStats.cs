@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HUDStats : MonoBehaviour
 {
-    [SerializeField] private Text scoreText;
-    [SerializeField] private Text distanceText;
-    [SerializeField] private Text hpText;
+    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI distanceText;
+    [SerializeField] private TextMeshProUGUI hpText;
 
     private void Awake()
     {
@@ -19,12 +20,12 @@ public class HUDStats : MonoBehaviour
 
     void UpdateScoreText(object[] parameters)
     {
-        scoreText.text = "SCORE: " + parameters[0];
+        scoreText.text = "Score: " + parameters[0];
     }
     
     void UpdateDistanceText(object[] parameters)
     {
-        distanceText.text = "DISTANCE: " + parameters[0] +  "m";
+        distanceText.text = "Distance: " + parameters[0] +  "m";
     }
 
     void UpdateHpText(object[] parameters)
