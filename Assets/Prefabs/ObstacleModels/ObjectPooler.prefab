@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pools:
-  - tag: Tree
-    prefab: {fileID: 2896977362171722918, guid: 23f4396abfaadc340801e2f13dff1f7b,
+  - tag: Dumpster
+    prefab: {fileID: 3382434825410551239, guid: 3102a5b555a26514c824c08194074617,
       type: 3}
     size: 10
   - tag: Cop
@@ -67,7 +67,4 @@ MonoBehaviour:
   - tag: Coin
     prefab: {fileID: 7847902284739186199, guid: 7dda864db9750e3439310ce4e1ed1f29,
       type: 3}
-    size: 3
-  - tag: ExtraLife
-    prefab: {fileID: 449488945762432758, guid: 3b700807e499f5a42adf54401e2fe8eb, type: 3}
     size: 3
