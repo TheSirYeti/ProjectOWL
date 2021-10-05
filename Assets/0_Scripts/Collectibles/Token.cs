@@ -3,22 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Token : MonoBehaviour, ICollectible, IMovable
+public class Token : ICollectible
 {
-    public float value;
-    public float speed;
+    private int _value;
+
+    public Token(int value)
+    {
+        _value = value;
+    }
     public void OnCollect()
     {
-        EventManager.Trigger("UpdateScore", value);
-    }
-
-    private void FixedUpdate()
-    {
-        StartMoving();
-    }
-
-    public void StartMoving()
-    {
-        transform.position -= transform.forward * Time.deltaTime * speed;
+        EventManager.Trigger("UpdateScore", _value);
     }
 }

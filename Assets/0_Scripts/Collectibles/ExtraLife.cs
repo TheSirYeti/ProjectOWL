@@ -2,23 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExtraLife : MonoBehaviour, ICollectible, IMovable
+public class ExtraLife : ICollectible
 {
-    public float speed;
-    public float value;
-    public void OnCollect()
+    private int _value;
+
+    public ExtraLife(int value)
     {
-        EventManager.Trigger("UpdateScore", value);
-        EventManager.Trigger("SetHP", 1f);
-    }
-    
-    private void FixedUpdate()
-    {
-        StartMoving();
+        _value = value;
     }
 
-    public void StartMoving()
+    public void OnCollect()
     {
-        transform.position -= transform.forward * Time.deltaTime * speed;
+        EventManager.Trigger("SetHP", 1f);
+        EventManager.Trigger("UpdateScore", _value);
     }
 }

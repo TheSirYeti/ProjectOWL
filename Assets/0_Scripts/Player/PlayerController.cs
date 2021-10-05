@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 playerStartAction;
     private Vector2 playerEndAction;
+    private bool isGamePaused = false;
     private void Start()
     {
         SwipeManager.instance.OnEndTouch += CheckInputs;
@@ -25,13 +26,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D))
         {
             movement.ChangeLane(1);
-            Debug.Log("DER");
         }
         
         if (Input.GetKeyDown(KeyCode.A))
         {
             movement.ChangeLane(-1);
-            Debug.Log("IZQ");
         }
 
         if (Input.GetKeyDown(KeyCode.W))

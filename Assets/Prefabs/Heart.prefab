@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 449488945762432759}
   - component: {fileID: 449488945762432752}
-  - component: {fileID: 4306978750383688382}
   - component: {fileID: 4935537887732351773}
+  - component: {fileID: 876280037789244284}
   m_Layer: 0
   m_Name: Heart
   m_TagString: ExtraLife
@@ -54,20 +54,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4306978750383688382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 449488945762432758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a217ee42e1f3864c96411b5ad4556f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value: 250
-  speed: 55
 --- !u!65 &4935537887732351773
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -81,6 +67,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0609909, y: 0.057761904, z: 0.030635968}
   m_Center: {x: 0.0009886883, y: 0.052153833, z: 0.0005831085}
+--- !u!114 &876280037789244284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449488945762432758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 374a2cde80cada14d9a6e2fa0e9106b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 55
+  value: 250
+  strategyID: 1
 --- !u!1 &1194219960242420210
 GameObject:
   m_ObjectHideFlags: 0
