@@ -1,18 +1,23 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.ComTypes;
 using UnityEngine;
 
 public abstract class Collectible : MonoBehaviour
 {
-    public int value;
+    public ICollectible collectible;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            OnCollect();
+            ExecuteStrategyMethod();
             gameObject.SetActive(false);
         }
     }
-    public abstract void OnCollect();
+
+    private void ExecuteStrategyMethod()
+    {
+        collectible.OnCollect();
+    }
 }

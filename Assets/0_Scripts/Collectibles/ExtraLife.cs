@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExtraLife : Collectible
+public class ExtraLife : MonoBehaviour, ICollectible, IMovable
 {
     public float speed;
-    public override void OnCollect()
+    public float value;
+    public void OnCollect()
     {
         EventManager.Trigger("UpdateScore", value);
         EventManager.Trigger("SetHP", 1f);

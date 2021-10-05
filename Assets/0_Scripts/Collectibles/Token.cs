@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Token : Collectible, IMovable
+public class Token : MonoBehaviour, ICollectible, IMovable
 {
+    public float value;
     public float speed;
-    public override void OnCollect()
+    public void OnCollect()
     {
         EventManager.Trigger("UpdateScore", value);
     }
