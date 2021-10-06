@@ -3,15 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Token : ICollectible
+public class Token : Collectible
 {
-    private int _value;
+    public int _value;
 
-    public Token(int value)
-    {
-        _value = value;
-    }
-    public void OnCollect()
+    public override void OnCollect()
     {
         EventManager.Trigger("UpdateScore", _value);
     }

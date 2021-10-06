@@ -4871,7 +4871,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6535286372835392516}
   - component: {fileID: 7847902284739186198}
-  - component: {fileID: 8749192450184309508}
+  - component: {fileID: 5165034540974904772}
   - component: {fileID: 5156449148216346790}
   m_Layer: 0
   m_Name: CoinPrefab
@@ -4916,7 +4916,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8749192450184309508
+--- !u!114 &5165034540974904772
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4925,12 +4925,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7847902284739186199}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 374a2cde80cada14d9a6e2fa0e9106b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 88065311549f6204bbc1d5f5d487f942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 55
-  value: 100
-  strategyID: 0
+  speed: 60
+  _value: 100
 --- !u!65 &5156449148216346790
 BoxCollider:
   m_ObjectHideFlags: 0

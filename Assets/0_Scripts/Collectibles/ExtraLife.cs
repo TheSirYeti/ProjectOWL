@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExtraLife : ICollectible
+public class ExtraLife : Collectible
 {
-    private int _value;
+    public int _value;
 
     public ExtraLife(int value)
     {
         _value = value;
     }
 
-    public void OnCollect()
+    public override void OnCollect()
     {
         EventManager.Trigger("SetHP", 1f);
         EventManager.Trigger("UpdateScore", _value);

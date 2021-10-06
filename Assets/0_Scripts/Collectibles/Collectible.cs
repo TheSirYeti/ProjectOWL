@@ -4,19 +4,14 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices.ComTypes;
 using UnityEngine;
 
-public class Collectible : MonoBehaviour, IMovable
+public abstract class Collectible : MonoBehaviour, IMovable, ICollectible
 {
     public float speed;
-    public int value;
-    public int strategyID;
     private ICollectible collectible;
 
     private void Start()
     {
-        if (strategyID == 0)
-            collectible = new Token(value);
-        else if (strategyID == 1)
-            collectible = new ExtraLife(value);
+        collectible = this;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -43,4 +38,6 @@ public class Collectible : MonoBehaviour, IMovable
     {
         transform.position -= transform.forward * Time.deltaTime * speed;
     }
+
+    public abstract void OnCollect();
 }
