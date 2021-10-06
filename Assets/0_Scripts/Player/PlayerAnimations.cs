@@ -6,12 +6,14 @@ using UnityEngine;
 public class PlayerAnimations : MonoBehaviour, ISubscriber
 {
     [SerializeField] private Animator _animator;
+    [SerializeField] private GroundStatus _groundStatus;
     
     public PlayerObserver _playerObserver;
 
     private void Awake()
     {
         _playerObserver.Subscribe(this);
+        _groundStatus.Subscribe(this);
     }
 
     public void PlayAnimation(string animationID)
@@ -21,6 +23,14 @@ public class PlayerAnimations : MonoBehaviour, ISubscriber
 
     public void OnNotify(string eventID)
     {
-        PlayAnimation(eventID);
+        if (eventID == "enterGround")
+        {
+            _animator.SetBool("isGrounded", true);
+        }
+        else if (eventID == "leftGround")
+        {
+            _animator.SetBool("isGrounded", false);
+        }
+        else PlayAnimation(eventID);
     }
 }

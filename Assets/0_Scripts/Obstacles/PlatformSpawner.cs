@@ -45,7 +45,7 @@ public class PlatformSpawner : MonoBehaviour
                 }
                 else
                 {
-                    //FIXEAR PARA MODELOS
+                    //FIXEAR PARA MODELOS - NO OMPTIMO//
                     int rand = Random.Range(0, 2);
                     if (rand == 1)
                     {

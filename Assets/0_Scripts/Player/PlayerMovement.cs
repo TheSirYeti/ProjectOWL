@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
 {
     [SerializeField] private float moveAmount;
     [SerializeField] private float jumpForce;
+    private float originalJumpForce;
     [SerializeField] private Rigidbody rb;
 
     [SerializeField] private LaneManager lanes;
@@ -20,6 +21,14 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
     private void Awake()
     {
         _groundStatus.Subscribe(this);
+        
+        EventManager.Subscribe("EnableHighJump", ChangeJumpValue);
+        EventManager.Subscribe("ResetHighJump", ResetJumpValue);
+    }
+
+    private void Start()
+    {
+        originalJumpForce = jumpForce;
     }
 
     public void ChangeLane(int direction)
@@ -56,5 +65,15 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
         {
             isGrounded = false;
         }
+    }
+
+    void ChangeJumpValue(object[] parameters)
+    {
+        jumpForce = (float)parameters[0];
+    }
+
+    void ResetJumpValue(object[] parameters)
+    {
+        jumpForce = originalJumpForce;
     }
 }
