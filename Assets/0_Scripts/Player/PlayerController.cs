@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 playerStartAction;
     private Vector2 playerEndAction;
     private bool isGamePaused = false;
+    private bool hasTakenAction = false;
     private void Start()
     {
         EventManager.Subscribe("PauseGame", PauseInputs);
@@ -55,11 +56,7 @@ public class PlayerController : MonoBehaviour
     private void UpdatePlayerAction(Vector2 position)
     {
         playerEndAction = position;
-    }
-    
-    void CheckInputs(Vector2 position)
-    {
-        if (Vector3.Distance(playerStartAction, playerEndAction) >= minimumSwipeTriggerValue)
+        if (Vector3.Distance(playerStartAction, playerEndAction) >= minimumSwipeTriggerValue && !hasTakenAction)
         {
             if (Mathf.Abs(playerEndAction.y - playerStartAction.y) >= minimumSwipeTriggerValue)
             {
@@ -73,7 +70,28 @@ public class PlayerController : MonoBehaviour
                 if (Mathf.Abs(differenceX) >= minimumSwipeTriggerValue)
                     movement.ChangeLane(1 * (int) Mathf.Sign(differenceX));
             }
+            hasTakenAction = true;
         }
+    }
+    
+    void CheckInputs(Vector2 position)
+    {
+        hasTakenAction = false;
+        /*if (Vector3.Distance(playerStartAction, playerEndAction) >= minimumSwipeTriggerValue)
+        {
+            if (Mathf.Abs(playerEndAction.y - playerStartAction.y) >= minimumSwipeTriggerValue)
+            {
+                float differenceY = playerEndAction.y - playerStartAction.y;
+                if (Mathf.Abs(differenceY) >= minimumSwipeTriggerValue)
+                    movement.VerticalAction(1 * (int) Mathf.Sign(differenceY));
+            }
+            else
+            {
+                float differenceX = playerEndAction.x - playerStartAction.x;
+                if (Mathf.Abs(differenceX) >= minimumSwipeTriggerValue)
+                    movement.ChangeLane(1 * (int) Mathf.Sign(differenceX));
+            }
+        }*/
     }
 
     public void UnpauseInputs(object[] parameters)

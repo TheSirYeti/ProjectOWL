@@ -10,11 +10,11 @@ public class PlatformSpawner : MonoBehaviour
     [SerializeField] private float spawnTime;
     [SerializeField] private float spawnDelay;
 
-    
-   
+
     void Start()
     {   
-        InvokeRepeating("SpawnObstacles", spawnTime, spawnDelay);
+        //InvokeRepeating("SpawnObstacles", spawnTime, spawnDelay);
+        StartCoroutine(SpawnObjects());
     }
 
     void SpawnObstacles()
@@ -23,5 +23,24 @@ public class PlatformSpawner : MonoBehaviour
         objectPooler = ObjectPooler.Instance;
         int rand = Random.Range (0, ObjectPooler.Instance.pools.Count);
         objectPooler.SpawnFromPool(ObjectPooler.Instance.pools[rand].prefab.tag, _sp.transform.position, _sp.transform.rotation);
+    }
+
+    IEnumerator SpawnObjects()
+    {
+        objectPooler = ObjectPooler.Instance;
+        while (true)
+        {
+            int freeSpace = Random.Range(0, spawnPoints.Length);
+            for (int i = 0; i < spawnPoints.Length; i++)
+            {
+                if (i != freeSpace)
+                {
+                    Transform _sp = spawnPoints[i];
+                    int rand = Random.Range (0, ObjectPooler.Instance.pools.Count);
+                    objectPooler.SpawnFromPool(ObjectPooler.Instance.pools[rand].prefab.tag, _sp.transform.position, _sp.transform.rotation);
+                }
+            }
+            yield return new WaitForSeconds(spawnDelay);
+        }
     }
 }

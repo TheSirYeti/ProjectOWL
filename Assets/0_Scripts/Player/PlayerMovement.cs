@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
 
     public void ChangeLane(int direction)
     {
-        if (lanes.IsLaneChangeAllowed(direction) && isGrounded)
+        if (lanes.IsLaneChangeAllowed(direction))
         {
             Vector3 target = new Vector3(moveAmount * direction, 0, 0);
             transform.position += target;//Vector3.MoveTowards(transform.position, target, speed * Time.fixedDeltaTime);
