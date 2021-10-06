@@ -12,8 +12,6 @@ public class PlayerController : MonoBehaviour
     private Vector2 playerStartAction;
     private Vector2 playerEndAction;
     private bool isGamePaused = false;
-
-    public GameObject test1, test2;
     private void Start()
     {
         EventManager.Subscribe("PauseGame", PauseInputs);
@@ -52,15 +50,11 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("corro");
         playerStartAction = position;
-        test1.SetActive(true);
-        test1.transform.position = position;
     }
 
     private void UpdatePlayerAction(Vector2 position)
     {
         playerEndAction = position;
-        test2.SetActive(true);
-        test2.transform.position = position;
     }
     
     void CheckInputs(Vector2 position)
@@ -80,8 +74,6 @@ public class PlayerController : MonoBehaviour
                     movement.ChangeLane(1 * (int) Mathf.Sign(differenceX));
             }
         }
-        test1.SetActive(false);
-        test2.SetActive(false);
     }
 
     public void UnpauseInputs(object[] parameters)
