@@ -17,6 +17,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Lanes/LaneManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Collectibles/Collectible.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/TempScripts/TestSwipeMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Player/PlayerVFX.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/UI/FadeManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Obstacles/IMovable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Collectibles/HighJump.cs" root0="FORCE_HIGHLIGHTING" />
@@ -101,7 +102,7 @@
       <workItem from="1633393917213" duration="1964000" />
       <workItem from="1633407601667" duration="176000" />
       <workItem from="1633446704426" duration="20571000" />
-      <workItem from="1633531343184" duration="13320000" />
+      <workItem from="1633531343184" duration="15748000" />
     </task>
     <servers />
   </component>

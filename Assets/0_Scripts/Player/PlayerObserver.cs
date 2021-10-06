@@ -6,7 +6,6 @@ using UnityEngine;
 public class PlayerObserver : MonoBehaviour, IPublisher
 {
     [SerializeField] private List<ISubscriber> _subscribers = new List<ISubscriber>();
-    [SerializeField] private GroundStatus _groundStatus;
 
     public void Subscribe(ISubscriber subscriber)
     {

@@ -17,11 +17,12 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
     
     [SerializeField] private PlayerObserver _playerObserver;
     [SerializeField] private GroundStatus _groundStatus;
-    
+
     private void Awake()
     {
         _groundStatus.Subscribe(this);
-        
+        _playerObserver.Subscribe(this);
+
         EventManager.Subscribe("EnableHighJump", ChangeJumpValue);
         EventManager.Subscribe("ResetHighJump", ResetJumpValue);
     }
@@ -36,7 +37,7 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
         if (lanes.IsLaneChangeAllowed(direction))
         {
             Vector3 target = new Vector3(moveAmount * direction, 0, 0);
-            transform.position += target;//Vector3.MoveTowards(transform.position, target, speed * Time.fixedDeltaTime);
+            transform.position += target;
             lanes.SetCurrentLane(lanes.currentLane += 1 * direction);
         }
     }
@@ -70,10 +71,12 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
     void ChangeJumpValue(object[] parameters)
     {
         jumpForce = (float)parameters[0];
+        _playerObserver.NotifySubscribers("HighJump");
     }
 
     void ResetJumpValue(object[] parameters)
     {
         jumpForce = originalJumpForce;
+        _playerObserver.NotifySubscribers("ResetVFX");
     }
 }

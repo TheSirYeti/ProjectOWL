@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerAnimations : MonoBehaviour, ISubscriber
 {
     [SerializeField] private Animator _animator;
+    [SerializeField] private List<string> animatorStatesNames;
     [SerializeField] private GroundStatus _groundStatus;
     
     public PlayerObserver _playerObserver;
@@ -31,6 +32,13 @@ public class PlayerAnimations : MonoBehaviour, ISubscriber
         {
             _animator.SetBool("isGrounded", false);
         }
-        else PlayAnimation(eventID);
+        else
+        {
+            foreach (string s in animatorStatesNames)
+            {
+                if(s == eventID)
+                    PlayAnimation(eventID);
+            }
+        }
     }
 }
