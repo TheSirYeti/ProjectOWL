@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 [DefaultExecutionOrder(-1)]
 public class SwipeManager : MonoBehaviour
@@ -36,7 +37,7 @@ public class SwipeManager : MonoBehaviour
 
     private void Update()
     {
-          _ArtificialUpdate();
+        _ArtificialUpdate();
     }
 
     void StartTouchPrimary()

@@ -8,7 +8,7 @@ public class SceneLoader : MonoBehaviour
 {
     private void Awake()
     {
-        EventManager.Subscribe("PlayerDied", ReturnToMainMenu);
+        EventManager.Subscribe("LoadScene", LoadScene);
     }
 
     public enum SceneID
@@ -17,14 +17,9 @@ public class SceneLoader : MonoBehaviour
         MAINLEVEL
     }
 
-    public void LoadScene(int sceneID)
+    public void LoadScene(object[] parameters)
     {
         EventManager.ResetEventDictionary();
-        SceneManager.LoadSceneAsync(sceneID);
-    }
-
-    public void ReturnToMainMenu(object[] parameters)
-    {
-        LoadScene((int)parameters[0]);
+        SceneManager.LoadSceneAsync((int)parameters[0]);
     }
 }

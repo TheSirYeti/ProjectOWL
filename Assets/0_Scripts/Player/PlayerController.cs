@@ -12,12 +12,16 @@ public class PlayerController : MonoBehaviour
     private Vector2 playerStartAction;
     private Vector2 playerEndAction;
     private bool isGamePaused = false;
+
+    public GameObject test1, test2;
     private void Start()
     {
+        EventManager.Subscribe("PauseGame", PauseInputs);
+        EventManager.Subscribe("ResumeGame", UnpauseInputs);
+        
         SwipeManager.instance.OnEndTouch += CheckInputs;
         SwipeManager.instance.OnUpdateTouch += UpdatePlayerAction;
         SwipeManager.instance.OnStartTouch += StartPlayerAction;
-        //artificialUpdate = CheckInputs;
     }
 
     private void Update()
@@ -46,12 +50,17 @@ public class PlayerController : MonoBehaviour
 
     void StartPlayerAction(Vector2 position)
     {
+        Debug.Log("corro");
         playerStartAction = position;
+        test1.SetActive(true);
+        test1.transform.position = position;
     }
 
     private void UpdatePlayerAction(Vector2 position)
     {
         playerEndAction = position;
+        test2.SetActive(true);
+        test2.transform.position = position;
     }
     
     void CheckInputs(Vector2 position)
@@ -61,20 +70,29 @@ public class PlayerController : MonoBehaviour
             if (Mathf.Abs(playerEndAction.y - playerStartAction.y) >= minimumSwipeTriggerValue)
             {
                 float differenceY = playerEndAction.y - playerStartAction.y;
-                if(Mathf.Abs(differenceY) >= minimumSwipeTriggerValue)
-                    movement.VerticalAction(1 * (int)Mathf.Sign(differenceY));
+                if (Mathf.Abs(differenceY) >= minimumSwipeTriggerValue)
+                    movement.VerticalAction(1 * (int) Mathf.Sign(differenceY));
             }
             else
             {
                 float differenceX = playerEndAction.x - playerStartAction.x;
-                if(Mathf.Abs(differenceX) >= minimumSwipeTriggerValue)
-                    movement.ChangeLane(1 * (int)Mathf.Sign(differenceX));
+                if (Mathf.Abs(differenceX) >= minimumSwipeTriggerValue)
+                    movement.ChangeLane(1 * (int) Mathf.Sign(differenceX));
             }
         }
+        test1.SetActive(false);
+        test2.SetActive(false);
     }
 
-    public void PauseInputs()
+    public void UnpauseInputs(object[] parameters)
     {
-        
+        isGamePaused = false;
+        Time.timeScale = 1f;
+    }
+    
+    public void PauseInputs(object[] parameters)
+    {
+        isGamePaused = true;
+        Time.timeScale = 0f;
     }
 }

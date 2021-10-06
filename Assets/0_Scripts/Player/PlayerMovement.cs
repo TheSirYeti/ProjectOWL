@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour, ISubscriber
 {
-    [SerializeField] private float speed;
     [SerializeField] private float moveAmount;
     [SerializeField] private float jumpForce;
     [SerializeField] private Rigidbody rb;

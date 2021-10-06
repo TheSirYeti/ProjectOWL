@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DistanceManager : MonoBehaviour
 {
-    [SerializeField] private int distance;
+    private int distance;
     private bool enableCount = true;
 
     private void Start()
@@ -21,7 +21,7 @@ public class DistanceManager : MonoBehaviour
             {
                 distance += 1;
                 EventManager.Trigger("UpdateUIDistance", distance);
-                yield return new WaitForSeconds(0.2f);
+                yield return new WaitForSeconds(0.1f);
             }
         }
     }

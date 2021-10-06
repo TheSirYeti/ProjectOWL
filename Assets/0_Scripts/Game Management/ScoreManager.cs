@@ -10,11 +10,17 @@ public class ScoreManager : MonoBehaviour
     private void Awake()
     {
         EventManager.Subscribe("UpdateScore", AddScore);
+        EventManager.Subscribe("EndGame", SaveScore);
     }
 
     void AddScore(object[] parameters)
     {
         score += (int)parameters[0];
         EventManager.Trigger("UpdateUIScore", score);
+    }
+
+    void SaveScore(object[] parameters)
+    {
+        PlayerPrefs.SetFloat("High Score", score);
     }
 }

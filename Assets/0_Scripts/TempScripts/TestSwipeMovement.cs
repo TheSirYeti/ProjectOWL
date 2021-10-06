@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class TestSwipeMovement : MonoBehaviour
 {
     public float movementValue;
@@ -11,7 +9,6 @@ public class TestSwipeMovement : MonoBehaviour
     {
         SwipeManager.instance.OnEndTouch += EndTouch;
     }
-
     void EndTouch(Vector2 position)
     {
         if (position.x >= minimumSwipeTriggerValue)
