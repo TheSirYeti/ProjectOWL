@@ -45,6 +45,6 @@ public class PauseManager : MonoBehaviour
     {
         pausePanel.transform.position = originalPanelPosition.position;
         resumeButton.SetActive(false);
-        pausePanel.SetActive(true);
+        pauseButton.SetActive(false);
     }
 }
