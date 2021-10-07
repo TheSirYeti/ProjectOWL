@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine.Utility;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour, ISubscriber
@@ -40,6 +41,7 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
             Vector3 target = new Vector3(moveAmount * direction, 0, 0);
             transform.position += target;
             lanes.SetCurrentLane(lanes.currentLane += 1 * direction);
+            SoundManager.instance.PlaySound(SoundID.CHANGE_LANE);
         }
     }
 
@@ -49,10 +51,12 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             _playerObserver.NotifySubscribers("Jump");
+            SoundManager.instance.PlaySound(SoundID.JUMP);
         }
         else if(direction == -1 && isGrounded)
         {
             _playerObserver.NotifySubscribers("Slide");
+            SoundManager.instance.PlaySound(SoundID.SLIDE);
         }
     }
 

@@ -182,7 +182,11 @@ public class SoundManager : MonoBehaviour
 
 public enum SoundID
 {
-    TRANSITION
+    TRANSITION,
+    JUMP,
+    HURT,
+    SLIDE,
+    CHANGE_LANE
 }
 
 public enum MusicID

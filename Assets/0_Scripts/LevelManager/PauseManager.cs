@@ -28,6 +28,7 @@ public class PauseManager : MonoBehaviour
         pauseButton.SetActive(false);
         resumeButton.SetActive(true);
         EventManager.Trigger("SetPauseChallengeUI", PlayerPrefs.GetFloat("ScoreToBeat"), PlayerPrefs.GetFloat("DistanceToBeat"));
+        SoundManager.instance.StopAllSounds();
         EventManager.Trigger("PauseGame");
     }
 
@@ -36,6 +37,7 @@ public class PauseManager : MonoBehaviour
         pausePanel.transform.position = new Vector2(-999f, -999f);
         pauseButton.SetActive(true);
         resumeButton.SetActive(false);
+        SoundManager.instance.ResumeAllSounds();
         EventManager.Trigger("ResumeGame");
     }
 

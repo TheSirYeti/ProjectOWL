@@ -11,12 +11,6 @@ public class SceneLoader : MonoBehaviour
         EventManager.Subscribe("LoadScene", LoadScene);
     }
 
-    public enum SceneID
-    {
-        MAINMENU,
-        MAINLEVEL
-    }
-
     public void LoadScene(object[] parameters)
     {
         EventManager.ResetEventDictionary();
