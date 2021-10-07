@@ -11,6 +11,11 @@ public class PauseManager : MonoBehaviour
 
     private void Awake()
     {
+        EventManager.Subscribe("EndGame", DisablePause);
+    }
+
+    private void Start()
+    {
         EventManager.Trigger("SetPauseChallengeUI", PlayerPrefs.GetFloat("ScoreToBeat"), PlayerPrefs.GetFloat("DistanceToBeat"));
     }
 
@@ -30,5 +35,11 @@ public class PauseManager : MonoBehaviour
         resumeButton.SetActive(false);
         EventManager.Trigger("ResumeGame");
     }
-    
+
+    public void DisablePause(object[] parameters)
+    {
+        pauseButton.SetActive(false);
+        resumeButton.SetActive(false);
+        pausePanel.SetActive(true);
+    }
 }

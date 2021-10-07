@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class HighJump : Collectible
 {
-    public float value;
+    public int _value;
     public float jumpValue;
     public float duration;
     public override void OnCollect()
     {
+        EventManager.Trigger("UpdateScore", _value);
         StartCoroutine(StartHighJump());
     }
 

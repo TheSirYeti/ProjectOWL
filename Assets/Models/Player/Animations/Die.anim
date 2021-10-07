@@ -91582,7 +91582,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 3.0333333
-    functionName: 
+    functionName: EndGame
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

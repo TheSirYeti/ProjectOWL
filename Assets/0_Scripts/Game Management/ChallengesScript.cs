@@ -22,11 +22,11 @@ public class ChallengesScript : MonoBehaviour
 
         if (PlayerPrefs.HasKey("HighDistance"))
         {
-            distanceToBeat = (Mathf.Round(PlayerPrefs.GetFloat("HighDistance") / 1000) * 1000) + 1000;
+            distanceToBeat = (Mathf.Round(PlayerPrefs.GetFloat("HighDistance") / 100) * 100) + 100;
         }
         else
         {
-            distanceToBeat = 100f;
+            distanceToBeat = 200f;
         }
         PlayerPrefs.SetFloat("DistanceToBeat", distanceToBeat);
         EventManager.Trigger("SetChallengeUI", scoreToBeat, distanceToBeat);

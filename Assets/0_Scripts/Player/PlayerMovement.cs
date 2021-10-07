@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
 
         EventManager.Subscribe("EnableHighJump", ChangeJumpValue);
         EventManager.Subscribe("ResetHighJump", ResetJumpValue);
+        EventManager.Subscribe("PlayerDeath", OnPlayerDeath);
     }
 
     private void Start()
@@ -80,7 +81,7 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
         _playerObserver.NotifySubscribers("ResetVFX");
     }
 
-    void OnPlayerDeath()
+    void OnPlayerDeath(object[] parameters)
     {
         _playerObserver.NotifySubscribers("Die");
     }

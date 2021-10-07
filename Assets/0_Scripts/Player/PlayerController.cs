@@ -95,4 +95,12 @@ public class PlayerController : MonoBehaviour
     }
     
     
+    void EndGame()
+    {
+        EventManager.Trigger("EndGame");
+        isGamePaused = true;
+        Time.timeScale = 0f;
+    }
+    
+    
 }

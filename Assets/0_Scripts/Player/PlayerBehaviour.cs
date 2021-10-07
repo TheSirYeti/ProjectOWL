@@ -20,8 +20,11 @@ public class PlayerBehaviour : MonoBehaviour
     public void SetLives(object[] parameters)
     {
         hp += (float)parameters[0];
-        if(hp <= 0)
-            EventManager.Trigger("EndGame");
+        if (hp <= 0)
+        {
+            hp = 0;
+            EventManager.Trigger("PlayerDeath");
+        }
 
         EventManager.Trigger("UpdateUIhp", hp);
     }

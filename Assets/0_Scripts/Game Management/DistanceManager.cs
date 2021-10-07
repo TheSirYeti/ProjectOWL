@@ -11,6 +11,7 @@ public class DistanceManager : MonoBehaviour
     private void Start()
     {
         StartCoroutine(AddSteps());
+        EventManager.Subscribe("EndGame", SaveDistance);
     }
 
     IEnumerator AddSteps()
@@ -24,6 +25,12 @@ public class DistanceManager : MonoBehaviour
                 yield return new WaitForSeconds(0.1f);
             }
         }
+    }
+    
+    void SaveDistance(object[] parameters)
+    {
+        if(PlayerPrefs.GetFloat("HighDistance") < distance)
+            PlayerPrefs.SetFloat("HighDistance", distance);
     }
     
     public void UpdatePauseChallenges()

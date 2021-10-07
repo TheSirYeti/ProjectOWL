@@ -4942,6 +4942,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 60
-  value: 250
+  _value: 250
   jumpValue: 40
   duration: 20
