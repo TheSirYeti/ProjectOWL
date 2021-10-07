@@ -10,4 +10,9 @@ public class HighJumpTimer : PowerUpTimer
         EventManager.Subscribe("EnableHighJump", StartTimer);
         EventManager.Subscribe("ResetHighJump", ResetTimer);
     }
+
+    public override void OnTimerOver()
+    {
+        EventManager.Trigger("ResetHighJump");
+    }
 }

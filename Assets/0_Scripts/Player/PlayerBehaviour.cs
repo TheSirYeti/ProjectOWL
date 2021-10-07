@@ -6,10 +6,13 @@ using UnityEngine;
 public class PlayerBehaviour : MonoBehaviour
 {
     [SerializeField] private float hp;
+    [SerializeField] private bool shield;
 
     private void Awake()
     {
         EventManager.Subscribe("SetHP", SetLives);
+        EventManager.Subscribe("EnableShield", SetShield);
+        EventManager.Subscribe("DisableShield", SetShield);
     }
 
     private void Start()
@@ -19,17 +22,25 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void SetLives(object[] parameters)
     {
-        hp += (float)parameters[0];
-        if (hp <= 0)
+        if (!shield || (float) parameters[0] > 0)
         {
-            hp = 0;
-            EventManager.Trigger("PlayerDeath");
+            hp += (float)parameters[0];
+            if (hp <= 0)
+            {
+                hp = 0;
+                EventManager.Trigger("PlayerDeath");
+            }
+            else if (hp >= 5)
+            {
+                hp = 5;
+            }
+            EventManager.Trigger("UpdateUIhp", hp);
         }
-        else if (hp >= 5)
-        {
-            hp = 5;
-        }
-        EventManager.Trigger("UpdateUIhp", hp);
+    }
+
+    void SetShield(object[] parameters)
+    {
+        shield = (bool)parameters[0];
     }
 
 }

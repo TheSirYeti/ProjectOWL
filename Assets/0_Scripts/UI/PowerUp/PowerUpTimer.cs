@@ -29,7 +29,7 @@ public abstract class PowerUpTimer : MonoBehaviour
         {
             timer -= Time.deltaTime;
             timerUI.fillAmount = timer / totalTimerValue;
-            if(timer <= 0) EventManager.Trigger("ResetHighJump");
+            if(timer <= 0) OnTimerOver();
         }
     }
 
@@ -39,4 +39,6 @@ public abstract class PowerUpTimer : MonoBehaviour
         isActive = false;
         timerUI.enabled = false;
     }
+
+    public abstract void OnTimerOver();
 }

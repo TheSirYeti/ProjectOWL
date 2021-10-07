@@ -6,11 +6,15 @@ using UnityEngine;
 public class PlayerVFX : MonoBehaviour, ISubscriber
 {
     [SerializeField] private List<GameObject> vfx;
+    [SerializeField] private GameObject shieldFX;
     [SerializeField] private PlayerObserver _playerObserver;
 
     private void Start()
     {
         _playerObserver.Subscribe(this);
+        
+        EventManager.Subscribe("EnableShield", SetShieldVFX);
+        EventManager.Subscribe("DisableShield", SetShieldVFX);
     }
 
     public void OnNotify(string eventID)
@@ -39,9 +43,15 @@ public class PlayerVFX : MonoBehaviour, ISubscriber
         }
     }
 
+    public void SetShieldVFX(object[] parameters)
+    {
+        shieldFX.SetActive((bool)parameters[0]);
+    }
+
     public enum ParticleID
     {
         AIR,
         HIGHJUMP
     }
+    
 }

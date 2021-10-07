@@ -57,7 +57,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1d4ffd5d0efa1ac4dba777d197e69ae4, type: 2}
+  - {fileID: 2100000, guid: 078f02bf8c9f962498540878634add61, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -119,9 +119,9 @@ GameObject:
   - component: {fileID: 6535286372835392516}
   - component: {fileID: 7847902284739186198}
   - component: {fileID: 5156449148216346790}
-  - component: {fileID: 3970656926585804147}
+  - component: {fileID: 4653480786345076623}
   m_Layer: 0
-  m_Name: HighJumpPrefab
+  m_Name: ShieldPrefab
   m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -140,7 +140,7 @@ Transform:
   m_Children:
   - {fileID: 3665050050176724796}
   - {fileID: 7486323901198510421}
-  - {fileID: 7262155386767991713}
+  - {fileID: 8539745743210704955}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -176,7 +176,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5737165, y: 3.618517, z: 0.45640564}
   m_Center: {x: 0, y: 2.4392695, z: 0}
---- !u!114 &3970656926585804147
+--- !u!114 &4653480786345076623
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,14 +185,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7847902284739186199}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45b5b6b3449f1c84c8ea67b30a5ed11c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d044205511891a4c83d321e3dfa14dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 60
   _value: 250
-  jumpValue: 35
   duration: 10
---- !u!1001 &8508181278888995907
+--- !u!1001 &7230599091448332249
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -261,9 +260,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 978fc03f6be65e847b217c381031e334, type: 3}
---- !u!4 &7262155386767991713 stripped
+--- !u!4 &8539745743210704955 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1358813932444209122, guid: 978fc03f6be65e847b217c381031e334,
     type: 3}
-  m_PrefabInstance: {fileID: 8508181278888995907}
+  m_PrefabInstance: {fileID: 7230599091448332249}
   m_PrefabAsset: {fileID: 0}

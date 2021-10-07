@@ -189,7 +189,8 @@ public enum SoundID
     CHANGE_LANE,
     EXTRA_LIFE,
     COIN,
-    HIGH_JUMP
+    HIGH_JUMP,
+    SHIELD
 }
 
 public enum MusicID
