@@ -33,6 +33,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/TempScripts/TestSwipeMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/UI/FadeManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/UI/PowerUp/HighJumpTimer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Sounds/SelectMusic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/UI/PowerUp/PowerUpTimer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/UI/HUDStats.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Collectibles/ExtraLife.cs" root0="FORCE_HIGHLIGHTING" />
@@ -106,7 +107,7 @@
       <workItem from="1633407601667" duration="176000" />
       <workItem from="1633446704426" duration="20571000" />
       <workItem from="1633531343184" duration="32583000" />
-      <workItem from="1633628386473" duration="4649000" />
+      <workItem from="1633628386473" duration="7224000" />
     </task>
     <servers />
   </component>

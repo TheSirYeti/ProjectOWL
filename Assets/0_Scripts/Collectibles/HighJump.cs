@@ -15,6 +15,7 @@ public class HighJump : Collectible
 
     IEnumerator StartHighJump()
     {
+        SoundManager.instance.PlaySound(SoundID.HIGH_JUMP);
         EventManager.Trigger("EnableHighJump", jumpValue, duration);
         yield return new WaitForSeconds(duration);
         EventManager.Trigger("ResetHighJump");

@@ -69,6 +69,8 @@ public class PlatformSpawner : MonoBehaviour
         spawnDelay = spawnDelay * 0.75f;
         yield return new WaitForSeconds(30);
         spawnDelay = spawnDelay * 0.75f;
+        yield return new WaitForSeconds(30);
+        spawnDelay = spawnDelay * 0.85f;
     }
 
     int ChoosePowerUp()

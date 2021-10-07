@@ -4944,4 +4944,4 @@ MonoBehaviour:
   speed: 60
   _value: 250
   jumpValue: 35
-  duration: 20
+  duration: 10

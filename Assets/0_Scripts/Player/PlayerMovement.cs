@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Cinemachine.Utility;
-using UnityEditorInternal;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour, ISubscriber

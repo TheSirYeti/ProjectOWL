@@ -25,7 +25,10 @@ public class PlayerBehaviour : MonoBehaviour
             hp = 0;
             EventManager.Trigger("PlayerDeath");
         }
-        SoundManager.instance.PlaySound(SoundID.HURT);
+        else if (hp >= 5)
+        {
+            hp = 5;
+        }
         EventManager.Trigger("UpdateUIhp", hp);
     }
 

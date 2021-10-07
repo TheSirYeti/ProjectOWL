@@ -186,7 +186,10 @@ public enum SoundID
     JUMP,
     HURT,
     SLIDE,
-    CHANGE_LANE
+    CHANGE_LANE,
+    EXTRA_LIFE,
+    COIN,
+    HIGH_JUMP
 }
 
 public enum MusicID

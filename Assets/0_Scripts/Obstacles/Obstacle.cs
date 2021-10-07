@@ -9,6 +9,7 @@ public class Obstacle : MovingObjects
         if(other.gameObject.tag.Equals("Player"))
         {
             EventManager.Trigger("SetHP", -1f);
+            SoundManager.instance.PlaySound(SoundID.HURT);
             movingCondition = false;
             gameObject.SetActive(false);
         }
