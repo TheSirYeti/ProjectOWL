@@ -22,6 +22,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Player/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Player/GroundCheck/GroundStatus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/UI/ChallengeUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Sounds/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/LevelManager/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Player/PlayerBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/TempScripts/testTouch.cs" root0="FORCE_HIGHLIGHTING" />
@@ -104,7 +105,7 @@
       <workItem from="1633393917213" duration="1964000" />
       <workItem from="1633407601667" duration="176000" />
       <workItem from="1633446704426" duration="20571000" />
-      <workItem from="1633531343184" duration="30911000" />
+      <workItem from="1633531343184" duration="32583000" />
     </task>
     <servers />
   </component>
