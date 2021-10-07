@@ -50,7 +50,7 @@ public class PlatformSpawner : MonoBehaviour
                     if (rand == 1)
                     {
                         Transform _sp = spawnPoints[i];
-                        int powerUpValue = Random.Range(0, powerUpList.Count);
+                        int powerUpValue = ChoosePowerUp();
                         GameObject powerUp = Instantiate(powerUpList[powerUpValue]);
                         powerUp.transform.position = _sp.transform.position;
                     }
@@ -59,4 +59,19 @@ public class PlatformSpawner : MonoBehaviour
             yield return new WaitForSeconds(spawnDelay);
         }
     }
+
+    int ChoosePowerUp()
+    {
+        int rand = Random.Range(0, 100);
+        if (rand >= 0 && rand <= 74)
+        {
+            return 0;
+        }
+        else if (rand >= 75 && rand <= 89)
+        {
+            return 1;
+        }
+        else return 2;
+    }
 }
+

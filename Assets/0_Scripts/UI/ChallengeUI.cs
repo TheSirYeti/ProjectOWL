@@ -7,8 +7,7 @@ using UnityEngine.UI;
 
 public class ChallengeUI : MonoBehaviour
 {
-    [Header("Text")] 
-    [SerializeField] private TextMeshProUGUI title;
+    [Header("Text")]
     [SerializeField] private TextMeshProUGUI scorePauseText;
     [SerializeField] private TextMeshProUGUI distancePauseText;
 
@@ -21,7 +20,6 @@ public class ChallengeUI : MonoBehaviour
         EventManager.Subscribe("SetPauseChallengeUI", SetPauseChallengeText);
         EventManager.Subscribe("SetScorePauseCheck", EnableScorePauseCheck);
         EventManager.Subscribe("SetDistancePauseCheck", EnableDistancePauseCheck);
-        EventManager.Subscribe("SetGameOver", SetGameOver);
     }
 
     public void SetPauseChallengeText(object[] parameters)
@@ -47,10 +45,5 @@ public class ChallengeUI : MonoBehaviour
     {
         distancePauseCross.enabled = false;
         distancePauseCheck.enabled = true;
-    }
-
-    void SetGameOver(object[] parameters)
-    {
-        title.text = "GAME OVER!";
     }
 }
