@@ -11,7 +11,7 @@ public abstract class MovingObjects : MonoBehaviour, IPooledObject, IMovable
 
 
     public bool movingCondition = true;
-
+    
     public void OnObjectSpawn()
     {
         StartMoving();
