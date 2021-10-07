@@ -21,6 +21,16 @@ public class ScoreManager : MonoBehaviour
 
     void SaveScore(object[] parameters)
     {
-        PlayerPrefs.SetFloat("High Score", score);
+        if(PlayerPrefs.GetFloat("HighScore") < score)
+            PlayerPrefs.SetFloat("HighScore", score);
+    }
+    
+    
+    public void UpdatePauseChallenges()
+    {
+        if (score > PlayerPrefs.GetFloat("ScoreToBeat"))
+        {
+            EventManager.Trigger("SetScorePauseCheck");
+        }
     }
 }

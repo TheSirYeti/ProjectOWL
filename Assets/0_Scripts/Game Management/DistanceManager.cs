@@ -25,4 +25,12 @@ public class DistanceManager : MonoBehaviour
             }
         }
     }
+    
+    public void UpdatePauseChallenges()
+    {
+        if (distance > PlayerPrefs.GetFloat("DistanceToBeat"))
+        {
+            EventManager.Trigger("SetDistancePauseCheck");
+        }
+    }
 }
