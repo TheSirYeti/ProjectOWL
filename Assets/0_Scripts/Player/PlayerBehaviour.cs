@@ -22,8 +22,7 @@ public class PlayerBehaviour : MonoBehaviour
         hp += (float)parameters[0];
         if(hp <= 0)
             EventManager.Trigger("EndGame");
-            //EventManager.Trigger("PlayerDied", SceneLoader.SceneID.MAINMENU);
-        
+
         EventManager.Trigger("UpdateUIhp", hp);
     }
 

@@ -29,6 +29,14 @@ public class PlayerVFX : MonoBehaviour, ISubscriber
         {
             vfx[(int) ParticleID.HIGHJUMP].SetActive(true);
         }
+
+        if (eventID == "Die")
+        {
+            foreach (GameObject g in vfx)
+            {
+                g.SetActive(false);
+            }
+        }
     }
 
     public enum ParticleID

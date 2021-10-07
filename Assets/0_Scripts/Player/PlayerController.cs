@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     {
         EventManager.Subscribe("PauseGame", PauseInputs);
         EventManager.Subscribe("ResumeGame", UnpauseInputs);
-        
+
         SwipeManager.instance.OnEndTouch += CheckInputs;
         SwipeManager.instance.OnUpdateTouch += UpdatePlayerAction;
         SwipeManager.instance.OnStartTouch += StartPlayerAction;
@@ -93,4 +93,6 @@ public class PlayerController : MonoBehaviour
         isGamePaused = true;
         Time.timeScale = 0f;
     }
+    
+    
 }

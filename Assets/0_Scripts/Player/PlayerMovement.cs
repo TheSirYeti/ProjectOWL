@@ -79,4 +79,9 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
         jumpForce = originalJumpForce;
         _playerObserver.NotifySubscribers("ResetVFX");
     }
+
+    void OnPlayerDeath()
+    {
+        _playerObserver.NotifySubscribers("Die");
+    }
 }
