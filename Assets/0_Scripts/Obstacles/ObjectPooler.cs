@@ -19,17 +19,8 @@ public class ObjectPooler : MonoBehaviour
 
     private void Awake ()
     {
-        Instance = this; 
-    }
-
-    #endregion
-
-    public List<Pool> pools;
-    public Dictionary<string, Queue<GameObject>> poolDictionary;
-
-    
-    void Start()
-    {
+        Instance = this;
+        
         poolDictionary = new Dictionary<string, Queue<GameObject>>();
 
         foreach (Pool pool in pools)
@@ -46,6 +37,11 @@ public class ObjectPooler : MonoBehaviour
             poolDictionary.Add(pool.tag, objectPool);
         }
     }
+
+    #endregion
+
+    public List<Pool> pools;
+    public Dictionary<string, Queue<GameObject>> poolDictionary;
 
     public GameObject SpawnFromPool (string tag, Vector3 position, Quaternion rotation)
     {

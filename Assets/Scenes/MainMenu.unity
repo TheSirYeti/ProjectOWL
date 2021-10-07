@@ -2725,7 +2725,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1546595550}
-        m_MethodName: FadeOut
+        m_MethodName: FadeOutToGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -11,13 +11,16 @@ public class LoopingFloor : MonoBehaviour
 
     private void Update()
     {
-        foreach (Transform t in roads)
+        if (Time.timeScale == 1f)
         {
-            t.position -= Vector3.forward * speed * Time.fixedDeltaTime;
-
-            if (t.position.z <= endPos.position.z)
+            foreach (Transform t in roads)
             {
-                t.position = startPos.position;
+                t.position -= Vector3.forward * speed * Time.fixedDeltaTime;
+
+                if (t.position.z <= endPos.position.z)
+                {
+                    t.position = startPos.position;
+                }
             }
         }
     }

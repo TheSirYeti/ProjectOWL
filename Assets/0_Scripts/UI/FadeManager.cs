@@ -11,9 +11,16 @@ public class FadeManager : MonoBehaviour
         animator.Play("FadeIn");
     }
     
-    public void FadeOut()
+    public void FadeOutToMenu()
     {
-        animator.Play("fadeOut");
+        animator.Play("fadeOutToMenu");
+        Time.timeScale = 1f;
+    }
+    
+    public void FadeOutToGame()
+    {
+        animator.Play("fadeOutToGame");
+        Time.timeScale = 1f;
     }
 
     public void FadeToLevel(int sceneID)

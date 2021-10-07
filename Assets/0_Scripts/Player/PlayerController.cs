@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 playerEndAction;
     private bool isGamePaused = false;
     private bool hasTakenAction = false;
+
     private void Start()
     {
         EventManager.Subscribe("PauseGame", PauseInputs);
@@ -49,49 +50,36 @@ public class PlayerController : MonoBehaviour
 
     void StartPlayerAction(Vector2 position)
     {
-        Debug.Log("corro");
         playerStartAction = position;
     }
 
     private void UpdatePlayerAction(Vector2 position)
     {
-        playerEndAction = position;
-        if (Vector3.Distance(playerStartAction, playerEndAction) >= minimumSwipeTriggerValue && !hasTakenAction)
+        if (!isGamePaused)
         {
-            if (Mathf.Abs(playerEndAction.y - playerStartAction.y) >= minimumSwipeTriggerValue)
+            playerEndAction = position;
+            if (Vector3.Distance(playerStartAction, playerEndAction) >= minimumSwipeTriggerValue && !hasTakenAction)
             {
-                float differenceY = playerEndAction.y - playerStartAction.y;
-                if (Mathf.Abs(differenceY) >= minimumSwipeTriggerValue)
-                    movement.VerticalAction(1 * (int) Mathf.Sign(differenceY));
+                if (Mathf.Abs(playerEndAction.y - playerStartAction.y) >= minimumSwipeTriggerValue)
+                {
+                    float differenceY = playerEndAction.y - playerStartAction.y;
+                    if (Mathf.Abs(differenceY) >= minimumSwipeTriggerValue)
+                        movement.VerticalAction(1 * (int) Mathf.Sign(differenceY));
+                }
+                else
+                {
+                    float differenceX = playerEndAction.x - playerStartAction.x;
+                    if (Mathf.Abs(differenceX) >= minimumSwipeTriggerValue)
+                        movement.ChangeLane(1 * (int) Mathf.Sign(differenceX));
+                }
+                hasTakenAction = true;
             }
-            else
-            {
-                float differenceX = playerEndAction.x - playerStartAction.x;
-                if (Mathf.Abs(differenceX) >= minimumSwipeTriggerValue)
-                    movement.ChangeLane(1 * (int) Mathf.Sign(differenceX));
-            }
-            hasTakenAction = true;
         }
     }
     
     void CheckInputs(Vector2 position)
     {
         hasTakenAction = false;
-        /*if (Vector3.Distance(playerStartAction, playerEndAction) >= minimumSwipeTriggerValue)
-        {
-            if (Mathf.Abs(playerEndAction.y - playerStartAction.y) >= minimumSwipeTriggerValue)
-            {
-                float differenceY = playerEndAction.y - playerStartAction.y;
-                if (Mathf.Abs(differenceY) >= minimumSwipeTriggerValue)
-                    movement.VerticalAction(1 * (int) Mathf.Sign(differenceY));
-            }
-            else
-            {
-                float differenceX = playerEndAction.x - playerStartAction.x;
-                if (Mathf.Abs(differenceX) >= minimumSwipeTriggerValue)
-                    movement.ChangeLane(1 * (int) Mathf.Sign(differenceX));
-            }
-        }*/
     }
 
     public void UnpauseInputs(object[] parameters)
