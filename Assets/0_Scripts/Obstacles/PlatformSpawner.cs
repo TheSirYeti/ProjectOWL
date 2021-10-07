@@ -19,6 +19,7 @@ public class PlatformSpawner : MonoBehaviour
     {   
         //InvokeRepeating("SpawnObstacles", spawnTime, spawnDelay);
         StartCoroutine(SpawnObjects());
+        StartCoroutine(SpeedUpSpawning());
     }
 
     void SpawnObstacles()
@@ -58,6 +59,16 @@ public class PlatformSpawner : MonoBehaviour
             }
             yield return new WaitForSeconds(spawnDelay);
         }
+    }
+
+    IEnumerator SpeedUpSpawning()
+    {
+        yield return new WaitForSeconds(30);
+        spawnDelay = spawnDelay * 0.75f;
+        yield return new WaitForSeconds(30);
+        spawnDelay = spawnDelay * 0.75f;
+        yield return new WaitForSeconds(30);
+        spawnDelay = spawnDelay * 0.75f;
     }
 
     int ChoosePowerUp()

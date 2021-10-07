@@ -31,9 +31,10 @@ public class DistanceManager : MonoBehaviour
     {
         if(PlayerPrefs.GetFloat("HighDistance") < distance)
             PlayerPrefs.SetFloat("HighDistance", distance);
+        UpdateChallenges();
     }
     
-    public void UpdatePauseChallenges()
+    public void UpdateChallenges()
     {
         if (distance > PlayerPrefs.GetFloat("DistanceToBeat"))
         {

@@ -47,23 +47,23 @@ MonoBehaviour:
   - tag: Dumpster
     prefab: {fileID: 3382434825410551239, guid: 3102a5b555a26514c824c08194074617,
       type: 3}
-    size: 20
+    size: 40
   - tag: Cop
     prefab: {fileID: 6204215731301075761, guid: dfbdba1dfcd53b04fbfc9f75e69473c3,
       type: 3}
-    size: 20
+    size: 40
   - tag: Bus
     prefab: {fileID: 5060205511492017760, guid: 1161c4f1273519846956807002d11213,
       type: 3}
-    size: 20
+    size: 40
   - tag: Car
     prefab: {fileID: 4760527874321801363, guid: 8ae4dc70daa96ff49b3357fe2fb77cd7,
       type: 3}
-    size: 20
+    size: 40
   - tag: Sign
     prefab: {fileID: 4802863792228064726, guid: 3d120a22c1946d9418fb74ccfc5391af,
       type: 3}
-    size: 20
+    size: 40
   - tag: Coin
     prefab: {fileID: 7847902284739186199, guid: 7dda864db9750e3439310ce4e1ed1f29,
       type: 3}

@@ -6,6 +6,7 @@ using UnityEngine;
 public class PauseManager : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel;
+    [SerializeField] Transform originalPanelPosition;
     [SerializeField] private GameObject pauseButton;
     [SerializeField] private GameObject resumeButton;
 
@@ -17,11 +18,13 @@ public class PauseManager : MonoBehaviour
     private void Start()
     {
         EventManager.Trigger("SetPauseChallengeUI", PlayerPrefs.GetFloat("ScoreToBeat"), PlayerPrefs.GetFloat("DistanceToBeat"));
+        originalPanelPosition.position = pausePanel.transform.position;
+        pausePanel.transform.position = new Vector2(-999f, -999f);
     }
 
     public void PauseGame()
     {
-        pausePanel.SetActive(true);
+        pausePanel.transform.position = originalPanelPosition.position;
         pauseButton.SetActive(false);
         resumeButton.SetActive(true);
         EventManager.Trigger("SetPauseChallengeUI", PlayerPrefs.GetFloat("ScoreToBeat"), PlayerPrefs.GetFloat("DistanceToBeat"));
@@ -30,7 +33,7 @@ public class PauseManager : MonoBehaviour
 
     public void ResumeGame()
     {
-        pausePanel.SetActive(false);
+        pausePanel.transform.position = new Vector2(-999f, -999f);
         pauseButton.SetActive(true);
         resumeButton.SetActive(false);
         EventManager.Trigger("ResumeGame");
@@ -38,7 +41,7 @@ public class PauseManager : MonoBehaviour
 
     public void DisablePause(object[] parameters)
     {
-        pauseButton.SetActive(false);
+        pausePanel.transform.position = originalPanelPosition.position;
         resumeButton.SetActive(false);
         pausePanel.SetActive(true);
     }

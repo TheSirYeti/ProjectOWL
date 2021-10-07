@@ -23,10 +23,11 @@ public class ScoreManager : MonoBehaviour
     {
         if(PlayerPrefs.GetFloat("HighScore") < score)
             PlayerPrefs.SetFloat("HighScore", score);
+        UpdateChallenges();
     }
     
     
-    public void UpdatePauseChallenges()
+    public void UpdateChallenges()
     {
         if (score > PlayerPrefs.GetFloat("ScoreToBeat"))
         {
