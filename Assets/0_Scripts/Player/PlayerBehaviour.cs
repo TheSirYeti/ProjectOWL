@@ -25,6 +25,7 @@ public class PlayerBehaviour : MonoBehaviour
         if (!shield || (float) parameters[0] > 0)
         {
             hp += (float)parameters[0];
+
             if (hp <= 0)
             {
                 hp = 0;
@@ -35,6 +36,11 @@ public class PlayerBehaviour : MonoBehaviour
                 hp = 5;
             }
             EventManager.Trigger("UpdateUIhp", hp);
+            
+            if ((float)parameters[0] < 0)
+            {
+                SoundManager.instance.PlaySound(SoundID.HURT);
+            }
         }
     }
 

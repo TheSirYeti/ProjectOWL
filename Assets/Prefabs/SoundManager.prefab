@@ -59,4 +59,4 @@ MonoBehaviour:
   sfxChannel: []
   musicChannel: []
   volumeSFX: 1
-  volumeMusic: 0.5
+  volumeMusic: 0.3

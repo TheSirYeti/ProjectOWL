@@ -26,7 +26,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        //artificialUpdate();
+        //Inputs para probar el movimiento con teclado
+        
         if (Input.GetKeyDown(KeyCode.D))
         {
             movement.ChangeLane(1);
