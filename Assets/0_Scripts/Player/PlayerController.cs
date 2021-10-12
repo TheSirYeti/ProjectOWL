@@ -3,25 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, ISubscriber
 {
     private Action artificialUpdate;
-    [SerializeField] float minimumSwipeTriggerValue;
-    [SerializeField] private PlayerMovement movement;
-
-    private Vector2 playerStartAction;
-    private Vector2 playerEndAction;
-    private bool isGamePaused = false;
-    private bool hasTakenAction = false;
+    [SerializeField] private MovementCalculator _movementCalculator;
+    [SerializeField] private PlayerMovement _playerMovement;
 
     private void Start()
     {
+        _movementCalculator.Subscribe(this);
+        
         EventManager.Subscribe("PauseGame", PauseInputs);
         EventManager.Subscribe("ResumeGame", UnpauseInputs);
-
-        SwipeManager.instance.OnEndTouch += CheckInputs;
-        SwipeManager.instance.OnUpdateTouch += UpdatePlayerAction;
-        SwipeManager.instance.OnStartTouch += StartPlayerAction;
     }
 
     private void Update()
@@ -30,78 +23,63 @@ public class PlayerController : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.D))
         {
-            movement.ChangeLane(1);
+            _playerMovement.ChangeLane(1);
         }
         
         if (Input.GetKeyDown(KeyCode.A))
         {
-            movement.ChangeLane(-1);
+            _playerMovement.ChangeLane(-1);
         }
 
         if (Input.GetKeyDown(KeyCode.W))
         {
-            movement.VerticalAction(1);
+            _playerMovement.VerticalAction(1);
         }
         
         if (Input.GetKeyDown(KeyCode.S))
         {
-            movement.VerticalAction(-1);
+            _playerMovement.VerticalAction(-1);
         }
-    }
-
-    void StartPlayerAction(Vector2 position)
-    {
-        playerStartAction = position;
-    }
-
-    private void UpdatePlayerAction(Vector2 position)
-    {
-        if (!isGamePaused)
-        {
-            playerEndAction = position;
-            if (Vector3.Distance(playerStartAction, playerEndAction) >= minimumSwipeTriggerValue && !hasTakenAction)
-            {
-                if (Mathf.Abs(playerEndAction.y - playerStartAction.y) >= minimumSwipeTriggerValue)
-                {
-                    float differenceY = playerEndAction.y - playerStartAction.y;
-                    if (Mathf.Abs(differenceY) >= minimumSwipeTriggerValue)
-                        movement.VerticalAction(1 * (int) Mathf.Sign(differenceY));
-                }
-                else
-                {
-                    float differenceX = playerEndAction.x - playerStartAction.x;
-                    if (Mathf.Abs(differenceX) >= minimumSwipeTriggerValue)
-                        movement.ChangeLane(1 * (int) Mathf.Sign(differenceX));
-                }
-                hasTakenAction = true;
-            }
-        }
-    }
-    
-    void CheckInputs(Vector2 position)
-    {
-        hasTakenAction = false;
     }
 
     public void UnpauseInputs(object[] parameters)
     {
-        isGamePaused = false;
+        _movementCalculator.isGamePaused = false;
         Time.timeScale = 1f;
     }
     
     public void PauseInputs(object[] parameters)
     {
-        isGamePaused = true;
+        _movementCalculator.isGamePaused = true;
         Time.timeScale = 0f;
     }
     
-    
+    //via AnimationEvent
     void EndGame()
     {
         EventManager.Trigger("EndGame");
-        isGamePaused = true;
+        _movementCalculator.isGamePaused = true;
         Time.timeScale = 0f;
     }
-    
-    
+
+
+    public void OnNotify(string eventID)
+    {
+        if (eventID == "MoveRight")
+        {
+            _playerMovement.ChangeLane(1);
+        }
+        else if (eventID == "MoveLeft")
+        {
+            _playerMovement.ChangeLane(-1);
+        }
+        else if (eventID == "Jump")
+        {
+            _playerMovement.VerticalAction(1);
+        }
+        else if (eventID == "Slide")
+        {
+            _playerMovement.VerticalAction(-1);
+        }
+    }
 }

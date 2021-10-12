@@ -3,10 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DistanceManager : MonoBehaviour
+public class DistanceManager : MonoBehaviour, IUpdater
 {
     private int distance;
-    private bool enableCount = true;
 
     private void Start()
     {
@@ -18,12 +17,9 @@ public class DistanceManager : MonoBehaviour
     {
         while (true)
         {
-            if (enableCount)
-            {
-                distance += 1;
-                EventManager.Trigger("UpdateUIDistance", distance);
-                yield return new WaitForSeconds(0.1f);
-            }
+            distance += 1;
+            EventManager.Trigger("UpdateUIDistance", distance);
+            yield return new WaitForSeconds(0.1f);
         }
     }
     

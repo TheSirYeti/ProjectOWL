@@ -10,6 +10,11 @@ public class ChallengesScript : MonoBehaviour
 
     private void Start()
     {
+        CreateChallenges();
+    }
+
+    void CreateChallenges()
+    {
         if (PlayerPrefs.HasKey("HighScore"))
         {
             scoreToBeat = (Mathf.Round(PlayerPrefs.GetFloat("HighScore") / 1000) * 1000) + 1000;

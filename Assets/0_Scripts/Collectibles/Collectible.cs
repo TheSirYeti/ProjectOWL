@@ -5,8 +5,8 @@ using System.Runtime.InteropServices.ComTypes;
 using UnityEngine;
 
 public abstract class Collectible : MonoBehaviour, IMovable, ICollectible
-{
-    public float speed;
+{ 
+    [SerializeField] float  speed;
     private ICollectible collectible;
 
     private void Start()
@@ -28,7 +28,6 @@ public abstract class Collectible : MonoBehaviour, IMovable, ICollectible
         collectible.OnCollect();
     }
     
-        
     private void FixedUpdate()
     {
         StartMoving();
