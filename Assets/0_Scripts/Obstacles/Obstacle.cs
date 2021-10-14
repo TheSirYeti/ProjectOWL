@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstacle : MovingObjects
+public class Obstacle : MovingObjects //, MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
@@ -13,4 +13,17 @@ public class Obstacle : MovingObjects
             gameObject.SetActive(false);
         }
     }
+
+    public static Obstacle TurnOff(Obstacle obstacle)
+    {
+        obstacle.gameObject.SetActive(false);
+        return obstacle;
+    }
+
+    public static Obstacle TurnOn(Obstacle obstacle)
+    {
+        obstacle.gameObject.SetActive(true);
+        return obstacle;
+    }
+
 }
