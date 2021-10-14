@@ -13,9 +13,9 @@ public class HUDStats : MonoBehaviour
 
     private void Awake()
     {
-        EventManager.Subscribe("UpdateUIDistance", UpdateDistanceText);
-        EventManager.Subscribe("UpdateUIScore", UpdateScoreText);
-        EventManager.Subscribe("UpdateUIhp", UpdateHpText);
+        EventManager.Subscribe("OnDistanceChange", UpdateDistanceText);
+        EventManager.Subscribe("OnScoreChange", UpdateScoreText);
+        EventManager.Subscribe("OnHPChange", UpdateHpText);
     }
 
     void UpdateScoreText(object[] parameters)

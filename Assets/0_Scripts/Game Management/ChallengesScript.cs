@@ -34,6 +34,6 @@ public class ChallengesScript : MonoBehaviour
             distanceToBeat = 200f;
         }
         PlayerPrefs.SetFloat("DistanceToBeat", distanceToBeat);
-        EventManager.Trigger("SetChallengeUI", scoreToBeat, distanceToBeat);
+        EventManager.Trigger("OnChallengeGenerated", scoreToBeat, distanceToBeat);
     }
 }

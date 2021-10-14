@@ -13,8 +13,9 @@ public class PlayerController : MonoBehaviour, ISubscriber
     {
         _movementCalculator.Subscribe(this);
         
-        EventManager.Subscribe("PauseGame", PauseInputs);
-        EventManager.Subscribe("ResumeGame", UnpauseInputs);
+        EventManager.Subscribe("OnPauseGame", PauseInputs);
+        EventManager.Subscribe("OnResumeGame", UnpauseInputs);
+        EventManager.Subscribe("OnEndGame", EndGame);
     }
 
     private void Update()
@@ -55,11 +56,10 @@ public class PlayerController : MonoBehaviour, ISubscriber
     }
     
     //via AnimationEvent
-    void EndGame()
+    void EndGame(object[] parameters)
     {
-        EventManager.Trigger("EndGame");
-        _movementCalculator.isGamePaused = true;
-        Time.timeScale = 0f;
+        PauseInputs(null);
+        _playerMovement.enabled = false;
     }
 
 

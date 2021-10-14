@@ -8,45 +8,33 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] private float hp;
     [SerializeField] private bool shield;
 
-    private void Awake()
+    public void SetLives(float value)
     {
-        EventManager.Subscribe("SetHP", SetLives);
-        EventManager.Subscribe("EnableShield", SetShield);
-        EventManager.Subscribe("DisableShield", SetShield);
-    }
-
-    private void Start()
-    {
-        EventManager.Trigger("UpdateUIhp", hp);
-    }
-
-    public void SetLives(object[] parameters)
-    {
-        if (!shield || (float) parameters[0] > 0)
+        if ((!shield || value > 0) && hp > 0)
         {
-            hp += (float)parameters[0];
+            hp += value;
 
             if (hp <= 0)
             {
                 hp = 0;
-                EventManager.Trigger("PlayerDeath");
+                EventManager.Trigger("OnPlayerDeath");
             }
             else if (hp >= 5)
             {
                 hp = 5;
             }
-            EventManager.Trigger("UpdateUIhp", hp);
-            
-            if ((float)parameters[0] < 0)
+
+            if (value < 0)
             {
                 SoundManager.instance.PlaySound(SoundID.HURT);
             }
+            EventManager.Trigger("OnHPChange", hp);
         }
     }
 
-    void SetShield(object[] parameters)
+    public void SetShield(bool state)
     {
-        shield = (bool)parameters[0];
+        shield = state;
     }
 
 }

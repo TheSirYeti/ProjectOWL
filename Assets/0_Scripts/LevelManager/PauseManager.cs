@@ -12,7 +12,7 @@ public class PauseManager : MonoBehaviour
 
     private void Awake()
     {
-        EventManager.Subscribe("EndGame", DisablePause);
+        EventManager.Subscribe("OnEndGame", DisablePause);
     }
 
     private void Start()
@@ -22,6 +22,7 @@ public class PauseManager : MonoBehaviour
         pausePanel.transform.position = new Vector2(-999f, -999f);
     }
 
+    //Via button
     public void PauseGame()
     {
         pausePanel.transform.position = originalPanelPosition.position;
@@ -29,16 +30,17 @@ public class PauseManager : MonoBehaviour
         resumeButton.SetActive(true);
         EventManager.Trigger("SetPauseChallengeUI", PlayerPrefs.GetFloat("ScoreToBeat"), PlayerPrefs.GetFloat("DistanceToBeat"));
         SoundManager.instance.StopAllSounds();
-        EventManager.Trigger("PauseGame");
+        EventManager.Trigger("OnPauseGame");
     }
 
+    //Via button
     public void ResumeGame()
     {
         pausePanel.transform.position = new Vector2(-999f, -999f);
         pauseButton.SetActive(true);
         resumeButton.SetActive(false);
         SoundManager.instance.ResumeAllSounds();
-        EventManager.Trigger("ResumeGame");
+        EventManager.Trigger("OnResumeGame");
     }
 
     public void DisablePause(object[] parameters)
