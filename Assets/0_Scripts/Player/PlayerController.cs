@@ -82,4 +82,5 @@ public class PlayerController : MonoBehaviour, ISubscriber
             _playerMovement.VerticalAction(-1);
         }
     }
+    
 }

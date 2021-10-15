@@ -11,10 +11,12 @@ public class PlayerAnimations : MonoBehaviour, ISubscriber
     
     public PlayerObserver _playerObserver;
 
-    private void Awake()
+    private void Start()
     {
         _playerObserver.Subscribe(this);
         _groundStatus.Subscribe(this);
+        
+        EventManager.Subscribe("OnPlayerDeath", KillAnimations);
     }
 
     public void PlayAnimation(string animationID)
@@ -40,5 +42,11 @@ public class PlayerAnimations : MonoBehaviour, ISubscriber
                     PlayAnimation(eventID);
             }
         }
+    }
+    
+    public void KillAnimations(object[] parameters)
+    {
+        PlayAnimation((string)parameters[0]);
+        _playerObserver.Unsubscribe(this);
     }
 }

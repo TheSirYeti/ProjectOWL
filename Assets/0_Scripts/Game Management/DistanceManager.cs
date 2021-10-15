@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DistanceManager : MonoBehaviour, IUpdater
+public class DistanceManager : MonoBehaviour
 {
     private int distance;
 
@@ -27,14 +27,5 @@ public class DistanceManager : MonoBehaviour, IUpdater
     {
         if(PlayerPrefs.GetFloat("HighDistance") < distance)
             PlayerPrefs.SetFloat("HighDistance", distance);
-        UpdateChallenges();
-    }
-    
-    public void UpdateChallenges()
-    {
-        if (distance > PlayerPrefs.GetFloat("DistanceToBeat"))
-        {
-            EventManager.Trigger("SetDistancePauseCheck");
-        }
     }
 }

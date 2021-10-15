@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScoreManager : MonoBehaviour, IUpdater
+public class ScoreManager : MonoBehaviour
 {
     [SerializeField] private int score;
 
@@ -27,15 +27,5 @@ public class ScoreManager : MonoBehaviour, IUpdater
     {
         if(PlayerPrefs.GetFloat("HighScore") < score)
             PlayerPrefs.SetFloat("HighScore", score);
-        UpdateChallenges();
-    }
-    
-    
-    public void UpdateChallenges()
-    {
-        if (score > PlayerPrefs.GetFloat("ScoreToBeat"))
-        {
-            EventManager.Trigger("SetScorePauseCheck");
-        }
     }
 }
