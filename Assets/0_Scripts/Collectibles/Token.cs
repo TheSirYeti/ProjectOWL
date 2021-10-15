@@ -9,7 +9,7 @@ public class Token : Collectible
 
     public override void OnCollect()
     {
-        EventManager.Trigger("OnCoinCollected", null, _value);
+        EventManager.Trigger("OnCoinCollected", _value, _value);
         SoundManager.instance.PlaySound(SoundID.COIN);
     }
 }

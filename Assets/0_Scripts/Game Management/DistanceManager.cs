@@ -18,7 +18,7 @@ public class DistanceManager : MonoBehaviour, IUpdater
         while (true)
         {
             distance += 1;
-            EventManager.Trigger("UpdateUIDistance", distance);
+            EventManager.Trigger("OnDistanceChange", distance);
             yield return new WaitForSeconds(0.1f);
         }
     }

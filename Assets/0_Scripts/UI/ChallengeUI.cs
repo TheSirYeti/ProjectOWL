@@ -17,9 +17,9 @@ public class ChallengeUI : MonoBehaviour
 
     private void Awake()
     {
-        EventManager.Subscribe("SetPauseChallengeUI", SetPauseChallengeText);
-        EventManager.Subscribe("SetScorePauseCheck", EnableScorePauseCheck);
-        EventManager.Subscribe("SetDistancePauseCheck", EnableDistancePauseCheck);
+        EventManager.Subscribe("OnChallengeGenerated", SetPauseChallengeText);
+        EventManager.Subscribe("OnScoreChange", EnableScorePauseCheck);
+        EventManager.Subscribe("OnDistanceChange", EnableDistancePauseCheck);
     }
 
     public void SetPauseChallengeText(object[] parameters)
@@ -37,13 +37,19 @@ public class ChallengeUI : MonoBehaviour
 
     void EnableScorePauseCheck(object[] parameters)
     {
-        scorePauseCross.enabled = false;
-        scorePauseCheck.enabled = true;
+        if (PlayerPrefs.GetFloat("ScoreToBeat") <= (int)parameters[0])
+        {
+            scorePauseCross.enabled = false;
+            scorePauseCheck.enabled = true;
+        }
     }
 
     void EnableDistancePauseCheck(object[] parameters)
     {
-        distancePauseCross.enabled = false;
-        distancePauseCheck.enabled = true;
+        if (PlayerPrefs.GetFloat("DistanceToBeat") <= (int)parameters[0])
+        {
+            distancePauseCross.enabled = false;
+            distancePauseCheck.enabled = true;
+        }
     }
 }

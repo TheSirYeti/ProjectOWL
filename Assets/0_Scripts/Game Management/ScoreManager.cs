@@ -20,7 +20,7 @@ public class ScoreManager : MonoBehaviour, IUpdater
     {
         Debug.Log((int)parameters[1]);
         score += (int)parameters[1];
-        EventManager.Trigger("UpdateUIScore", score);
+        EventManager.Trigger("OnScoreChange", score);
     }
 
     void SaveScore(object[] parameters)
