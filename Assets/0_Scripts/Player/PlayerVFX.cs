@@ -13,8 +13,8 @@ public class PlayerVFX : MonoBehaviour, ISubscriber
     {
         _playerObserver.Subscribe(this);
         
-        EventManager.Subscribe("EnableShield", SetShieldVFX);
-        EventManager.Subscribe("DisableShield", SetShieldVFX);
+        EventManager.Subscribe("OnShieldEnabled", SetShieldVFX);
+        EventManager.Subscribe("OnShieldEnd", SetShieldVFX);
     }
 
     public void OnNotify(string eventID)
@@ -29,12 +29,12 @@ public class PlayerVFX : MonoBehaviour, ISubscriber
             vfx[(int) ParticleID.AIR].SetActive(true);
         }
         
-        if (eventID == "HighJump")
+        if (eventID == "HighJumpVFX")
         {
             vfx[(int) ParticleID.HIGHJUMP].SetActive(true);
         }
 
-        if (eventID == "Die")
+        if (eventID == "DisableVFX")
         {
             foreach (GameObject g in vfx)
             {

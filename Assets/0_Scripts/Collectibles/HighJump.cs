@@ -9,8 +9,7 @@ public class HighJump : Collectible
     public float duration;
     public override void OnCollect()
     {
-        EventManager.Trigger("UpdateScore", _value);
         SoundManager.instance.PlaySound(SoundID.HIGH_JUMP);
-        EventManager.Trigger("EnableHighJump", jumpValue, duration);
+        EventManager.Trigger("OnHighJumpCollected", jumpValue, _value, duration);
     }
 }

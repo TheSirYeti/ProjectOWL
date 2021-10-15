@@ -18,8 +18,8 @@ public abstract class PowerUpTimer : MonoBehaviour
     {
         timerUI.enabled = true;
         timerUI.fillAmount = 1;
-        timer = (float) parameters[1];
-        totalTimerValue = (float)parameters[1];
+        timer = (float) parameters[2];
+        totalTimerValue = (float)parameters[2];
         isActive = true;
     }
 

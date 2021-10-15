@@ -5,7 +5,7 @@ using UnityEngine;
 public class Observer : IPublisher
 {
     [SerializeField] private List<ISubscriber> _subscribers = new List<ISubscriber>();
-
+    
     public void Subscribe(ISubscriber subscriber)
     {
         _subscribers.Add(subscriber);

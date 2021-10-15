@@ -8,11 +8,18 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] private float hp;
     [SerializeField] private bool shield;
 
-    public void SetLives(float value)
+    private void Start()
     {
-        if ((!shield || value > 0) && hp > 0)
+        EventManager.Subscribe("OnShieldEnabled", SetShield);
+        EventManager.Subscribe("OnShieldEnd", SetShield);
+        EventManager.Subscribe("OnExtraLifeCollected", SetLives);
+    }
+
+    public void SetLives(object[] parameters)
+    {
+        if ((!shield || (float)parameters[0] > 0) && hp > 0)
         {
-            hp += value;
+            hp += (float)parameters[0];
 
             if (hp <= 0)
             {
@@ -24,7 +31,7 @@ public class PlayerBehaviour : MonoBehaviour
                 hp = 5;
             }
 
-            if (value < 0)
+            if ((float)parameters[0] < 0)
             {
                 SoundManager.instance.PlaySound(SoundID.HURT);
             }
@@ -32,9 +39,9 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
-    public void SetShield(bool state)
+    public void SetShield(object[] parameters)
     {
-        shield = state;
+        shield = (bool)parameters[0];
     }
 
 }

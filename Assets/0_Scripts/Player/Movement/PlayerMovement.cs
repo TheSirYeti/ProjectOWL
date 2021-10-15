@@ -22,8 +22,8 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
         _groundStatus.Subscribe(this);
         _playerObserver.Subscribe(this);
 
-        EventManager.Subscribe("EnableHighJump", ChangeJumpValue);
-        EventManager.Subscribe("ResetHighJump", ResetJumpValue);
+        EventManager.Subscribe("OnHighJumpEnabled", ChangeJumpValue);
+        EventManager.Subscribe("OnHighJumpEnded", ResetJumpValue);
         EventManager.Subscribe("PlayerDeath", OnPlayerDeath);
     }
 
@@ -74,7 +74,7 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
     void ChangeJumpValue(object[] parameters)
     {
         jumpForce = (float)parameters[0];
-        _playerObserver.NotifySubscribers("HighJump");
+        _playerObserver.NotifySubscribers("HighJumpVFX");
     }
 
     void ResetJumpValue(object[] parameters)

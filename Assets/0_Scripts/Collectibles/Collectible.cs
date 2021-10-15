@@ -4,17 +4,14 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices.ComTypes;
 using UnityEngine;
 
-public abstract class Collectible : MonoBehaviour, IMovable, ICollectible, ISubscriber
+public abstract class Collectible : MonoBehaviour, IMovable, ICollectible
 { 
-    [SerializeField] private float  speed;
-    [SerializeField] private Observer collectibleObserver;
-    private ICollectible collectible;
+    [SerializeField] private float speed;
+    private ICollectible _collectible;
 
     private void Start()
     {
-        collectibleObserver.Subscribe(this);
-        collectible = this;
-        
+        _collectible = this;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -22,24 +19,19 @@ public abstract class Collectible : MonoBehaviour, IMovable, ICollectible, ISubs
         if (other.gameObject.CompareTag("Player"))
         {
             gameObject.SetActive(false);
-            collectibleObserver.NotifySubscribers(null);
+            _collectible.OnCollect();
         }
     }
 
     private void FixedUpdate()
     {
-        StartMoving();
+        GenerateMovement();
     }
 
-    public void StartMoving()
+    public void GenerateMovement()
     {
         transform.position -= transform.forward * Time.deltaTime * speed;
     }
-    
-    public void OnNotify(string eventID)
-    {
-        collectible.OnCollect();
-    }
-    
+
     public abstract void OnCollect();
 }

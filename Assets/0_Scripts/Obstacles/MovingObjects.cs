@@ -14,10 +14,10 @@ public abstract class MovingObjects : MonoBehaviour, IPooledObject, IMovable
     
     public void OnObjectSpawn()
     {
-        StartMoving();
+        GenerateMovement();
     }
 
-    public void StartMoving()
+    public void GenerateMovement()
     {
         StartCoroutine(StartMovement());
     }

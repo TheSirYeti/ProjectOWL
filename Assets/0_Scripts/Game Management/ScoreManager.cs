@@ -9,13 +9,17 @@ public class ScoreManager : MonoBehaviour, IUpdater
 
     private void Awake()
     {
-        EventManager.Subscribe("UpdateScore", AddScore);
+        EventManager.Subscribe("OnExtraLifeCollected", AddScore);
+        EventManager.Subscribe("OnCoinCollected", AddScore);
+        EventManager.Subscribe("OnHighJumpCollected", AddScore);
+        EventManager.Subscribe("OnShieldCollected", AddScore);
         EventManager.Subscribe("EndGame", SaveScore);
     }
 
     void AddScore(object[] parameters)
     {
-        score += (int)parameters[0];
+        Debug.Log((int)parameters[1]);
+        score += (int)parameters[1];
         EventManager.Trigger("UpdateUIScore", score);
     }
 

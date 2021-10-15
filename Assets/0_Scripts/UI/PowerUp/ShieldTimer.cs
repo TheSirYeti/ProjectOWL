@@ -6,12 +6,12 @@ public class ShieldTimer : PowerUpTimer
 {
     private void Start()
     {
-        EventManager.Subscribe("EnableShield", StartTimer);
-        EventManager.Subscribe("DisableShield", ResetTimer);
+        EventManager.Subscribe("OnShieldEnabled", StartTimer);
     }
 
     public override void OnTimerOver()
     {
-        EventManager.Trigger("DisableShield", false);
+        ResetTimer(null);
+        EventManager.Trigger("OnShieldEnd", false);
     }
 }
