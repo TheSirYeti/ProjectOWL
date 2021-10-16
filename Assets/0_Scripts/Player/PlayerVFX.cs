@@ -13,8 +13,8 @@ public class PlayerVFX : MonoBehaviour, ISubscriber
     {
         _playerObserver.Subscribe(this);
         
-        EventManager.Subscribe("OnShieldEnabled", SetShieldVFX);
-        EventManager.Subscribe("OnShieldEnd", SetShieldVFX);
+        EventManager.Subscribe("OnShieldCollected", SetShieldVFX);
+        EventManager.Subscribe("OnShieldOver", SetShieldVFX);
     }
 
     public void OnNotify(string eventID)

@@ -22,9 +22,9 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
         _groundStatus.Subscribe(this);
         _playerObserver.Subscribe(this);
 
-        EventManager.Subscribe("OnHighJumpEnabled", ChangeJumpValue);
-        EventManager.Subscribe("OnHighJumpEnded", ResetJumpValue);
-        EventManager.Subscribe("PlayerDeath", OnPlayerDeath);
+        EventManager.Subscribe("OnHighJumpCollected", ChangeJumpValue);
+        EventManager.Subscribe("OnHighJumpOver", ResetJumpValue);
+        EventManager.Subscribe("OnPlayerDeath", KillPlayer);
     }
 
     private void Start()
@@ -83,7 +83,7 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
         _playerObserver.NotifySubscribers("ResetVFX");
     }
 
-    void OnPlayerDeath(object[] parameters)
+    void KillPlayer(object[] parameters)
     {
         _playerObserver.NotifySubscribers("Die");
     }

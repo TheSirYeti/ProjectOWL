@@ -8,8 +8,7 @@ public class Shield : Collectible
     public float duration;
     public override void OnCollect()
     {
-        EventManager.Trigger("UpdateScore", _value);
         SoundManager.instance.PlaySound(SoundID.SHIELD);
-        EventManager.Trigger("EnableShield", true, duration);
+        EventManager.Trigger("OnShieldCollected", true, _value, duration);
     }
 }

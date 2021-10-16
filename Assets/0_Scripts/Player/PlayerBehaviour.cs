@@ -11,8 +11,8 @@ public class PlayerBehaviour : MonoBehaviour
     private void Start()
     {
         EventManager.Subscribe("OnObstacleCollision", SetLives);
-        EventManager.Subscribe("OnShieldEnabled", SetShield);
-        EventManager.Subscribe("OnShieldEnd", SetShield);
+        EventManager.Subscribe("OnShieldCollected", SetShield);
+        EventManager.Subscribe("OnShieldOver", SetShield);
         EventManager.Subscribe("OnExtraLifeCollected", SetLives);
     }
 

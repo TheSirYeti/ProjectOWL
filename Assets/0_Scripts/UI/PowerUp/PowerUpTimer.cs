@@ -33,7 +33,7 @@ public abstract class PowerUpTimer : MonoBehaviour
         }
     }
 
-    public void ResetTimer(object[] parameters)
+    public void ResetTimer()
     {
         timerUI.fillAmount = 1;
         isActive = false;

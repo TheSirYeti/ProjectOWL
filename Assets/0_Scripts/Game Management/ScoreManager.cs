@@ -13,7 +13,7 @@ public class ScoreManager : MonoBehaviour
         EventManager.Subscribe("OnCoinCollected", AddScore);
         EventManager.Subscribe("OnHighJumpCollected", AddScore);
         EventManager.Subscribe("OnShieldCollected", AddScore);
-        EventManager.Subscribe("EndGame", SaveScore);
+        EventManager.Subscribe("OnEndGame", SaveScore);
     }
 
     void AddScore(object[] parameters)
