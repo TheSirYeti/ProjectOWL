@@ -47,6 +47,5 @@ public class PlayerAnimations : MonoBehaviour, ISubscriber
     public void KillAnimations(object[] parameters)
     {
         PlayAnimation((string)parameters[0]);
-        _playerObserver.Unsubscribe(this);
     }
 }

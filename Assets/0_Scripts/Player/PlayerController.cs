@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour, ISubscriber
         
         EventManager.Subscribe("OnPauseGame", PauseInputs);
         EventManager.Subscribe("OnResumeGame", UnpauseInputs);
-        EventManager.Subscribe("OnEndGame", EndGame);
     }
 
     private void Update()
@@ -56,10 +55,11 @@ public class PlayerController : MonoBehaviour, ISubscriber
     }
     
     //via AnimationEvent
-    void EndGame(object[] parameters)
+    void EndGame()
     {
         PauseInputs(null);
         _playerMovement.enabled = false;
+        EventManager.Trigger("OnEndGame");
     }
 
 

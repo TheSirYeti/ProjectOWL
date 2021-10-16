@@ -25,7 +25,7 @@ public class PlayerBehaviour : MonoBehaviour
             if (hp <= 0)
             {
                 hp = 0;
-                EventManager.Trigger("OnPlayerDeath");
+                EventManager.Trigger("OnPlayerDeath", "Die");
             }
             else if (hp >= 5)
             {

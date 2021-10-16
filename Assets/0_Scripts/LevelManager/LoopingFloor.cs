@@ -13,7 +13,7 @@ public class LoopingFloor : MonoBehaviour
 
     private void Start()
     {
-        EventManager.Subscribe("PlayerDeath", DisableLoopingRoads);
+        EventManager.Subscribe("OnPlayerDeath", DisableLoopingRoads);
     }
 
     private void Update()
