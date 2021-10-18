@@ -23161,7 +23161,7 @@ MonoBehaviour:
   - Slide
   - Die
   _groundStatus: {fileID: 2253437344817982061}
-  _playerObserver: {fileID: 7810433921726635740}
+  playerObserver: {fileID: 7810433921726635740}
 --- !u!1 &7810433921726635744
 GameObject:
   m_ObjectHideFlags: 0

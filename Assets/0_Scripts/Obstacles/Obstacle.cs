@@ -8,9 +8,9 @@ public class Obstacle : MovingObjects //, MonoBehaviour
     {
         if(other.gameObject.tag.Equals("Player"))
         {
-            EventManager.Trigger("OnObstacleCollision", -1f);
             movingCondition = false;
             gameObject.SetActive(false);
+            EventManager.Trigger("OnObstacleCollision", -1f);
         }
     }
 
