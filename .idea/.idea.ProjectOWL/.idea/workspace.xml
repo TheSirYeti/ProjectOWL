@@ -54,7 +54,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Obstacles/Obstacle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Player/PlayerObserver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/LevelManager/PauseManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Inputs/ParticleSwipe.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1yMRySdaoi0RH5UtI4J5nRokZ91" />
   <component name="ProjectViewState">
@@ -127,7 +126,8 @@
       <workItem from="1634254063923" duration="12175000" />
       <workItem from="1634300073088" duration="5443000" />
       <workItem from="1634355445977" duration="489000" />
-      <workItem from="1634415123775" duration="1433000" />
+      <workItem from="1634415123775" duration="1929000" />
+      <workItem from="1634589820904" duration="1674000" />
     </task>
     <servers />
   </component>

@@ -17,7 +17,6 @@ public class PauseManager : MonoBehaviour
 
     private void Start()
     {
-        EventManager.Trigger("SetPauseChallengeUI", PlayerPrefs.GetFloat("ScoreToBeat"), PlayerPrefs.GetFloat("DistanceToBeat"));
         originalPanelPosition.position = pausePanel.transform.position;
         pausePanel.transform.position = new Vector2(-999f, -999f);
     }
@@ -28,7 +27,6 @@ public class PauseManager : MonoBehaviour
         pausePanel.transform.position = originalPanelPosition.position;
         pauseButton.SetActive(false);
         resumeButton.SetActive(true);
-        EventManager.Trigger("SetPauseChallengeUI", PlayerPrefs.GetFloat("ScoreToBeat"), PlayerPrefs.GetFloat("DistanceToBeat"));
         SoundManager.instance.StopAllSounds();
         EventManager.Trigger("OnPauseGame");
     }

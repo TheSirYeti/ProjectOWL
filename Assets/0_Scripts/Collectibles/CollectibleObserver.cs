@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CollectibleObserver : IPublisher
 {
-    public List<ISubscriber> subscribers = new List<ISubscriber>();
+    private List<ISubscriber> subscribers = new List<ISubscriber>();
     
     public void Subscribe(ISubscriber subscriber)
     {
