@@ -4,20 +4,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class ObstacleSpawner : MonoBehaviour
+public class ItemSpawner : MonoBehaviour
 {
-    [SerializeField]
-    private Transform[] spawnPoints;
-
+    [Header("Spawnpoints")]
+    [SerializeField] private Transform[] spawnPoints;
+    [SerializeField] private float spawnDelay;
+    
+    [Header("Obstacle Items")]
+    public List<string> obstacles;
+    
     private Pool<Obstacle> _obstaclePool;
     private IFactory<Obstacle> _obstacleFactory;
-    public List<string> obstacles;
+
+    [Header("Collectible Items")]
+    public List<string> collectibles;
     
     private Pool<Collectible> _collectiblePool;
     private IFactory<Collectible> _collectibleFactory;
-    public List<string> collectibles;
-    
-    [SerializeField] private float spawnDelay;
 
     private void Awake()
     {

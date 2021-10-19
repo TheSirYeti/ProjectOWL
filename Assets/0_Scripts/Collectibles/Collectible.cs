@@ -6,20 +6,21 @@ using UnityEngine;
 
 public abstract class Collectible : MonoBehaviour, IMovable, ICollectible
 {
+    [Header("Values")]
     public int value;
     public int speed;
-    public ICollectible collectible;
+    public ICollectible collectibleType;
 
     private void Start()
     {
-        collectible = this;
+        collectibleType = this;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            collectible.OnCollect();
+            collectibleType.OnCollect();
             TurnOff(this);
         }
     }

@@ -44,5 +44,4 @@ public class PlayerBehaviour : MonoBehaviour
     {
         shield = (bool)parameters[0];
     }
-
 }
