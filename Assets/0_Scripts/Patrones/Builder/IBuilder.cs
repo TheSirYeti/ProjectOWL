@@ -11,13 +11,12 @@ public interface IChallengeGenerator
 
 public interface ICollectibleBuilder
 {
-    void BuildCollectible();
-
-    void BuildCoin();
-    
-    void BuildExtraLife();
-
-    void BuildHighJump();
-
-    void BuildShield();
+    void BuildSpeed(float speed);
+    void BuildValue(float value);
+    void BuildDuration(float duration);
+    void BuildJumpValue(float jumpValue);
+    Token BuildCoin();
+    ExtraLife BuildExtraLife();
+    HighJump BuildHighJump();
+    Shield BuildShield();
 }

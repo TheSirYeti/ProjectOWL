@@ -31,6 +31,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Game Management/IUpdater.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Collectibles/CollectibleObserver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/LevelManager/LoopingFloor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Patrones/Builder/CollectibleBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Player/GroundCheck/GroundStatus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/UI/ChallengeUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Sounds/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -129,6 +130,7 @@
       <workItem from="1634589820904" duration="3347000" />
       <workItem from="1634596585110" duration="6411000" />
       <workItem from="1634606433364" duration="831000" />
+      <workItem from="1634662375185" duration="7796000" />
     </task>
     <servers />
   </component>

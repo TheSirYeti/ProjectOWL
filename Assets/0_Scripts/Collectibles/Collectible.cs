@@ -5,53 +5,28 @@ using System.Runtime.InteropServices.ComTypes;
 using UnityEngine;
 
 public abstract class Collectible : MonoBehaviour, IMovable, ICollectible
-{ 
-    [SerializeField] private float _speed;
-    private ICollectible _collectible;
+{
+    public float value;
+    public float speed;
+    public ICollectible collectible;
 
-    public Collectible(){}
-    
-    public Collectible(float speed)
+    public Collectible(float value, float speed)
     {
-        _speed = speed;
+        this.value = value;
+        this.speed = speed;
     }
     
-    public Collectible(float speed, Token coin)
+    private void Start()
     {
-        _speed = speed;
-        _collectible = coin;
+        collectible = this;
     }
-    
-    public Collectible(float speed, ExtraLife extraLife)
-    {
-        _speed = speed;
-        _collectible = extraLife;
-    }
-    
-    public Collectible(float speed, HighJump highJump)
-    {
-        _speed = speed;
-        _collectible = highJump;
-    }
-
-    public Collectible(float speed, Shield shield)
-    {
-        _speed = speed;
-        _collectible = shield;
-    }
-    
-    
-    /*private void Start()
-    {
-        _collectible = this;
-    }*/
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            gameObject.SetActive(false);
-            _collectible.OnCollect();
+            collectible.OnCollect();
+            TurnOff(this);
         }
     }
 
@@ -62,8 +37,20 @@ public abstract class Collectible : MonoBehaviour, IMovable, ICollectible
 
     public void GenerateMovement()
     {
-        transform.position -= transform.forward * Time.deltaTime * _speed;
+        transform.position -= transform.forward * Time.deltaTime * speed;
     }
 
+    public static Collectible TurnOff(Collectible collectible)
+    {
+        collectible.gameObject.SetActive(false);
+        return collectible;
+    }
+
+    public static Collectible TurnOn(Collectible collectible)
+    {
+        collectible.gameObject.SetActive(true);
+        return collectible;
+    }
+    
     public abstract void OnCollect();
 }

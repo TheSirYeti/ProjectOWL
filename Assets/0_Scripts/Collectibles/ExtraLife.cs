@@ -5,16 +5,16 @@ using UnityEngine;
 
 public class ExtraLife : Collectible
 {
-    public int _value;
-
-    public ExtraLife(int value)
-    {
-        _value = value;
-    }
-
     public override void OnCollect()
     {
         SoundManager.instance.PlaySound(SoundID.EXTRA_LIFE);
-        EventManager.Trigger("OnExtraLifeCollected", 1f, _value);
+        EventManager.Trigger("OnExtraLifeCollected", 1f, value);
+    }
+
+    public ExtraLife(float value, float speed) : base(value, speed)
+    {
+        this.value = value;
+        this.speed = speed;
+        collectible = this;
     }
 }

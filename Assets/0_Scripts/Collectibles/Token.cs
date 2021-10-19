@@ -5,11 +5,16 @@ using UnityEngine;
 
 public class Token : Collectible
 {
-    public int _value;
-
     public override void OnCollect()
     {
-        EventManager.Trigger("OnCoinCollected", _value, _value);
+        EventManager.Trigger("OnCoinCollected", value, value);
         SoundManager.instance.PlaySound(SoundID.COIN);
+    }
+
+    public Token(float value, float speed) : base(value, speed)
+    {
+        this.value = value;
+        this.speed = speed;
+        collectible = this;
     }
 }
