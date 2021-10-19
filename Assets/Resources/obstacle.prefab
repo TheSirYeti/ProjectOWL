@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4867256757293625240}
   - component: {fileID: 2444843487830022766}
   m_Layer: 0
-  m_Name: bus_blue
+  m_Name: obstacle
   m_TagString: Bus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

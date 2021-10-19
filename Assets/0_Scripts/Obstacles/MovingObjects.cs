@@ -7,7 +7,7 @@ public abstract class MovingObjects : MonoBehaviour, IPooledObject, IMovable
 {
     [SerializeField] private float timeToUpdate;
     [SerializeField] private float speed;
-    [SerializeField] private float timeToDespawn;
+    [SerializeField] public float timeToDespawn;
 
 
     public bool movingCondition = true;
@@ -22,7 +22,7 @@ public abstract class MovingObjects : MonoBehaviour, IPooledObject, IMovable
         StartCoroutine(StartMovement());
     }
     
-    IEnumerator ObjectMovement()
+    public IEnumerator ObjectMovement()
     {
         while (movingCondition)
         {
@@ -31,12 +31,6 @@ public abstract class MovingObjects : MonoBehaviour, IPooledObject, IMovable
         }
     }
 
-    IEnumerator StartMovement()
-    {
-        movingCondition = true;
-        StartCoroutine(ObjectMovement());
-        yield return new WaitForSeconds(timeToDespawn);
-        movingCondition = false;
-        gameObject.SetActive(false);
-    }
+    public abstract IEnumerator StartMovement();
+    
 }
