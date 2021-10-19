@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstacle : MovingObjects //, MonoBehaviour
+public class Obstacle : MovingObjects
 {
     public void Start()
     {
