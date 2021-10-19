@@ -14,10 +14,9 @@ public class MovementCalculator : MonoBehaviour, IPublisher
     private Vector2 playerEndAction;
     private bool hasTakenAction = false;
     
-    // Start is called before the first frame update
+    
     void Start()
     {
-        
         SwipeManager.instance.OnEndTouch += CheckInputs;
         SwipeManager.instance.OnUpdateTouch += CalculatePlayerAction;
         SwipeManager.instance.OnStartTouch += StartPlayerAction;
@@ -46,7 +45,6 @@ public class MovementCalculator : MonoBehaviour, IPublisher
                         }
                         else NotifySubscribers("Slide");
                     }
-
                 }
                 else
                 {

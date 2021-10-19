@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChallengesScript : MonoBehaviour
+public class ChallengesScript : MonoBehaviour, IChallengeGenerator
 {
     [SerializeField] private float distanceToBeat;
     [SerializeField] private float scoreToBeat;
@@ -17,7 +17,7 @@ public class ChallengesScript : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("HighScore"))
         {
-            scoreToBeat = (Mathf.Round(PlayerPrefs.GetFloat("HighScore") / 1000) * 1000) + 1000;
+            BuildScoreChallenge();
         }
         else
         {
@@ -27,7 +27,7 @@ public class ChallengesScript : MonoBehaviour
 
         if (PlayerPrefs.HasKey("HighDistance"))
         {
-            distanceToBeat = (Mathf.Round(PlayerPrefs.GetFloat("HighDistance") / 100) * 100) + 100;
+            BuildDistanceChallenge();
         }
         else
         {
@@ -35,5 +35,15 @@ public class ChallengesScript : MonoBehaviour
         }
         PlayerPrefs.SetFloat("DistanceToBeat", distanceToBeat);
         EventManager.Trigger("OnChallengeGenerated", scoreToBeat, distanceToBeat);
+    }
+
+    public void BuildScoreChallenge()
+    {
+        scoreToBeat = (Mathf.Round(PlayerPrefs.GetFloat("HighScore") / 1000) * 1000) + 1000;
+    }
+
+    public void BuildDistanceChallenge()
+    {
+        distanceToBeat = (Mathf.Round(PlayerPrefs.GetFloat("HighDistance") / 100) * 100) + 100;
     }
 }

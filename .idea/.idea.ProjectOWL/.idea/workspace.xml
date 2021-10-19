@@ -43,6 +43,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/UI/PowerUp/ShieldTimer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a278ebd44ab0472bb8e638263e06cd61fe200/65/9f7e1292/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Collectibles/Collectible.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Patrones/Builder/IBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/UI/FadeManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/UI/PowerUp/HighJumpTimer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Sounds/SelectMusic.cs" root0="FORCE_HIGHLIGHTING" />
@@ -126,7 +127,7 @@
       <workItem from="1634355445977" duration="489000" />
       <workItem from="1634415123775" duration="1929000" />
       <workItem from="1634589820904" duration="3347000" />
-      <workItem from="1634596585110" duration="1783000" />
+      <workItem from="1634596585110" duration="5814000" />
     </task>
     <servers />
   </component>
