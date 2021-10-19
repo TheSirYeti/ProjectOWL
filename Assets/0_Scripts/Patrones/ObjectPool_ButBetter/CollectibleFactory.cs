@@ -13,11 +13,11 @@ public class CollectibleFactory : IFactory<Collectible>
     
     public Collectible Create()
     {
-        var prefab = Resources.Load<Collectible>(RandomCollectible());
+        var prefab = Resources.Load<Collectible>(ChooseRandomCollectible());
         return GameObject.Instantiate(prefab);
     }
 
-    public string RandomCollectible()
+    public string ChooseRandomCollectible()
     {
         int rand = UnityEngine.Random.Range(0, collectibles.Count);
         return collectibles[rand];

@@ -18,7 +18,18 @@ public class Obstacle : MovingObjects
             EventManager.Trigger("OnObstacleCollision", -1f);
         }
     }
-
+    
+    public override IEnumerator StartMovement()
+    {
+        movingCondition = true;
+        StartCoroutine(ObjectMovement());
+        yield return new WaitForSeconds(timeToDespawn);
+        movingCondition = false;
+        Obstacle.TurnOff(this);
+    }
+    
+    
+    //For ObjectPool
     public static Obstacle TurnOff(Obstacle obstacle)
     {
         obstacle.gameObject.SetActive(false);
@@ -29,13 +40,5 @@ public class Obstacle : MovingObjects
     {
         obstacle.gameObject.SetActive(true);
         return obstacle;
-    }
-    public override IEnumerator StartMovement()
-    {
-        movingCondition = true;
-        StartCoroutine(ObjectMovement());
-        yield return new WaitForSeconds(timeToDespawn);
-        movingCondition = false;
-        Obstacle.TurnOff(this);
     }
 }

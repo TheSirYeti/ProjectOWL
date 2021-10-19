@@ -25,11 +25,11 @@ public class ItemSpawner : MonoBehaviour
     private void Awake()
     {
         _obstacleFactory = new ObstaclesFactory(obstacles);
-        _obstaclePool = new Pool<Obstacle>(_obstacleFactory.Create, Obstacle.TurnOff, Obstacle.TurnOn, 20);
+        _obstaclePool = new Pool<Obstacle>(_obstacleFactory.Create, Obstacle.TurnOff, Obstacle.TurnOn, 40);
 
         _collectibleFactory = new CollectibleFactory(collectibles);
         _collectiblePool =
-            new Pool<Collectible>(_collectibleFactory.Create, Collectible.TurnOff, Collectible.TurnOn, 20);
+            new Pool<Collectible>(_collectibleFactory.Create, Collectible.TurnOff, Collectible.TurnOn, 40);
     }
     
     public void Start()
@@ -48,20 +48,21 @@ public class ItemSpawner : MonoBehaviour
                 if (i != freeSpace)
                 {
                     var obstacle = _obstaclePool.Get();
-                    Transform _sp = spawnPoints[i];
+                    Transform spawnPoint = spawnPoints[i];
                     Obstacle.TurnOn(obstacle);
-                    obstacle.transform.position = _sp.transform.position;
-                    obstacle.transform.rotation = _sp.transform.rotation;
+                    obstacle.transform.position = spawnPoint.transform.position;
+                    obstacle.transform.rotation = spawnPoint.transform.rotation;
                 }
                 else
                 {
-                    int rand = UnityEngine.Random.Range(0, 3);
+                    int rand = UnityEngine.Random.Range(0, 3); //33% de chance de que spawnee un Collectible
                     if (rand == 1)
                     {
                         var collectible = _collectiblePool.Get();
-                        Transform _sp = spawnPoints[i];
+                        Transform spawnPoint = spawnPoints[i];
                         Collectible.TurnOn(collectible);
-                        collectible.transform.position = _sp.transform.position;
+                        collectible.transform.position = spawnPoint.transform.position;
+                        collectible.transform.rotation = spawnPoint.transform.rotation;
                     }
                 }
             }

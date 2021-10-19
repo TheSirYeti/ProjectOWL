@@ -23,11 +23,11 @@ public abstract class PowerUpTimer : MonoBehaviour
         isActive = true;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (isActive)
         {
-            timer -= Time.deltaTime;
+            timer -= Time.fixedDeltaTime;
             timerUI.fillAmount = timer / totalTimerValue;
             if(timer <= 0) OnTimerOver();
         }

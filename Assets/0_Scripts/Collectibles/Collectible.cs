@@ -35,6 +35,10 @@ public abstract class Collectible : MonoBehaviour, IMovable, ICollectible
         transform.position -= transform.forward * Time.deltaTime * speed;
     }
 
+    public abstract void OnCollect();
+    
+    
+    //For ObjectPool
     public static Collectible TurnOff(Collectible collectible)
     {
         collectible.gameObject.SetActive(false);
@@ -46,6 +50,4 @@ public abstract class Collectible : MonoBehaviour, IMovable, ICollectible
         collectible.gameObject.SetActive(true);
         return collectible;
     }
-    
-    public abstract void OnCollect();
 }
