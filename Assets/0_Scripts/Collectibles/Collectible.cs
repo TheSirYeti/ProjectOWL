@@ -6,16 +6,10 @@ using UnityEngine;
 
 public abstract class Collectible : MonoBehaviour, IMovable, ICollectible
 {
-    public float value;
-    public float speed;
+    public int value;
+    public int speed;
     public ICollectible collectible;
 
-    public Collectible(float value, float speed)
-    {
-        this.value = value;
-        this.speed = speed;
-    }
-    
     private void Start()
     {
         collectible = this;

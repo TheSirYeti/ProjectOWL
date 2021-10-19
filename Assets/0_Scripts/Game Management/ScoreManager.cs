@@ -18,7 +18,6 @@ public class ScoreManager : MonoBehaviour
 
     void AddScore(object[] parameters)
     {
-        Debug.Log((int)parameters[1]);
         score += (int)parameters[1];
         EventManager.Trigger("OnScoreChange", score);
     }

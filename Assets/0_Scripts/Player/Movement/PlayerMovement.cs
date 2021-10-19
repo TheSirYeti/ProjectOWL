@@ -48,13 +48,13 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
         if (direction == 1 && isGrounded)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            _playerObserver.NotifySubscribers("Jump");
             SoundManager.instance.PlaySound(SoundID.JUMP);
+            _playerObserver.NotifySubscribers("Jump");
         }
         else if(direction == -1 && isGrounded)
         {
-            _playerObserver.NotifySubscribers("Slide");
             SoundManager.instance.PlaySound(SoundID.SLIDE);
+            _playerObserver.NotifySubscribers("Slide");
         }
     }
 

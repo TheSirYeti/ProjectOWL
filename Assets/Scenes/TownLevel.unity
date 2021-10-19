@@ -6366,7 +6366,7 @@ MonoBehaviour:
   - Heart
   - HighJumpPrefab
   - ShieldPrefab
-  spawnDelay: 0.4
+  spawnDelay: 1.2
 --- !u!1 &741466585
 GameObject:
   m_ObjectHideFlags: 0

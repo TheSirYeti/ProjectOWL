@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 
+/*
 public class CollectibleBuilder : ICollectibleBuilder
 {
     public float value;
@@ -49,4 +50,4 @@ public class CollectibleBuilder : ICollectibleBuilder
     {
         return new Shield(value, speed, duration);
     }
-}
+}*/

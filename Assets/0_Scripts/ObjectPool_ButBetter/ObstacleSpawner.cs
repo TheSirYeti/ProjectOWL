@@ -52,14 +52,13 @@ public class ObstacleSpawner : MonoBehaviour
                 }
                 else
                 {
-                    int rand = UnityEngine.Random.Range(0, 2);
+                    int rand = UnityEngine.Random.Range(0, 3);
                     if (rand == 1)
                     {
                         var collectible = _collectiblePool.Get();
                         Transform _sp = spawnPoints[i];
                         Collectible.TurnOn(collectible);
                         collectible.transform.position = _sp.transform.position;
-                        collectible.transform.rotation = _sp.transform.rotation;
                     }
                 }
             }

@@ -11,10 +11,4 @@ public class ExtraLife : Collectible
         EventManager.Trigger("OnExtraLifeCollected", 1f, value);
     }
 
-    public ExtraLife(float value, float speed) : base(value, speed)
-    {
-        this.value = value;
-        this.speed = speed;
-        collectible = this;
-    }
 }
