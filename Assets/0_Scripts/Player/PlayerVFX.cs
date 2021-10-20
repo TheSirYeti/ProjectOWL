@@ -9,7 +9,7 @@ public class PlayerVFX : MonoBehaviour, ISubscriber
 {
     [SerializeField] private List<GameObject> vfx;
     [SerializeField] private GameObject shieldFX;
-    [SerializeField] private PlayerObserver _playerObserver;
+    [SerializeField] private Observer _playerObserver;
 
     private void Start()
     {

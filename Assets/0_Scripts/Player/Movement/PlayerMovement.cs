@@ -14,9 +14,8 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
     [SerializeField] private LaneManager lanes;
     [SerializeField] private bool isGrounded;
     
+    [SerializeField] private Observer _playerObserver, _groundStatus;
     
-    [SerializeField] private PlayerObserver _playerObserver;
-    [SerializeField] private GroundStatus _groundStatus;
 
     private void Awake()
     {

@@ -7878,6 +7878,49 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 930491857}
   m_Mesh: {fileID: 4300000, guid: 7ddaa1c967b38f2409f7bcb6762c0e20, type: 3}
+--- !u!1 &948987706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 948987708}
+  - component: {fileID: 948987707}
+  m_Layer: 0
+  m_Name: PlayerObserver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &948987707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948987706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9de950e559cd564eb6c649597d5676e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &948987708
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948987706}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6503028115583511795}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &955823864
 GameObject:
   m_ObjectHideFlags: 0
@@ -22663,6 +22706,7 @@ Transform:
   - {fileID: 2253437344817982062}
   - {fileID: 584332374}
   - {fileID: 335951909}
+  - {fileID: 948987708}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23089,18 +23133,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7810433921726635740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7810433921726635744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c3ea87a7784bfe43a494b5dbf90dd5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &7810433921726635741
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23132,8 +23164,8 @@ MonoBehaviour:
   - Run
   - Slide
   - Die
+  _playerObserver: {fileID: 948987707}
   _groundStatus: {fileID: 2253437344817982061}
-  playerObserver: {fileID: 7810433921726635740}
 --- !u!1 &7810433921726635744
 GameObject:
   m_ObjectHideFlags: 0
@@ -23148,7 +23180,6 @@ GameObject:
   - component: {fileID: 7810433921726635746}
   - component: {fileID: 7810433921726635747}
   - component: {fileID: 7810433921726635743}
-  - component: {fileID: 7810433921726635740}
   - component: {fileID: 7810433921726635745}
   - component: {fileID: 7810433921726635741}
   - component: {fileID: 2253437344459917291}
@@ -23175,7 +23206,7 @@ MonoBehaviour:
   - {fileID: 897849988}
   - {fileID: 1354071289}
   shieldFX: {fileID: 1368613818}
-  _playerObserver: {fileID: 7810433921726635740}
+  _playerObserver: {fileID: 948987707}
 --- !u!114 &7810433921726635746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23207,7 +23238,7 @@ MonoBehaviour:
   rb: {fileID: 2253437344459917291}
   lanes: {fileID: 313461623}
   isGrounded: 1
-  _playerObserver: {fileID: 7810433921726635740}
+  _playerObserver: {fileID: 948987707}
   _groundStatus: {fileID: 2253437344817982061}
 --- !u!1 &7878162522669294521
 GameObject:

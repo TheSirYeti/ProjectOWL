@@ -4,18 +4,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN PABLO RSHAID
-public class DistanceManager : MonoBehaviour
+public class DistanceManager : MonoBehaviour, IValueRecorder
 {
     private int distance;
     private bool running = true;
     
     private void Start()
     {
-        StartCoroutine(AddSteps());
-        EventManager.Subscribe("OnEndGame", SaveDistance);
+        AddValue(null);
+        EventManager.Subscribe("OnEndGame", SaveValue);
         EventManager.Subscribe("OnPlayerDeath", StopCountingDistance);
     }
 
+    public void AddValue(object[] parameters)
+    {
+        StartCoroutine(AddSteps());
+    }
+    
     IEnumerator AddSteps()
     {
         while (running)
@@ -26,7 +31,7 @@ public class DistanceManager : MonoBehaviour
         }
     }
     
-    void SaveDistance(object[] parameters)
+    public void SaveValue(object[] parameters)
     {
         if(PlayerPrefs.GetFloat("HighDistance") < distance)
             PlayerPrefs.SetFloat("HighDistance", distance);

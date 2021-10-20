@@ -8,13 +8,11 @@ public class PlayerAnimations : MonoBehaviour, ISubscriber
 {
     [SerializeField] private Animator _animator;
     [SerializeField] private List<string> animatorStatesNames;
-    [SerializeField] private GroundStatus _groundStatus;
+    [SerializeField] private Observer _playerObserver, _groundStatus;
     
-    public PlayerObserver playerObserver;
-
     private void Start()
     {
-        playerObserver.Subscribe(this);
+        _playerObserver.Subscribe(this);
         _groundStatus.Subscribe(this);
         
         EventManager.Subscribe("OnPlayerDeath", KillAnimations);

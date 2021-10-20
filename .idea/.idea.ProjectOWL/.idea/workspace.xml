@@ -23,6 +23,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Lanes/LaneManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Game Management/IValueRecorder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Patrones/Observer/Observer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Player/Movement/MovementCalculator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Player/PlayerVFX.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Collectibles/HighJump.cs" root0="FORCE_HIGHLIGHTING" />
@@ -127,6 +129,7 @@
       <workItem from="1634662375185" duration="17644000" />
       <workItem from="1634687024749" duration="1020000" />
       <workItem from="1634698219727" duration="5716000" />
+      <workItem from="1634763435563" duration="2275000" />
     </task>
     <servers />
   </component>

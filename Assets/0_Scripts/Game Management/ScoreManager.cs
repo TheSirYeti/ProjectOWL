@@ -4,26 +4,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN PABLO RSHAID
-public class ScoreManager : MonoBehaviour
+public class ScoreManager : MonoBehaviour, IValueRecorder
 {
     [SerializeField] private int score;
 
     private void Awake()
     {
-        EventManager.Subscribe("OnExtraLifeCollected", AddScore);
-        EventManager.Subscribe("OnCoinCollected", AddScore);
-        EventManager.Subscribe("OnHighJumpCollected", AddScore);
-        EventManager.Subscribe("OnShieldCollected", AddScore);
-        EventManager.Subscribe("OnEndGame", SaveScore);
+        EventManager.Subscribe("OnExtraLifeCollected", AddValue);
+        EventManager.Subscribe("OnCoinCollected", AddValue);
+        EventManager.Subscribe("OnHighJumpCollected", AddValue);
+        EventManager.Subscribe("OnShieldCollected", AddValue);
+        EventManager.Subscribe("OnEndGame", SaveValue);
     }
 
-    void AddScore(object[] parameters)
+    public void AddValue(object[] parameters)
     {
         score += (int)parameters[1];
         EventManager.Trigger("OnScoreChange", score);
     }
 
-    void SaveScore(object[] parameters)
+    public void SaveValue(object[] parameters)
     {
         if(PlayerPrefs.GetFloat("HighScore") < score)
             PlayerPrefs.SetFloat("HighScore", score);
