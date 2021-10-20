@@ -14787,8 +14787,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc4da104865e147418d17b9213ca0d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceToBeat: 0
-  scoreToBeat: 0
+  distanceChallenge: 0
+  scoreChallenge: 0
 --- !u!1 &1422935840
 GameObject:
   m_ObjectHideFlags: 0
@@ -23205,7 +23205,7 @@ MonoBehaviour:
   vfx:
   - {fileID: 897849988}
   - {fileID: 1354071289}
-  shieldFX: {fileID: 1368613818}
+  - {fileID: 1368613818}
   _playerObserver: {fileID: 948987707}
 --- !u!114 &7810433921726635746
 MonoBehaviour:

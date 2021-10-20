@@ -26,6 +26,6 @@ public class FadeManager : MonoBehaviour
 
     public void FadeToLevel(int sceneID)
     {
-        EventManager.Trigger("LoadScene", sceneID);
+        EventManager.Trigger("OnFadeOutOver", sceneID);
     }
 }

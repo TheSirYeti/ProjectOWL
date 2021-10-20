@@ -9,12 +9,12 @@ using UnityEngine.UI;
 public class ChallengeUI : MonoBehaviour
 {
     [Header("Text")]
-    [SerializeField] private TextMeshProUGUI scorePauseText;
-    [SerializeField] private TextMeshProUGUI distancePauseText;
+    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI distanceText;
 
-    [Header("Image")] 
-    [SerializeField] private Image scorePauseCheck, scorePauseCross;
-    [SerializeField] private Image distancePauseCheck, distancePauseCross;
+    [Header("Images")] 
+    [SerializeField] private Image scoreCheckImage, scoreCrossImage;
+    [SerializeField] private Image distanceCheckImage, distanceCrossImage;
 
     private void Awake()
     {
@@ -25,23 +25,23 @@ public class ChallengeUI : MonoBehaviour
 
     public void SetPauseChallengeText(object[] parameters)
     {
-        scorePauseText.text = "SCORE " + parameters[0] + " POINTS: ";
+        scoreText.text = "SCORE " + parameters[0] + " POINTS: ";
 
-        distancePauseText.text = "RUN " + parameters[1] + " METERS:";
+        distanceText.text = "RUN " + parameters[1] + " METERS:";
 
-        scorePauseCheck.enabled = false;
-        distancePauseCheck.enabled = false;
+        scoreCheckImage.enabled = false;
+        distanceCheckImage.enabled = false;
 
-        scorePauseCross.enabled = true;
-        distancePauseCross.enabled = true;
+        scoreCrossImage.enabled = true;
+        distanceCrossImage.enabled = true;
     }
 
     void EnableScorePauseCheck(object[] parameters)
     {
         if (PlayerPrefs.GetFloat("ScoreToBeat") <= (int)parameters[0])
         {
-            scorePauseCross.enabled = false;
-            scorePauseCheck.enabled = true;
+            scoreCrossImage.enabled = false;
+            scoreCheckImage.enabled = true;
         }
     }
 
@@ -49,8 +49,8 @@ public class ChallengeUI : MonoBehaviour
     {
         if (PlayerPrefs.GetFloat("DistanceToBeat") <= (int)parameters[0])
         {
-            distancePauseCross.enabled = false;
-            distancePauseCheck.enabled = true;
+            distanceCrossImage.enabled = false;
+            distanceCheckImage.enabled = true;
         }
     }
 }

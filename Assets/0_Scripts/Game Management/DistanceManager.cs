@@ -6,8 +6,8 @@ using UnityEngine;
 //Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN PABLO RSHAID
 public class DistanceManager : MonoBehaviour, IValueRecorder
 {
-    private int distance;
-    private bool running = true;
+    private int totalDistance;
+    private bool isRunning = true;
     
     private void Start()
     {
@@ -23,22 +23,22 @@ public class DistanceManager : MonoBehaviour, IValueRecorder
     
     IEnumerator AddSteps()
     {
-        while (running)
+        while (isRunning)
         {
-            distance += 1;
-            EventManager.Trigger("OnDistanceChange", distance);
+            totalDistance += 1;
+            EventManager.Trigger("OnDistanceChange", totalDistance);
             yield return new WaitForSeconds(0.1f);
         }
     }
     
     public void SaveValue(object[] parameters)
     {
-        if(PlayerPrefs.GetFloat("HighDistance") < distance)
-            PlayerPrefs.SetFloat("HighDistance", distance);
+        if(PlayerPrefs.GetFloat("HighDistance") < totalDistance)
+            PlayerPrefs.SetFloat("HighDistance", totalDistance);
     }
 
     void StopCountingDistance(object[] parameters)
     {
-        running = false;
+        isRunning = false;
     }
 }

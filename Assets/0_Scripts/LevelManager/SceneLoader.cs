@@ -9,7 +9,7 @@ public class SceneLoader : MonoBehaviour
 {
     private void Awake()
     {
-        EventManager.Subscribe("LoadScene", LoadScene);
+        EventManager.Subscribe("OnFadeOutOver", LoadScene);
     }
 
     public void LoadScene(object[] parameters)

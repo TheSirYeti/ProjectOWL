@@ -9,7 +9,7 @@ public class LoopingFloor : MonoBehaviour
     public List<Transform> roads = new List<Transform>();
     public Transform startPos, endPos;
     public float speed;
-    private bool isGameActive = true;
+    private bool canItLoop = true;
     
     private void Start()
     {
@@ -18,7 +18,7 @@ public class LoopingFloor : MonoBehaviour
 
     private void Update()
     {
-        if (Time.timeScale == 1f && isGameActive)
+        if (Time.timeScale == 1f && canItLoop)
         {
             foreach (Transform t in roads)
             {
@@ -34,6 +34,6 @@ public class LoopingFloor : MonoBehaviour
 
     public void DisableLoopingRoads(object[] parameters)
     {
-        isGameActive = false;
+        canItLoop = false;
     }
 }

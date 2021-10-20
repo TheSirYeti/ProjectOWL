@@ -6,8 +6,8 @@ using UnityEngine;
 //Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN PABLO RSHAID
 public class ChallengesScript : MonoBehaviour, IChallengeGenerator
 {
-    [SerializeField] private float distanceToBeat;
-    [SerializeField] private float scoreToBeat;
+    [SerializeField] private float distanceChallenge;
+    [SerializeField] private float scoreChallenge;
 
     private void Start()
     {
@@ -22,9 +22,9 @@ public class ChallengesScript : MonoBehaviour, IChallengeGenerator
         }
         else
         {
-            scoreToBeat = 1000f;
+            scoreChallenge = 1000f;
         }
-        PlayerPrefs.SetFloat("ScoreToBeat", scoreToBeat);
+        PlayerPrefs.SetFloat("ScoreToBeat", scoreChallenge);
 
         if (PlayerPrefs.HasKey("HighDistance"))
         {
@@ -32,19 +32,19 @@ public class ChallengesScript : MonoBehaviour, IChallengeGenerator
         }
         else
         {
-            distanceToBeat = 200f;
+            distanceChallenge = 200f;
         }
-        PlayerPrefs.SetFloat("DistanceToBeat", distanceToBeat);
-        EventManager.Trigger("OnChallengeGenerated", scoreToBeat, distanceToBeat);
+        PlayerPrefs.SetFloat("DistanceToBeat", distanceChallenge);
+        EventManager.Trigger("OnChallengeGenerated", scoreChallenge, distanceChallenge);
     }
 
     public void BuildScoreChallenge()
     {
-        scoreToBeat = (Mathf.Round(PlayerPrefs.GetFloat("HighScore") / 1000) * 1000) + 1000;
+        scoreChallenge = (Mathf.Round(PlayerPrefs.GetFloat("HighScore") / 1000) * 1000) + 1000;
     }
 
     public void BuildDistanceChallenge()
     {
-        distanceToBeat = (Mathf.Round(PlayerPrefs.GetFloat("HighDistance") / 100) * 100) + 100;
+        distanceChallenge = (Mathf.Round(PlayerPrefs.GetFloat("HighDistance") / 100) * 100) + 100;
     }
 }

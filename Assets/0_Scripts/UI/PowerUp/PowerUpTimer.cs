@@ -10,15 +10,15 @@ using UnityEngine.Video;
 //Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN PABLO RSHAID
 public abstract class PowerUpTimer : MonoBehaviour
 {
-    public Image timerUI;
+    public Image timerImage;
     private bool isActive;
     private float timer;
     private float totalTimerValue;
 
     public void StartTimer(object[] parameters)
     {
-        timerUI.enabled = true;
-        timerUI.fillAmount = 1;
+        timerImage.enabled = true;
+        timerImage.fillAmount = 1;
         timer = (float) parameters[2];
         totalTimerValue = (float)parameters[2];
         isActive = true;
@@ -29,16 +29,16 @@ public abstract class PowerUpTimer : MonoBehaviour
         if (isActive)
         {
             timer -= Time.fixedDeltaTime;
-            timerUI.fillAmount = timer / totalTimerValue;
+            timerImage.fillAmount = timer / totalTimerValue;
             if(timer <= 0) OnTimerOver();
         }
     }
 
     public void ResetTimer()
     {
-        timerUI.fillAmount = 1;
+        timerImage.fillAmount = 1;
         isActive = false;
-        timerUI.enabled = false;
+        timerImage.enabled = false;
     }
 
     public abstract void OnTimerOver();
