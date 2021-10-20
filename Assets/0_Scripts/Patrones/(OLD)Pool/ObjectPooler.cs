@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//NO FUE USADO - DESCARTADO
 public class ObjectPooler : MonoBehaviour
 {
 

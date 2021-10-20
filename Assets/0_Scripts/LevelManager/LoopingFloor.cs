@@ -10,8 +10,7 @@ public class LoopingFloor : MonoBehaviour
     public Transform startPos, endPos;
     public float speed;
     private bool isGameActive = true;
-
-
+    
     private void Start()
     {
         EventManager.Subscribe("OnPlayerDeath", DisableLoopingRoads);

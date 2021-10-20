@@ -13,7 +13,6 @@ public class CollectibleFactory : IFactory<Collectible>
     
     public Collectible Create()
     {
-        //var prefab = Resources.Load<Collectible>(ChooseRandomCollectible());
         var prefab = ResourceTable.instance.GetCollectiblePrefab(ChooseRandomCollectible());
         return GameObject.Instantiate(prefab);
     }
