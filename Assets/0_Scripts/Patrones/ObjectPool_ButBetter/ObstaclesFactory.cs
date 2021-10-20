@@ -14,7 +14,8 @@ public class ObstaclesFactory : IFactory<Obstacle>
     
     public Obstacle Create()
     {
-        var prefab = Resources.Load<Obstacle>(ChooseRandomObstacle());
+        //var prefab = Resources.Load<Obstacle>(ChooseRandomObstacle());
+        var prefab = ResourceTable.instance.GetObstaclePrefab(ChooseRandomObstacle());
         return GameObject.Instantiate(prefab);
     }
 

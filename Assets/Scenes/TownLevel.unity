@@ -826,6 +826,49 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96309622}
   m_Mesh: {fileID: 4300000, guid: 7ddaa1c967b38f2409f7bcb6762c0e20, type: 3}
+--- !u!1 &97829603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 97829604}
+  - component: {fileID: 97829605}
+  m_Layer: 0
+  m_Name: ResourceTable
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &97829604
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97829603}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 162.7869, y: 51.664886, z: 8.301815}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &97829605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97829603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 635fc0c4e70a38d4e8e8be829eac862e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &131078103
 GameObject:
   m_ObjectHideFlags: 0
@@ -5257,7 +5300,7 @@ Transform:
   m_Children:
   - {fileID: 603493895}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &609234468
 GameObject:
@@ -6086,7 +6129,7 @@ Transform:
   - {fileID: 1409556732}
   - {fileID: 509481316}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &692393937
 GameObject:
@@ -6355,6 +6398,7 @@ MonoBehaviour:
   - {fileID: 88010444}
   - {fileID: 822069571}
   - {fileID: 1145026888}
+  spawnDelay: 1.2
   obstacles:
   - car_green
   - cop_mesh
@@ -6366,7 +6410,6 @@ MonoBehaviour:
   - Heart
   - HighJumpPrefab
   - ShieldPrefab
-  spawnDelay: 1.2
 --- !u!1 &741466585
 GameObject:
   m_ObjectHideFlags: 0
@@ -8112,7 +8155,7 @@ PrefabInstance:
     - target: {fileID: 5937598076197036426, guid: 94b3cef16dbebd94da0f27813957d08d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5937598076197036426, guid: 94b3cef16dbebd94da0f27813957d08d,
         type: 3}
@@ -8685,7 +8728,7 @@ Transform:
   - {fileID: 822069571}
   - {fileID: 1145026888}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1035594022
 GameObject:
@@ -17578,7 +17621,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 54.04, y: -49.912003, z: -28.884}
 --- !u!1 &1677915147
 GameObject:
@@ -17760,7 +17803,7 @@ Transform:
   m_LocalScale: {x: 13.435282, y: 13.435282, z: 13.435282}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 33.850002, y: 0, z: 0}
 --- !u!1 &1692495036
 GameObject:
@@ -19617,7 +19660,7 @@ RectTransform:
   - {fileID: 324918163}
   - {fileID: 899790390}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -20338,7 +20381,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2047358075
 GameObject:
@@ -22621,7 +22664,7 @@ Transform:
   - {fileID: 584332374}
   - {fileID: 335951909}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &6585312063491179623
 Transform:
@@ -22769,6 +22812,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SoundManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013306188861766866, guid: a1e8ee01627f2604ca44bc4d28056610,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7013306188861766869, guid: a1e8ee01627f2604ca44bc4d28056610,
         type: 3}

@@ -22,7 +22,7 @@ public class ItemSpawner : MonoBehaviour
     private Pool<Collectible> _collectiblePool;
     private IFactory<Collectible> _collectibleFactory;
 
-    private void Awake()
+    private void Start()
     {
         _obstacleFactory = new ObstaclesFactory(obstacles);
         _obstaclePool = new Pool<Obstacle>(_obstacleFactory.Create, Obstacle.TurnOff, Obstacle.TurnOn, 40);
@@ -30,10 +30,7 @@ public class ItemSpawner : MonoBehaviour
         _collectibleFactory = new CollectibleFactory(collectibles);
         _collectiblePool =
             new Pool<Collectible>(_collectibleFactory.Create, Collectible.TurnOff, Collectible.TurnOn, 40);
-    }
-    
-    public void Start()
-    {
+        
         StartCoroutine(SpawnObjects());
     }
 
@@ -42,7 +39,6 @@ public class ItemSpawner : MonoBehaviour
         while (true)
         {
             int freeSpace = UnityEngine.Random.Range(0, spawnPoints.Length);
-            Debug.Log(freeSpace);
             for (int i = 0; i < spawnPoints.Length; i++)
             {
                 if (i != freeSpace)
