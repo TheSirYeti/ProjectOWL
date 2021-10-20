@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN PABLO RSHAID
 public class SceneLoader : MonoBehaviour
 {
     private void Awake()

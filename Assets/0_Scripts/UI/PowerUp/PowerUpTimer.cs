@@ -7,6 +7,7 @@ using UnityEngine.Experimental.PlayerLoop;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
+//Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN PABLO RSHAID
 public abstract class PowerUpTimer : MonoBehaviour
 {
     public Image timerUI;

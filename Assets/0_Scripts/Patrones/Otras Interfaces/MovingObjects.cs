@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN PABLO RSHAID, JUAN CRUZ CRISTÓFALO
 public abstract class MovingObjects : MonoBehaviour, IPooledObject, IMovable
 {
     [SerializeField] private float timeToUpdate;

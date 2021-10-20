@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices.ComTypes;
 using UnityEngine;
 
+
+//Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN PABLO RSHAID
 public abstract class Collectible : MonoBehaviour, IMovable, ICollectible
 {
     [Header("Values")]
@@ -14,15 +16,6 @@ public abstract class Collectible : MonoBehaviour, IMovable, ICollectible
     private void Start()
     {
         collectibleType = this;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            collectibleType.OnCollect();
-            TurnOff(this);
-        }
     }
 
     private void FixedUpdate()
@@ -49,5 +42,14 @@ public abstract class Collectible : MonoBehaviour, IMovable, ICollectible
     {
         collectible.gameObject.SetActive(true);
         return collectible;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            collectibleType.OnCollect();
+            TurnOff(this);
+        }
     }
 }

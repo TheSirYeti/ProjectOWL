@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+//Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN CRUZ CRISTÓFALO
 public class Pool<T> 
 {
     private List<T> _uninstantiated = new List<T>();
@@ -11,9 +11,7 @@ public class Pool<T>
     private Func<T, T> _turnOff;
     private Func<T, T> _turnOn;
 
-    public Pool()
-    {
-    }
+    public Pool(){}
 
     public Pool(Func<T> create, Func<T, T> turnOff, Func<T, T> turnOn, int amount)
     {

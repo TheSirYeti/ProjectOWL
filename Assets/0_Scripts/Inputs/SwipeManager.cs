@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using UnityEngine.UI;
 
+//Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN PABLO RSHAID
 [DefaultExecutionOrder(-1)]
 public class SwipeManager : MonoBehaviour
 {

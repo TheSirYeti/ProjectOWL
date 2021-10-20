@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 
+//Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN PABLO RSHAID
 public class ResourceTable : MonoBehaviour
 {
     public LookUpTable<string, Obstacle> obstacleTable;
