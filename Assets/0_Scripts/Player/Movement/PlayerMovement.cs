@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
     [SerializeField] private Rigidbody rb;
 
     [SerializeField] private LaneManager lanes;
-    [SerializeField] private bool isGrounded;
+    [SerializeField] private bool isGrounded, canPlay = true;
     
     [SerializeField] private Observer _playerObserver, _groundStatus;
     
@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
 
     public void ChangeLane(int direction)
     {
-        if (lanes.IsLaneChangeAllowed(direction))
+        if (lanes.IsLaneChangeAllowed(direction) && canPlay)
         {
             Vector3 target = new Vector3(moveAmount * direction, 0, 0);
             transform.position += target;
@@ -45,13 +45,13 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
 
     public void VerticalAction(int direction)
     {
-        if (direction == 1 && isGrounded)
+        if (direction == 1 && isGrounded && canPlay)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             SoundManager.instance.PlaySound(SoundID.JUMP);
             _playerObserver.NotifySubscribers("Jump");
         }
-        else if(direction == -1 && isGrounded)
+        else if(direction == -1 && isGrounded && canPlay)
         {
             SoundManager.instance.PlaySound(SoundID.SLIDE);
             _playerObserver.NotifySubscribers("Slide");
@@ -85,6 +85,7 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
 
     void KillPlayer(object[] parameters)
     {
+        canPlay = false;
         _playerObserver.NotifySubscribers("Die");
     }
 }
