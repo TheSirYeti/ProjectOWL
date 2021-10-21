@@ -1206,7 +1206,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 8.5625
+  m_padding: 0
   m_canvasRenderer: {fileID: 155138815}
   m_TextComponent: {fileID: 808190170}
   m_materialReferenceIndex: 1
@@ -2259,7 +2259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4f1c486973d1bc4c8f2373b53ff57d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerUI: {fileID: 238126980}
+  timerImage: {fileID: 238126980}
 --- !u!1 &275783003
 GameObject:
   m_ObjectHideFlags: 0
@@ -5509,7 +5509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3021b4a9e572fb24eac171751b4aeaeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerUI: {fileID: 615548768}
+  timerImage: {fileID: 615548768}
 --- !u!114 &615548768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19722,12 +19722,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c28386d0a6faaa41b00f93077f125f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scorePauseText: {fileID: 1599001021}
-  distancePauseText: {fileID: 1369234167}
-  scorePauseCheck: {fileID: 305210825}
-  scorePauseCross: {fileID: 9730962}
-  distancePauseCheck: {fileID: 727380025}
-  distancePauseCross: {fileID: 1568880372}
+  scoreText: {fileID: 1599001021}
+  distanceText: {fileID: 1369234167}
+  scoreCheckImage: {fileID: 305210825}
+  scoreCrossImage: {fileID: 9730962}
+  distanceCheckImage: {fileID: 727380025}
+  distanceCrossImage: {fileID: 1568880372}
 --- !u!1 &1933801936
 GameObject:
   m_ObjectHideFlags: 0

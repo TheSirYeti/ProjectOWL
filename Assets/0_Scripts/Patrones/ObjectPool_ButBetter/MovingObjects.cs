@@ -5,7 +5,7 @@ using UnityEngine;
 
 
 //Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN CRUZ CRISTÓFALO
-public abstract class MovingObjects : MonoBehaviour, IPooledObject, IMovable
+public abstract class MovingObjects : MonoBehaviour, IMovable
 {
     [SerializeField] private float timeToUpdate;
     [SerializeField] private float speed;
