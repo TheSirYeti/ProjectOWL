@@ -16,6 +16,7 @@ public class PlayerVFX : MonoBehaviour, ISubscriber
         
         EventManager.Subscribe("OnShieldCollected", SetShieldVFX);
         EventManager.Subscribe("OnShieldOver", SetShieldVFX);
+        EventManager.Subscribe("OnObstacleCollision", StartHurtVFX);
     }
 
     public void OnNotify(string eventID)
@@ -35,24 +36,41 @@ public class PlayerVFX : MonoBehaviour, ISubscriber
             vfx[(int) ParticleID.HIGHJUMP].SetActive(true);
         }
 
-        if (eventID == "DisableVFX")
+        if (eventID == "Die")
         {
             foreach (GameObject g in vfx)
             {
-                g.SetActive(false);
+                g.gameObject.SetActive(false);
             }
         }
     }
 
     public void SetShieldVFX(object[] parameters)
     {
-        vfx[2].SetActive((bool)parameters[0]);
+        vfx[(int) ParticleID.SHIELD].SetActive((bool)parameters[0]);
     }
 
+    public void StartHurtVFX(object[] parameters)
+    {
+        StopCoroutine(ToggleHurtVFX());
+        StartCoroutine(ToggleHurtVFX());
+    }
+
+    IEnumerator ToggleHurtVFX()
+    {
+        vfx[(int) ParticleID.AIR].SetActive(false);
+        vfx[(int) ParticleID.HURT].SetActive(true);
+        yield return new WaitForSeconds(1f);
+        vfx[(int) ParticleID.AIR].SetActive(true);
+        vfx[(int) ParticleID.HURT].SetActive(false);
+    }
+    
     public enum ParticleID
     {
         AIR,
-        HIGHJUMP
+        HIGHJUMP,
+        SHIELD,
+        HURT
     }
     
 }
