@@ -7,8 +7,8 @@ using UnityEngine;
 //Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN PABLO RSHAID
 public class PlayerVFX : MonoBehaviour, ISubscriber
 {
-    [SerializeField] private List<GameObject> vfx;
-    [SerializeField] private Observer _playerObserver;
+    [SerializeField] private List<GameObject> vfx = null;
+    [SerializeField] private Observer _playerObserver = null;
 
     private void Start()
     {
@@ -25,7 +25,7 @@ public class PlayerVFX : MonoBehaviour, ISubscriber
         {
             foreach (GameObject g in vfx)
             {
-                if(g.activeSelf)
+                if(g.activeSelf && g != vfx[(int)ParticleID.SHIELD])
                     g.SetActive(false);
             }
             vfx[(int) ParticleID.AIR].SetActive(true);

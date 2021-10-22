@@ -7,20 +7,20 @@ using UnityEngine;
 public class ItemSpawner : MonoBehaviour
 {
     [Header("Spawnpoints")]
-    [SerializeField] private Transform[] spawnPoints;
-    [SerializeField] private float spawnDelay;
+    [SerializeField] private Transform[] spawnPoints = null;
+    [SerializeField] private float spawnDelay = 0f;
     
     [Header("Obstacle Items")]
     public List<string> obstacles;
     
-    private Pool<Obstacle> _obstaclePool;
-    private IFactory<Obstacle> _obstacleFactory;
+    private Pool<Obstacle> _obstaclePool = null;
+    private IFactory<Obstacle> _obstacleFactory = null;
 
     [Header("Collectible Items")]
     public List<string> collectibles;
     
-    private Pool<Collectible> _collectiblePool;
-    private IFactory<Collectible> _collectibleFactory;
+    private Pool<Collectible> _collectiblePool = null;
+    private IFactory<Collectible> _collectibleFactory = null;
 
     private void Start()
     {

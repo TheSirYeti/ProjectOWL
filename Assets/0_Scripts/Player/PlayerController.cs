@@ -6,9 +6,9 @@ using UnityEngine;
 //Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN PABLO RSHAID
 public class PlayerController : MonoBehaviour, ISubscriber
 {
-    private Action artificialUpdate;
-    [SerializeField] private MovementCalculator _movementCalculator;
-    [SerializeField] private PlayerMovement _playerMovement;
+    private Action _artificialUpdate; 
+    [SerializeField] private MovementCalculator _movementCalculator = null;
+    [SerializeField] private PlayerMovement _playerMovement = null;
 
     private void Start()
     {
@@ -45,13 +45,15 @@ public class PlayerController : MonoBehaviour, ISubscriber
 
     public void UnpauseInputs(object[] parameters)
     {
-        _movementCalculator.isGamePaused = false;
+        _movementCalculator.NotifySubscribers("Resume");
+        //_movementCalculator.isGamePaused = false;
         Time.timeScale = 1f;
     }
     
     public void PauseInputs(object[] parameters)
     {
-        _movementCalculator.isGamePaused = true;
+        _movementCalculator.NotifySubscribers("Play");
+        //_movementCalculator.isGamePaused = true;
         Time.timeScale = 0f;
     }
     

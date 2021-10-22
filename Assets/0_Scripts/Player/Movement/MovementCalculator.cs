@@ -1,23 +1,30 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 //Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN PABLO RSHAID
-public class MovementCalculator : MonoBehaviour, IPublisher
+public class MovementCalculator : MonoBehaviour, IPublisher, ISubscriber
 {
 
-    [SerializeField] float minimumSwipeTriggerValue;
-    public bool isGamePaused = false;
+    [SerializeField] float minimumSwipeTriggerValue = 0f;
+    private bool _isGamePaused = false;
     
-    private List<ISubscriber> _subscribers = new List<ISubscriber>();
-    private Vector2 playerStartAction;
-    private Vector2 playerEndAction;
-    private bool hasTakenAction = false;
-    
-    
+    private List<ISubscriber> _subscribers = null;
+    private Vector2 _playerStartAction = Vector2.zero;
+    private Vector2 _playerEndAction = Vector2.zero;
+    private bool _hasTakenAction = false;
+
+
+    private void Awake()
+    {
+        _subscribers = new List<ISubscriber>();
+    }
+
     void Start()
     {
+        Subscribe(this);
         SwipeManager.instance.OnEndTouch += CheckInputs;
         SwipeManager.instance.OnUpdateTouch += CalculatePlayerAction;
         SwipeManager.instance.OnStartTouch += StartPlayerAction;
@@ -25,19 +32,19 @@ public class MovementCalculator : MonoBehaviour, IPublisher
 
     void StartPlayerAction(Vector2 position)
     {
-        playerStartAction = position;
+        _playerStartAction = position;
     }
     
     void CalculatePlayerAction(Vector2 position)
     {
-        if (!isGamePaused)
+        if (!_isGamePaused)
         {
-            playerEndAction = position;
-            if (Vector3.Distance(playerStartAction, playerEndAction) >= minimumSwipeTriggerValue && !hasTakenAction)
+            _playerEndAction = position;
+            if (Vector3.Distance(_playerStartAction, _playerEndAction) >= minimumSwipeTriggerValue && !_hasTakenAction)
             {
-                if (Mathf.Abs(playerEndAction.y - playerStartAction.y) >= minimumSwipeTriggerValue)
+                if (Mathf.Abs(_playerEndAction.y - _playerStartAction.y) >= minimumSwipeTriggerValue)
                 {
-                    float differenceY = playerEndAction.y - playerStartAction.y;
+                    float differenceY = _playerEndAction.y - _playerStartAction.y;
                     if (Mathf.Abs(differenceY) >= minimumSwipeTriggerValue)
                     {
                         if (Mathf.Sign(differenceY) > 0)
@@ -49,7 +56,7 @@ public class MovementCalculator : MonoBehaviour, IPublisher
                 }
                 else
                 {
-                    float differenceX = playerEndAction.x - playerStartAction.x;
+                    float differenceX = _playerEndAction.x - _playerStartAction.x;
                     if (Mathf.Abs(differenceX) >= minimumSwipeTriggerValue)
                     {
                         if (Mathf.Sign(differenceX) > 0)
@@ -59,14 +66,14 @@ public class MovementCalculator : MonoBehaviour, IPublisher
                         else NotifySubscribers("MoveLeft");
                     }
                 }
-                hasTakenAction = true;
+                _hasTakenAction = true;
             }
         }
     }
     
     void CheckInputs(Vector2 position)
     {
-        hasTakenAction = false;
+        _hasTakenAction = false;
     }
 
     public void Subscribe(ISubscriber subscriber)
@@ -84,6 +91,18 @@ public class MovementCalculator : MonoBehaviour, IPublisher
         foreach (ISubscriber subscriber in _subscribers)
         {
             subscriber.OnNotify(action);
+        }
+    }
+
+    public void OnNotify(string eventID)
+    {
+        if (eventID == "Resume")
+        {
+            _isGamePaused = false;
+        }
+        else if (eventID == "Pause")
+        {
+            _isGamePaused = true;
         }
     }
 }

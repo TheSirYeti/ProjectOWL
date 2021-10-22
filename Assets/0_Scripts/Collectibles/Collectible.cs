@@ -31,6 +31,7 @@ public abstract class Collectible : MonoBehaviour, IMovable, ICollectible
     public abstract void OnCollect();
     
     
+    
     //For ObjectPool
     public static Collectible TurnOff(Collectible collectible)
     {

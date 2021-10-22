@@ -6,10 +6,10 @@ using UnityEngine;
 //Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN PABLO RSHAID
 public class PauseManager : MonoBehaviour
 {
-    [SerializeField] private GameObject pausePanel;
-    [SerializeField] Transform originalPanelPosition;
-    [SerializeField] private GameObject pauseButton;
-    [SerializeField] private GameObject resumeButton;
+    [SerializeField] private GameObject pausePanel = null;
+    [SerializeField] Transform originalPanelPosition  = null;
+    [SerializeField] private GameObject pauseButton = null;
+    [SerializeField] private GameObject resumeButton = null;
 
     private void Awake()
     {

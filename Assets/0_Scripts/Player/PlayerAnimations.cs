@@ -6,9 +6,9 @@ using UnityEngine;
 //Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN PABLO RSHAID
 public class PlayerAnimations : MonoBehaviour, ISubscriber
 {
-    [SerializeField] private Animator _animator;
-    [SerializeField] private List<string> animatorStatesNames;
-    [SerializeField] private Observer _playerObserver, _groundStatus;
+    [SerializeField] private Animator _animator = new Animator();
+    [SerializeField] private List<string> animatorStatesNames = new List<string>();
+    [SerializeField] private Observer _playerObserver = null, _groundStatus = null;
     
     private void Start()
     {

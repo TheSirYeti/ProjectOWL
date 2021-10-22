@@ -3214,7 +3214,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minimumSwipeTriggerValue: 0.35
-  isGamePaused: 0
 --- !u!1 &363193542
 GameObject:
   m_ObjectHideFlags: 0
@@ -23356,6 +23355,7 @@ MonoBehaviour:
   rb: {fileID: 2253437344459917291}
   lanes: {fileID: 313461623}
   isGrounded: 1
+  canPlay: 1
   _playerObserver: {fileID: 948987707}
   _groundStatus: {fileID: 2253437344817982061}
 --- !u!1 &7878162522669294521

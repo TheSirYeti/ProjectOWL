@@ -8,9 +8,9 @@ using UnityEngine.UI;
 //Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN PABLO RSHAID
 public class HUDStats : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI scoreText;
-    [SerializeField] private TextMeshProUGUI distanceText;
-    [SerializeField] private TextMeshProUGUI hpText;
+    [SerializeField] private TextMeshProUGUI scoreText = null;
+    [SerializeField] private TextMeshProUGUI distanceText = null;
+    [SerializeField] private TextMeshProUGUI hpText = null;
 
     private void Awake()
     {

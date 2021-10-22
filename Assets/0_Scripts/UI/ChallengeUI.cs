@@ -9,12 +9,12 @@ using UnityEngine.UI;
 public class ChallengeUI : MonoBehaviour
 {
     [Header("Text")]
-    [SerializeField] private TextMeshProUGUI scoreText;
-    [SerializeField] private TextMeshProUGUI distanceText;
+    [SerializeField] private TextMeshProUGUI scoreText = null;
+    [SerializeField] private TextMeshProUGUI distanceText = null;
 
     [Header("Images")] 
-    [SerializeField] private Image scoreCheckImage, scoreCrossImage;
-    [SerializeField] private Image distanceCheckImage, distanceCrossImage;
+    [SerializeField] private Image scoreCheckImage = null, scoreCrossImage = null;
+    [SerializeField] private Image distanceCheckImage = null, distanceCrossImage = null;
 
     private void Awake()
     {
