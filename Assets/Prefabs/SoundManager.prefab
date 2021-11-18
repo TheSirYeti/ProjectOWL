@@ -56,6 +56,7 @@ MonoBehaviour:
   music:
   - {fileID: 8300000, guid: 932b167f85ae1584aba4901c1d035da0, type: 3}
   - {fileID: 8300000, guid: e79360c79b951e44a95d49391d49d10f, type: 3}
+  - {fileID: 8300000, guid: 2723fd8c376f5304e9d381d61e683287, type: 3}
   sfxChannel: []
   musicChannel: []
   volumeSFX: 1

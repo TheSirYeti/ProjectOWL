@@ -7,9 +7,9 @@ using UnityEngine;
 //Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN CRUZ CRISTÓFALO
 public abstract class MovingObjects : MonoBehaviour, IMovable
 {
-    [SerializeField] private float timeToUpdate = 0f;
-    [SerializeField] private float speed = 0f;
-    [SerializeField] public float timeToDespawn = 0f;
+    public float timeToUpdate = 0f;
+    public float speed = 0f;
+    public float timeToDespawn = 0f;
 
 
     public bool movingCondition = true;

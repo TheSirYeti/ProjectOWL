@@ -4,9 +4,25 @@ using UnityEngine;
 //Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN CRUZ CRISTÓFALO
 public class Obstacle : MovingObjects
 {
+    private float damage;
+    public bool isHeavy;
     public void Start()
     {
         GenerateMovement();
+        if (isHeavy)
+        {
+            speed = ObstacleFlyweightPointer.heavyObstacle.speed;
+            damage = ObstacleFlyweightPointer.heavyObstacle.damage;
+            timeToUpdate = ObstacleFlyweightPointer.heavyObstacle.timeToUpdate;
+            timeToDespawn = ObstacleFlyweightPointer.heavyObstacle.timeToDespawn;
+        }
+        else
+        {
+            speed = ObstacleFlyweightPointer.normalObstacle.speed;
+            damage = ObstacleFlyweightPointer.normalObstacle.damage;
+            timeToUpdate = ObstacleFlyweightPointer.normalObstacle.timeToUpdate;
+            timeToDespawn = ObstacleFlyweightPointer.normalObstacle.timeToDespawn;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -15,7 +31,7 @@ public class Obstacle : MovingObjects
         {
             movingCondition = false;
             Obstacle.TurnOff(this);
-            EventManager.Trigger("OnObstacleCollision", -1f);
+            EventManager.Trigger("OnObstacleCollision", damage);
         }
     }
     
