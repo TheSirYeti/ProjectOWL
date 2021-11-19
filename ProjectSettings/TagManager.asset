@@ -15,6 +15,7 @@ TagManager:
   - ExtraLife
   - PP
   - Dumpster
+  - Rocket
   layers:
   - Default
   - TransparentFX

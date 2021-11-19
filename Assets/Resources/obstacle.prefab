@@ -109,3 +109,4 @@ MonoBehaviour:
   speed: 60
   timeToDespawn: 20
   movingCondition: 1
+  isHeavy: 1

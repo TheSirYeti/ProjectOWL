@@ -31,7 +31,7 @@ public class Obstacle : MovingObjects
         {
             movingCondition = false;
             Obstacle.TurnOff(this);
-            EventManager.Trigger("OnObstacleCollision", damage);
+            EventManager.Trigger("OnObstacleCollision", -damage);
         }
     }
     

@@ -6565,6 +6565,8 @@ MonoBehaviour:
   - Dumpster 1
   - obstacle
   - signfbx
+  - rocketpower
+  poolSize: 40
   collectibles:
   - CoinPrefab
   - Heart

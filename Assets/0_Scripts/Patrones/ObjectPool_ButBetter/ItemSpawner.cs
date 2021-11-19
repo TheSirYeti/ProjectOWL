@@ -12,6 +12,8 @@ public class ItemSpawner : MonoBehaviour
     
     [Header("Obstacle Items")]
     public List<string> obstacles;
+
+    public int poolSize;
     
     private Pool<Obstacle> _obstaclePool = null;
     private IFactory<Obstacle> _obstacleFactory = null;
@@ -25,11 +27,11 @@ public class ItemSpawner : MonoBehaviour
     private void Start()
     {
         _obstacleFactory = new ObstaclesFactory(obstacles);
-        _obstaclePool = new Pool<Obstacle>(_obstacleFactory.Create, Obstacle.TurnOff, Obstacle.TurnOn, 40);
+        _obstaclePool = new Pool<Obstacle>(_obstacleFactory.Create, Obstacle.TurnOff, Obstacle.TurnOn, poolSize);
 
         _collectibleFactory = new CollectibleFactory(collectibles);
         _collectiblePool =
-            new Pool<Collectible>(_collectibleFactory.Create, Collectible.TurnOff, Collectible.TurnOn, 40);
+            new Pool<Collectible>(_collectibleFactory.Create, Collectible.TurnOff, Collectible.TurnOn, poolSize);
         
         StartCoroutine(SpawnObjects());
     }
