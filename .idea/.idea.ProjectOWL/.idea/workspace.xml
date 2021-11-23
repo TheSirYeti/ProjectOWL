@@ -44,9 +44,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Collectibles/Collectible.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Patrones/Builder/IBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/UI/FadeManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa11956.33165/Test.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/UI/PowerUp/HighJumpTimer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Sounds/SelectMusic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Patrones/MVC/TankController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e1306985bd4c4b8eb21610399381c31fba00/8f/c3bed812/ShowOptions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/UI/PowerUp/PowerUpTimer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/UI/HUDStats.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Collectibles/ExtraLife.cs" root0="FORCE_HIGHLIGHTING" />
@@ -139,6 +141,7 @@
       <workItem from="1637258893548" duration="18050000" />
       <workItem from="1637324083316" duration="1958000" />
       <workItem from="1637345289526" duration="5742000" />
+      <workItem from="1637686348465" duration="3955000" />
     </task>
     <servers />
   </component>

@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: SirYetiTV
   productName: Super Macho Owl Man
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -751,10 +751,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 7cbd4184-895a-4083-ac29-f80b8c5f4c04
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Super Macho Owl Man
+  organizationId: jprshaid
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

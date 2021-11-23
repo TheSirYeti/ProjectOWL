@@ -25,8 +25,7 @@ public class PlayerBehaviour : MonoBehaviour
 
             if (hp <= 0)
             {
-                hp = 0;
-                EventManager.Trigger("OnPlayerDeath", "Die");
+                AdService.instance.Active(AdService.AdsType.Interstitial_Android, SecondChance, Died);
             }
             else if (hp >= 5)
             {
@@ -44,5 +43,17 @@ public class PlayerBehaviour : MonoBehaviour
     public void SetShield(object[] parameters)
     {
         shield = (bool)parameters[0];
+    }
+
+    public void Died()
+    {
+        hp = 0;
+        EventManager.Trigger("OnPlayerDeath", "Die");
+    }
+
+    public void SecondChance()
+    {
+        hp = 3f;
+        EventManager.Trigger("OnHPChange", hp);
     }
 }

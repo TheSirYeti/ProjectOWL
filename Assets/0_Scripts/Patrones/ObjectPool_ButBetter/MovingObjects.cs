@@ -34,7 +34,6 @@ public abstract class MovingObjects : MonoBehaviour, IMovable
 
             if (isSinMovement)
             {
-                Debug.Log("cosas de seno");
                 transform.position -= (transform.forward + new Vector3(Mathf.Sin(Time.fixedTime) / sinModifier, 0f, 0f)) * Time.deltaTime * speed;
             } 
             else transform.position -= transform.forward * Time.deltaTime * speed;
