@@ -3886,75 +3886,6 @@ Transform:
   m_Father: {fileID: 6503028115583511795}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &958036217
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5937598076197036426, guid: 94b3cef16dbebd94da0f27813957d08d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 163.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5937598076197036426, guid: 94b3cef16dbebd94da0f27813957d08d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 5937598076197036426, guid: 94b3cef16dbebd94da0f27813957d08d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 24.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5937598076197036426, guid: 94b3cef16dbebd94da0f27813957d08d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5937598076197036426, guid: 94b3cef16dbebd94da0f27813957d08d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5937598076197036426, guid: 94b3cef16dbebd94da0f27813957d08d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5937598076197036426, guid: 94b3cef16dbebd94da0f27813957d08d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5937598076197036426, guid: 94b3cef16dbebd94da0f27813957d08d,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 5937598076197036426, guid: 94b3cef16dbebd94da0f27813957d08d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 5937598076197036426, guid: 94b3cef16dbebd94da0f27813957d08d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5937598076197036426, guid: 94b3cef16dbebd94da0f27813957d08d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5937598076197036437, guid: 94b3cef16dbebd94da0f27813957d08d,
-        type: 3}
-      propertyPath: m_Name
-      value: Rain
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 94b3cef16dbebd94da0f27813957d08d, type: 3}
 --- !u!65 &978109884
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9066,7 +8997,7 @@ Transform:
   m_LocalScale: {x: 56.607594, y: 56.607594, z: 56.607594}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1564314431
 GameObject:
@@ -12939,7 +12870,6 @@ GameObject:
   - component: {fileID: 5006512734931846986}
   - component: {fileID: 4044710141438344572}
   - component: {fileID: 7718390322779242885}
-  - component: {fileID: 8296172669058151771}
   - component: {fileID: 8296172669058151770}
   m_Layer: 0
   m_Name: Super_Tank
@@ -12957,28 +12887,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 8296172669058151769}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c366036c70a54bb4aa7fa04408f1e1bd, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f892f6aee88a714cb527f9143662cf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8296172669058151771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8296172669058151769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfe932399911e6049adac1e7a6676418, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 10
-  maxHp: 10
+  hp: 1
+  maxHp: 1
   attackSpawnPoint: {fileID: 144834989}
   target: {fileID: 6503028115583511795}
   bulletPrefab: {fileID: 7728782099594874196, guid: 1721e3c911ff4aa489fce62ab7e0ea92,
     type: 3}
-  attackRate: 3
+  attackRate: 2
 --- !u!4 &8302211754330449684
 Transform:
   m_ObjectHideFlags: 0
