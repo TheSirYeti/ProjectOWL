@@ -30,8 +30,7 @@ public class ItemSpawner : MonoBehaviour
         _obstaclePool = new Pool<Obstacle>(_obstacleFactory.Create, Obstacle.TurnOff, Obstacle.TurnOn, poolSize);
 
         _collectibleFactory = new CollectibleFactory(collectibles);
-        _collectiblePool =
-            new Pool<Collectible>(_collectibleFactory.Create, Collectible.TurnOff, Collectible.TurnOn, poolSize);
+        _collectiblePool = new Pool<Collectible>(_collectibleFactory.Create, Collectible.TurnOff, Collectible.TurnOn, poolSize);
         
         StartCoroutine(SpawnObjects());
     }
