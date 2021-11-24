@@ -34,6 +34,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/UI/ChallengeUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Sounds/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/LevelManager/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Ads/AdsChallenge.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Player/PlayerBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Collectibles/Shield.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Game Management/ChallengesScript.cs" root0="FORCE_HIGHLIGHTING" />
@@ -141,7 +142,7 @@
       <workItem from="1637258893548" duration="18050000" />
       <workItem from="1637324083316" duration="1958000" />
       <workItem from="1637345289526" duration="5742000" />
-      <workItem from="1637686348465" duration="3955000" />
+      <workItem from="1637686348465" duration="15342000" />
     </task>
     <servers />
   </component>

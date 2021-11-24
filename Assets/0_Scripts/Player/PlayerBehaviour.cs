@@ -15,6 +15,8 @@ public class PlayerBehaviour : MonoBehaviour
         EventManager.Subscribe("OnShieldCollected", SetShield);
         EventManager.Subscribe("OnShieldOver", SetShield);
         EventManager.Subscribe("OnExtraLifeCollected", SetLives);
+        EventManager.Subscribe("OnAdFinished", SecondChance);
+        EventManager.Subscribe("OnAdFailed", Died);
     }
 
     public void SetLives(object[] parameters)
@@ -25,7 +27,8 @@ public class PlayerBehaviour : MonoBehaviour
 
             if (hp <= 0)
             {
-                AdService.instance.Active(AdService.AdsType.Interstitial_Android, SecondChance, Died);
+                //AdService.instance.Active(AdService.AdsType.Interstitial_Android, SecondChance, Died);
+                EventManager.Trigger("OnNoMoreLives");
             }
             else if (hp >= 5)
             {
@@ -45,13 +48,14 @@ public class PlayerBehaviour : MonoBehaviour
         shield = (bool)parameters[0];
     }
 
-    public void Died()
+    public void Died(object[] parameters)
     {
+        Debug.Log("Deberia morir");
         hp = 0;
         EventManager.Trigger("OnPlayerDeath", "Die");
     }
 
-    public void SecondChance()
+    public void SecondChance(object[] parameters)
     {
         hp = 3f;
         EventManager.Trigger("OnHPChange", hp);

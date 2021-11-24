@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour, ISubscriber
         _movementCalculator.Subscribe(this);
         
         EventManager.Subscribe("OnPauseGame", PauseInputs);
+        EventManager.Subscribe("OnNoMoreLives", PauseInputs);
+        EventManager.Subscribe("OnAdFailed", PauseInputs);
         EventManager.Subscribe("OnResumeGame", UnpauseInputs);
     }
 

@@ -7,6 +7,7 @@ using UnityEngine;
 public class PauseManager : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel = null;
+    [SerializeField] private GameObject gameOverPanel = null;
     [SerializeField] Transform originalPanelPosition  = null;
     [SerializeField] private GameObject pauseButton = null;
     [SerializeField] private GameObject resumeButton = null;
@@ -14,12 +15,16 @@ public class PauseManager : MonoBehaviour
     private void Awake()
     {
         EventManager.Subscribe("OnEndGame", DisablePause);
+        EventManager.Subscribe("OnAdFailed", ResumeGame);
+        EventManager.Subscribe("OnAdFinished", ResumeGame);
+        EventManager.Subscribe("OnNoMoreLives", OutOfLivesPause);
     }
 
     private void Start()
     {
         originalPanelPosition.position = pausePanel.transform.position;
         pausePanel.transform.position = new Vector2(-999f, -999f);
+        gameOverPanel.transform.position = new Vector2(-999f, -999f);
     }
 
     //Via button
@@ -33,15 +38,25 @@ public class PauseManager : MonoBehaviour
     }
 
     //Via button
-    public void ResumeGame()
+    public void ResumeGame(object[] parameters)
     {
         pausePanel.transform.position = new Vector2(-999f, -999f);
+        gameOverPanel.transform.position = new Vector2(-999f, -999f);
         pauseButton.SetActive(true);
         resumeButton.SetActive(false);
         SoundManager.instance.ResumeAllSounds();
         EventManager.Trigger("OnResumeGame");
     }
 
+    public void OutOfLivesPause(object[] parameters)
+    {
+        gameOverPanel.transform.position = originalPanelPosition.position;
+        gameOverPanel.SetActive(true);
+        resumeButton.SetActive(false);
+        pauseButton.SetActive(false);
+        EventManager.Trigger("OnPauseGame");
+    }
+    
     public void DisablePause(object[] parameters)
     {
         pausePanel.transform.position = originalPanelPosition.position;
