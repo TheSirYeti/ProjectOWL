@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/JPScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
-    path: Assets/Scenes/New Scene.unity
+    path: 
     guid: 5ec74a49ac8ecdb43913a917773f2ba0
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 8ac737b1f05cd2347a4a857dc27abbe1
   m_configObjects: {}

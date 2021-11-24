@@ -4957,6 +4957,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6708533333570551623}
   - component: {fileID: 4164174595880871018}
+  - component: {fileID: -383207273932190622}
   m_Layer: 0
   m_Name: rocketpower 1
   m_TagString: Rocket
@@ -4993,3 +4994,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5529222, y: 1.3590357, z: 6.4619484}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-383207273932190622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7728782099594874196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4557da74f7420bd459f0c42e38874411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToUpdate: 0.00001
+  speed: 10
+  timeToDespawn: 5
+  sinModifier: 0
+  isSinMovement: 0
+  movingCondition: 1
+  target: {fileID: 0}

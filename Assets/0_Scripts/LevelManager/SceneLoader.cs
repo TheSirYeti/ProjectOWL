@@ -17,4 +17,9 @@ public class SceneLoader : MonoBehaviour
         EventManager.ResetEventDictionary();
         SceneManager.LoadSceneAsync((int)parameters[0]);
     }
+
+    public void HardLoadScene(int sceneID)
+    {
+        SceneManager.LoadScene(sceneID);
+    }
 }

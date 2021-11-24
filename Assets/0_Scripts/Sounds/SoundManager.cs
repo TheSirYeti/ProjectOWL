@@ -191,7 +191,8 @@ public enum SoundID
     EXTRA_LIFE,
     COIN,
     HIGH_JUMP,
-    SHIELD
+    SHIELD,
+    YEAH
 }
 
 public enum MusicID
