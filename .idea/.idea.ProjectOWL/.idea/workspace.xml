@@ -36,6 +36,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/LevelManager/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Ads/AdsChallenge.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Player/PlayerBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Sounds/PlaySoundByte.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Collectibles/Shield.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Game Management/ChallengesScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Game Management/DistanceManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -53,6 +54,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/UI/HUDStats.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Collectibles/ExtraLife.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/LevelManager/PauseManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Collectibles/Football.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1yMRySdaoi0RH5UtI4J5nRokZ91" />
   <component name="ProjectViewState">
@@ -143,7 +145,7 @@
       <workItem from="1637345289526" duration="5742000" />
       <workItem from="1637686348465" duration="15584000" />
       <workItem from="1637727606887" duration="1870000" />
-      <workItem from="1637775741533" duration="577000" />
+      <workItem from="1637775741533" duration="11407000" />
     </task>
     <servers />
   </component>

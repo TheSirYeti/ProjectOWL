@@ -16,6 +16,7 @@ public abstract class Collectible : MonoBehaviour, IMovable, ICollectible
     private void Start()
     {
         collectibleType = this;
+        Debug.Log(collectibleType);
     }
 
     private void FixedUpdate()
@@ -49,8 +50,8 @@ public abstract class Collectible : MonoBehaviour, IMovable, ICollectible
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Debug.Log("COLLISIONE CON PLAYER");
             collectibleType.OnCollect();
-            TurnOff(this);
         }
     }
 }

@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour, ISubscriber
         
         EventManager.Subscribe("OnPauseGame", PauseInputs);
         EventManager.Subscribe("OnNoMoreLives", PauseInputs);
-        EventManager.Subscribe("OnAdFailed", PauseInputs);
+        EventManager.Subscribe("OnAdFailed", UnpauseInputs);
         EventManager.Subscribe("OnResumeGame", UnpauseInputs);
     }
 
@@ -66,8 +66,7 @@ public class PlayerController : MonoBehaviour, ISubscriber
         _playerMovement.enabled = false;
         EventManager.Trigger("OnEndGame");
     }
-
-
+    
     public void OnNotify(string eventID)
     {
         if (eventID == "MoveRight")
@@ -87,5 +86,4 @@ public class PlayerController : MonoBehaviour, ISubscriber
             _playerMovement.VerticalAction(-1);
         }
     }
-    
 }

@@ -11,5 +11,6 @@ public class HighJump : Collectible
     {
         SoundManager.instance.PlaySound(SoundID.HIGH_JUMP);
         EventManager.Trigger("OnHighJumpCollected", jumpValue, value, duration);
+        TurnOff(this);
     }
 }

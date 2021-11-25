@@ -10,6 +10,7 @@ public class ExtraLife : Collectible
     {
         SoundManager.instance.PlaySound(SoundID.EXTRA_LIFE);
         EventManager.Trigger("OnExtraLifeCollected", 1f, value);
+        TurnOff(this);
     }
 
 }

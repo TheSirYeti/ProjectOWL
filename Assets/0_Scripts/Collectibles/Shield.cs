@@ -10,5 +10,6 @@ public class Shield : Collectible
     {
         SoundManager.instance.PlaySound(SoundID.SHIELD);
         EventManager.Trigger("OnShieldCollected", true, value, duration);
+        TurnOff(this);
     }
 }

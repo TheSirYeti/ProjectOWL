@@ -5007,9 +5007,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToUpdate: 0.00001
-  speed: 10
-  timeToDespawn: 5
+  speed: -20
+  timeToDespawn: 7
   sinModifier: 0
   isSinMovement: 0
   movingCondition: 1
-  target: {fileID: 0}

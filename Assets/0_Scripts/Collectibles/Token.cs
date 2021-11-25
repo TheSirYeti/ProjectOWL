@@ -10,5 +10,6 @@ public class Token : Collectible
     {
         EventManager.Trigger("OnCoinCollected", value, value);
         SoundManager.instance.PlaySound(SoundID.COIN);
+        TurnOff(this);
     }
 }

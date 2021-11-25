@@ -1,17 +1,21 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DirectedMissile : MovingObjects
 {
-    public Transform target;
+    private void Start()
+    {
+        StartCoroutine(StartMovement());
+    }
+
     public override IEnumerator StartMovement()
     {
-        transform.forward = target.position;
-        while (true)
-        {
-            yield return new WaitForSeconds(timeToUpdate);
-            transform.position += transform.forward * speed * Time.fixedDeltaTime;
-        }
+        movingCondition = true;
+        StartCoroutine(ObjectMovement());
+        yield return new WaitForSeconds(timeToDespawn);
+        movingCondition = false;
+        Destroy(gameObject);
     }
 }

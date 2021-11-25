@@ -15,7 +15,8 @@ public class PlayerAnimations : MonoBehaviour, ISubscriber
         _playerObserver.Subscribe(this);
         _groundStatus.Subscribe(this);
         
-        EventManager.Subscribe("OnPlayerDeath", KillAnimations);
+        EventManager.Subscribe("OnPlayerDeath", OnEventReaction);
+        EventManager.Subscribe("OnFootballKicked", OnEventReaction);
     }
 
     public void PlayAnimation(string animationID)
@@ -43,7 +44,7 @@ public class PlayerAnimations : MonoBehaviour, ISubscriber
         }
     }
     
-    public void KillAnimations(object[] parameters)
+    public void OnEventReaction(object[] parameters)
     {
         PlayAnimation((string)parameters[0]);
     }

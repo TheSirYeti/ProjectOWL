@@ -8,7 +8,7 @@ public class PauseManager : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel = null;
     [SerializeField] private GameObject gameOverPanel = null;
-    [SerializeField] Transform originalPanelPosition  = null;
+    [SerializeField] private Transform originalPanelPosition;
     [SerializeField] private GameObject pauseButton = null;
     [SerializeField] private GameObject resumeButton = null;
 

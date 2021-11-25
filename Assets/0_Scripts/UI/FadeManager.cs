@@ -23,6 +23,12 @@ public class FadeManager : MonoBehaviour
         animator.Play("fadeOutToGame");
         Time.timeScale = 1f;
     }
+    
+    public void FadeOutToBoss()
+    {
+        animator.Play("fadeOutToBoss");
+        Time.timeScale = 1f;
+    }
 
     public void FadeToLevel(int sceneID)
     {
