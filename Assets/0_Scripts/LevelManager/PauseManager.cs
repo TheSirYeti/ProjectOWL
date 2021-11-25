@@ -15,8 +15,8 @@ public class PauseManager : MonoBehaviour
     private void Awake()
     {
         EventManager.Subscribe("OnEndGame", DisablePause);
-        EventManager.Subscribe("OnAdFailed", ResumeGame);
-        EventManager.Subscribe("OnAdFinished", ResumeGame);
+        EventManager.Subscribe("OnAdFailed", StopPause);
+        EventManager.Subscribe("OnAdFinished", StopPause);
         EventManager.Subscribe("OnNoMoreLives", OutOfLivesPause);
     }
 
@@ -38,7 +38,12 @@ public class PauseManager : MonoBehaviour
     }
 
     //Via button
-    public void ResumeGame(object[] parameters)
+    public void StopPause(object[] parameters)
+    {
+        ResumeGame();
+    }
+
+    public void ResumeGame()
     {
         pausePanel.transform.position = new Vector2(-999f, -999f);
         gameOverPanel.transform.position = new Vector2(-999f, -999f);
@@ -47,7 +52,7 @@ public class PauseManager : MonoBehaviour
         SoundManager.instance.ResumeAllSounds();
         EventManager.Trigger("OnResumeGame");
     }
-
+    
     public void OutOfLivesPause(object[] parameters)
     {
         gameOverPanel.transform.position = originalPanelPosition.position;

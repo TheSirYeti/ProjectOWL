@@ -18,4 +18,14 @@ public class DirectedMissile : MovingObjects
         movingCondition = false;
         Destroy(gameObject);
     }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag.Equals("Player"))
+        {
+            movingCondition = false;
+            EventManager.Trigger("OnObstacleCollision", -1f);
+            Destroy(gameObject);
+        }
+    }
 }

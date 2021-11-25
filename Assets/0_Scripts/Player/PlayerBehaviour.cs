@@ -9,6 +9,7 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] private float hp;
     [SerializeField] private bool shield;
 
+    bool firstDeath = true;
     private void Start()
     {
         EventManager.Subscribe("OnObstacleCollision", SetLives);
@@ -27,8 +28,13 @@ public class PlayerBehaviour : MonoBehaviour
 
             if (hp <= 0)
             {
-                //AdService.instance.Active(AdService.AdsType.Interstitial_Android, SecondChance, Died);
-                EventManager.Trigger("OnNoMoreLives");
+                if (firstDeath)
+                {
+                    EventManager.Trigger("OnNoMoreLives");
+                    firstDeath = false;
+                }
+                else
+                    Died(null);
             }
             else if (hp >= 5)
             {

@@ -192,7 +192,10 @@ public enum SoundID
     COIN,
     HIGH_JUMP,
     SHIELD,
-    YEAH
+    YEAH,
+    SHOT,
+    KICK,
+    HIT
 }
 
 public enum MusicID

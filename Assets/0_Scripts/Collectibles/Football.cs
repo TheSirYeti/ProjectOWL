@@ -5,15 +5,15 @@ using UnityEngine;
 public class Football : Collectible
 {
     private Transform target;
+    [SerializeField] private float attackDamage;
     [SerializeField] float timeToDespawn = 2f;
     [SerializeField] float timeToUpdate = 0.0001f;
     public override void OnCollect()
     {
-        Debug.Log("LO HACES???");
         GetTarget();
         EventManager.Trigger("OnFootballCollected", "Kick");
+        SoundManager.instance.PlaySound(SoundID.KICK);
         StartCoroutine(GoToTarget());
-        Debug.Log("LO HICE");
     }
 
     void GetTarget()
@@ -34,15 +34,16 @@ public class Football : Collectible
         while (flag)
         {
             yield return new WaitForSeconds(timeToUpdate);
-            transform.position += transform.forward * speed * Time.fixedDeltaTime;
-            timeToDespawn -= timeToUpdate;
-            Debug.Log("hola2222");
+            transform.position += transform.forward * (speed * 2) * Time.fixedDeltaTime;
+            timeToDespawn -= Time.fixedDeltaTime;
             if (timeToDespawn <= 0f)
             {
                 flag = false;
             }
         }
-
+        
+        EventManager.Trigger("OnFootballKicked", attackDamage);
+        SoundManager.instance.PlaySound(SoundID.HIT);
         TurnOff(this);
     }
 }

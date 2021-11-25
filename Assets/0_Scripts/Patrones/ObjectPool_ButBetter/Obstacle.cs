@@ -1,30 +1,40 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+
 //Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN CRUZ CRISTÓFALO
 public class Obstacle : MovingObjects
 {
     private float damage;
-    public bool isHeavy;
+    public bool isHeavy, isSlow;
     public void Start()
     {
+        SetUpStats();
         GenerateMovement();
+    }
+
+    private void SetUpStats()
+    {
+        timeToDespawn = ObstacleFlyweightPointer.timers.timeToDespawn;
+        timeToUpdate = ObstacleFlyweightPointer.timers.timeToUpdate;
         if (isHeavy)
         {
             speed = ObstacleFlyweightPointer.heavyObstacle.speed;
             damage = ObstacleFlyweightPointer.heavyObstacle.damage;
-            timeToUpdate = ObstacleFlyweightPointer.heavyObstacle.timeToUpdate;
-            timeToDespawn = ObstacleFlyweightPointer.heavyObstacle.timeToDespawn;
+        }
+        else if(isSlow)
+        {
+            speed = ObstacleFlyweightPointer.slowObstacle.speed;
+            damage = ObstacleFlyweightPointer.slowObstacle.damage;
         }
         else
         {
             speed = ObstacleFlyweightPointer.normalObstacle.speed;
             damage = ObstacleFlyweightPointer.normalObstacle.damage;
-            timeToUpdate = ObstacleFlyweightPointer.normalObstacle.timeToUpdate;
-            timeToDespawn = ObstacleFlyweightPointer.normalObstacle.timeToDespawn;
         }
     }
-
+    
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag.Equals("Player"))

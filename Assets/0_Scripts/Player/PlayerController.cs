@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour, ISubscriber
         EventManager.Subscribe("OnNoMoreLives", PauseInputs);
         EventManager.Subscribe("OnAdFailed", UnpauseInputs);
         EventManager.Subscribe("OnResumeGame", UnpauseInputs);
+        EventManager.Subscribe("OnBossDestroyed", EndGame);
     }
 
     private void Update()
@@ -60,11 +61,15 @@ public class PlayerController : MonoBehaviour, ISubscriber
     }
     
     //via AnimationEvent
-    void EndGame()
+    void OnAnimationEnd()
+    {
+        EndGame(null);
+    }
+    void EndGame(object[] parameters)
     {
         PauseInputs(null);
         _playerMovement.enabled = false;
-        EventManager.Trigger("OnEndGame");
+        EventManager.Trigger("OnEndGame", "Game Over");
     }
     
     public void OnNotify(string eventID)
