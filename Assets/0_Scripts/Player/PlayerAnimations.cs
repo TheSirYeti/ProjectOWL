@@ -9,6 +9,8 @@ public class PlayerAnimations : MonoBehaviour, ISubscriber
     [SerializeField] private Animator _animator = new Animator();
     [SerializeField] private List<string> animatorStatesNames = new List<string>();
     [SerializeField] private Observer _playerObserver = null, _groundStatus = null;
+
+    private bool canRequest = false;
     
     private void Start()
     {
@@ -38,14 +40,22 @@ public class PlayerAnimations : MonoBehaviour, ISubscriber
         {
             foreach (string s in animatorStatesNames)
             {
-                if(s == eventID)
+                if (s == eventID)
+                {
                     PlayAnimation(eventID);
+                    if (s == "Die")
+                    {
+                        canRequest = false;
+                    }
+                }
+
             }
         }
     }
     
     public void OnEventReaction(object[] parameters)
     {
-        PlayAnimation((string)parameters[0]);
+        if(canRequest)
+            PlayAnimation((string)parameters[0]);
     }
 }
