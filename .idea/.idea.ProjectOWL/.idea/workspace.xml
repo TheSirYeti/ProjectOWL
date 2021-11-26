@@ -28,6 +28,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Player/Movement/MovementCalculator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Player/PlayerVFX.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@4.0.5/Runtime/Core/EntityBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/UI/URLManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Collectibles/HighJump.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/LevelManager/LoopingFloor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Player/GroundCheck/GroundStatus.cs" root0="FORCE_HIGHLIGHTING" />
@@ -148,7 +149,7 @@
       <workItem from="1637686348465" duration="15584000" />
       <workItem from="1637727606887" duration="1870000" />
       <workItem from="1637775741533" duration="11407000" />
-      <workItem from="1637860217378" duration="19384000" />
+      <workItem from="1637860217378" duration="20663000" />
     </task>
     <servers />
   </component>

@@ -5009,7 +5009,8 @@ MonoBehaviour:
   timeToUpdate: 0.00001
   speed: 60
   timeToDespawn: 20
-  sinModifier: 12
+  sinModifier: 24
   isSinMovement: 1
   movingCondition: 1
   isHeavy: 1
+  isSlow: 0
