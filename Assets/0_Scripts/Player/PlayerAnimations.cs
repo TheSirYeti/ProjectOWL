@@ -10,7 +10,7 @@ public class PlayerAnimations : MonoBehaviour, ISubscriber
     [SerializeField] private List<string> animatorStatesNames = new List<string>();
     [SerializeField] private Observer _playerObserver = null, _groundStatus = null;
 
-    private bool canRequest = false;
+    private bool canRequest = true;
     
     private void Start()
     {

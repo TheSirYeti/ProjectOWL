@@ -11,7 +11,10 @@ public class TankModel : MonoBehaviour
     private Transform target;
     private GameObject bulletPrefab;
     private float attackRate;
-       
+    private float attackCooldown;
+
+    private bool attackRateFlag = false;
+    
     public Action<float, float> OnDamageRecieved;
     public Action OnAttackShot;
     public Action OnDeath;
@@ -29,6 +32,11 @@ public class TankModel : MonoBehaviour
     public void TakeDamage(float damage)
     {
         hp -= damage;
+        if (hp <= maxHp / 2 && !attackRateFlag)
+        {
+            attackRateFlag = true;
+            attackRate /= 2;
+        }
         if (hp <= 0)
         {
             OnDeath?.Invoke();
@@ -39,7 +47,7 @@ public class TankModel : MonoBehaviour
 
     public void Attack()
     {
-        if (hp > 0)
+        if (hp > 0 && attackCooldown <= Time.fixedTime)
         {
             Vector3 dir = target.transform.position - attackSpawnPoint.transform.position;
             dir.y += 1f;
@@ -48,6 +56,8 @@ public class TankModel : MonoBehaviour
             bullet.transform.position = attackSpawnPoint.position;
             bullet.transform.forward = dir;
             OnAttackShot?.Invoke();
+
+            attackCooldown = Time.fixedTime + attackRate;
         }
     }
 }

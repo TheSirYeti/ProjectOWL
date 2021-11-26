@@ -3945,6 +3945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb84eb86d7695764dac62be52232a1ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkValue: 250
 --- !u!1 &580189863 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5178592578424963657, guid: d9470f79d0b3e7c46bd262355dbc96c3,
@@ -4840,6 +4841,8 @@ MonoBehaviour:
   - {fileID: 822069571}
   - {fileID: 1145026888}
   spawnDelay: 1.2
+  minSpawnDelay: 0.5
+  spawnDelayRate: 0.2
   obstacles:
   - car_green
   - cop_mesh

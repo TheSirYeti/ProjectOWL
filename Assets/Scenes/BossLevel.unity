@@ -5816,6 +5816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb84eb86d7695764dac62be52232a1ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkValue: 150
 --- !u!1 &584332373
 GameObject:
   m_ObjectHideFlags: 0
@@ -5941,6 +5942,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5178592577599429953, guid: d9470f79d0b3e7c46bd262355dbc96c3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5178592577605632184, guid: d9470f79d0b3e7c46bd262355dbc96c3,
         type: 3}
@@ -6155,7 +6161,7 @@ PrefabInstance:
     - target: {fileID: 5178592578288713283, guid: d9470f79d0b3e7c46bd262355dbc96c3,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5178592578343578963, guid: d9470f79d0b3e7c46bd262355dbc96c3,
         type: 3}
@@ -6295,6 +6301,11 @@ PrefabInstance:
     - target: {fileID: 5178592578892090976, guid: d9470f79d0b3e7c46bd262355dbc96c3,
         type: 3}
       propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5178592578892090978, guid: d9470f79d0b3e7c46bd262355dbc96c3,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5178592578949476543, guid: d9470f79d0b3e7c46bd262355dbc96c3,
@@ -6893,6 +6904,8 @@ MonoBehaviour:
   - {fileID: 822069571}
   - {fileID: 1145026888}
   spawnDelay: 1.2
+  minSpawnDelay: 0.3
+  spawnDelayRate: 0.2
   obstacles:
   - Mine
   poolSize: 40
@@ -19489,7 +19502,7 @@ MonoBehaviour:
   target: {fileID: 6503028115583511795}
   bulletPrefab: {fileID: 7728782099594874196, guid: 1721e3c911ff4aa489fce62ab7e0ea92,
     type: 3}
-  attackRate: 2
+  attackRate: 2.5
   shootingSmoke: {fileID: 200932943}
   dyingEffect: {fileID: 983457946}
   hpBar: {fileID: 590947351}

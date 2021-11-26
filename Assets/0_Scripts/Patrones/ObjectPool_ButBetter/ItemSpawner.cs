@@ -9,6 +9,8 @@ public class ItemSpawner : MonoBehaviour
     [Header("Spawnpoints")]
     [SerializeField] private Transform[] spawnPoints = null;
     [SerializeField] private float spawnDelay = 0f;
+    [SerializeField] private float minSpawnDelay;
+    [SerializeField] private float spawnDelayRate;
     
     [Header("Obstacle Items")]
     public List<string> obstacles;
@@ -32,6 +34,7 @@ public class ItemSpawner : MonoBehaviour
         _collectibleFactory = new CollectibleFactory(collectibles);
         _collectiblePool = new Pool<Collectible>(_collectibleFactory.Create, Collectible.TurnOff, Collectible.TurnOn, poolSize);
         
+        EventManager.Subscribe("OnDistanceCheck", ChangeRate);
         StartCoroutine(SpawnObjects());
     }
 
@@ -64,6 +67,14 @@ public class ItemSpawner : MonoBehaviour
                 }
             }
             yield return new WaitForSeconds(spawnDelay);
+        }
+    }
+
+    public void ChangeRate(object[] parameters)
+    {
+        if (spawnDelay >= minSpawnDelay)
+        {
+            spawnDelay -= spawnDelayRate;
         }
     }
 }

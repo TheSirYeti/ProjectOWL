@@ -11,6 +11,7 @@ public abstract class MovingObjects : MonoBehaviour, IMovable
     public float speed = 0f;
     public float timeToDespawn = 0f;
     public float sinModifier;
+    public float period;
     
     public bool isSinMovement;
     
@@ -34,7 +35,7 @@ public abstract class MovingObjects : MonoBehaviour, IMovable
 
             if (isSinMovement)
             {
-                transform.position -= (transform.forward + new Vector3(Mathf.Sin(Time.fixedTime) / sinModifier, 0f, 0f)) * Time.deltaTime * speed;
+                transform.position -= (transform.forward + new Vector3(Mathf.Sin(Time.fixedTime * period) * sinModifier, 0f, 0f)) * Time.deltaTime * speed;
             } 
             else transform.position -= transform.forward * Time.deltaTime * speed;
         }

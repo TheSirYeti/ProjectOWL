@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 100
-  speed: 50
-  attackDamage: 10
+  speed: 40
+  attackDamage: 5
   timeToDespawn: 1
   timeToUpdate: 0.000001

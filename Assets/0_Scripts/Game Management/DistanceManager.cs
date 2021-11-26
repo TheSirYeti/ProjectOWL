@@ -7,6 +7,8 @@ using UnityEngine;
 public class DistanceManager : MonoBehaviour, IValueRecorder
 {
     private int totalDistance;
+    private int nextCheck;
+    [SerializeField] int checkValue = 300;
     private bool isRunning = true;
     
     private void Start()
@@ -26,6 +28,12 @@ public class DistanceManager : MonoBehaviour, IValueRecorder
         while (isRunning)
         {
             totalDistance += 1;
+            nextCheck += 1;
+            if (nextCheck >= checkValue)
+            {
+                nextCheck = 0;
+                EventManager.Trigger("OnDistanceCheck");
+            }
             EventManager.Trigger("OnDistanceChange", totalDistance);
             yield return new WaitForSeconds(0.1f);
         }

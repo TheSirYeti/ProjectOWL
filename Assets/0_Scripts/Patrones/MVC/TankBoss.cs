@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
@@ -33,17 +34,11 @@ public class TankBoss : MonoBehaviour
         
         
         EventManager.Subscribe("OnFootballKicked", OnAttackCollision);
-         
-        StartCoroutine(GenerateAttack());
     }
 
-    IEnumerator GenerateAttack()
+    private void Update()
     {
-        while (true)
-        {
-            yield return new WaitForSeconds(attackRate);
-            controller.Attack();
-        }
+        controller.Attack();
     }
 
     void OnAttackCollision(object[] parameters)
