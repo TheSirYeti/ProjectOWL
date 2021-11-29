@@ -6,23 +6,17 @@ using UnityEngine.UI;
 
 public class TankView : MonoBehaviour
 {
-    private ParticleSystem shootingSmoke, dyingEffect;
-    private Animator animator;
-    private Slider hpBar;
+    [SerializeField] ParticleSystem shootingSmoke, dyingEffect;
+    [SerializeField] Animator animator;
+    [SerializeField] Slider hpBar;
 
-    private TankModel model;
+    [SerializeField] TankController controller;
 
-    public TankView(ParticleSystem shootingSmoke, ParticleSystem dyingEffect, Slider hpBar, TankModel model, Animator animator)
+    private void Start()
     {
-        this.shootingSmoke = shootingSmoke;
-        this.dyingEffect = dyingEffect;
-        this.hpBar = hpBar;
-        this.model = model;
-        this.animator = animator;
-        
-        model.OnDamageRecieved += ShowHP;
-        model.OnDeath += TankDeath;
-        model.OnAttackShot += AttackFX;
+        controller.OnDamageRecieved += ShowHP;
+        controller.OnDeath += TankDeath;
+        controller.OnAttackShot += AttackFX;
     }
 
     public void ShowHP(float currentHP, float maxHP)

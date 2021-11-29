@@ -16,7 +16,7 @@ public class DirectedMissile : MovingObjects
         StartCoroutine(ObjectMovement());
         yield return new WaitForSeconds(timeToDespawn);
         movingCondition = false;
-        Destroy(gameObject);
+        TurnOff(this);
     }
     
     private void OnTriggerEnter(Collider other)
@@ -25,7 +25,20 @@ public class DirectedMissile : MovingObjects
         {
             movingCondition = false;
             EventManager.Trigger("OnObstacleCollision", -1f);
-            Destroy(gameObject);
+            TurnOff(this);
         }
+    }
+    
+    //For ObjectPool
+    public static DirectedMissile TurnOff(DirectedMissile misisle)
+    {
+        misisle.gameObject.SetActive(false);
+        return misisle;
+    }
+
+    public static DirectedMissile TurnOn(DirectedMissile misisle)
+    {
+        misisle.gameObject.SetActive(true);
+        return misisle;
     }
 }

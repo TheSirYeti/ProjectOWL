@@ -26,12 +26,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Game Management/IValueRecorder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Patrones/Observer/Observer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Player/Movement/MovementCalculator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa3128.49175/TankModel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Player/PlayerVFX.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@4.0.5/Runtime/Core/EntityBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/UI/URLManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Collectibles/HighJump.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/LevelManager/LoopingFloor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Patrones/ObjectPool_ButBetter/MissileFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Player/GroundCheck/GroundStatus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/UI/ChallengeUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Sounds/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -153,6 +153,8 @@
       <workItem from="1637860217378" duration="21308000" />
       <workItem from="1637894017103" duration="4324000" />
       <workItem from="1637937214592" duration="2178000" />
+      <workItem from="1638052885576" duration="814000" />
+      <workItem from="1638130732449" duration="9323000" />
     </task>
     <servers />
   </component>

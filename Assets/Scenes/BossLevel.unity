@@ -428,7 +428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 144834989}
   m_Layer: 9
-  m_Name: GameObject
+  m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5686,7 +5686,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e971ab74135f9c84c8a1651561a1d72d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rootDirectory: /Resources/Localization
 --- !u!1 &509481315
 GameObject:
   m_ObjectHideFlags: 0
@@ -19518,6 +19517,7 @@ GameObject:
   - component: {fileID: 5006512734931846986}
   - component: {fileID: 4044710141438344572}
   - component: {fileID: 7718390322779242885}
+  - component: {fileID: 8296172669058151774}
   - component: {fileID: 8296172669058151770}
   - component: {fileID: 8296172669058151772}
   - component: {fileID: 8296172669058151771}
@@ -19538,21 +19538,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 8296172669058151769}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f892f6aee88a714cb527f9143662cf7, type: 3}
+  m_Script: {fileID: 11500000, guid: c366036c70a54bb4aa7fa04408f1e1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 100
   maxHp: 100
   attackSpawnPoint: {fileID: 144834989}
   target: {fileID: 6503028115583511795}
-  bulletPrefab: {fileID: 7728782099594874196, guid: 1721e3c911ff4aa489fce62ab7e0ea92,
-    type: 3}
   attackRate: 2.5
-  shootingSmoke: {fileID: 200932943}
-  dyingEffect: {fileID: 983457946}
-  hpBar: {fileID: 590947351}
-  animator: {fileID: 8296172669058151773}
-  view: {fileID: 8296172669058151772}
+  attackCooldown: 2.5
 --- !u!65 &8296172669058151771
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19578,6 +19572,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1fb110d2fce28c46b95279e43000e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootingSmoke: {fileID: 200932943}
+  dyingEffect: {fileID: 983457946}
+  animator: {fileID: 8296172669058151773}
+  hpBar: {fileID: 590947351}
+  controller: {fileID: 8296172669058151774}
 --- !u!95 &8296172669058151773
 Animator:
   serializedVersion: 3
@@ -19597,6 +19596,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8296172669058151774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669058151769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfe932399911e6049adac1e7a6676418, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  model: {fileID: 8296172669058151770}
+  missilePrefabName: rocketpower 1
 --- !u!4 &8302211754330449684
 Transform:
   m_ObjectHideFlags: 0

@@ -5,59 +5,10 @@ using UnityEngine;
 
 public class TankModel : MonoBehaviour
 {
-    private float hp;
-    private float maxHp;
-    private Transform attackSpawnPoint;
-    private Transform target;
-    private GameObject bulletPrefab;
-    private float attackRate;
-    private float attackCooldown;
-
-    private bool attackRateFlag = false;
-    
-    public Action<float, float> OnDamageRecieved;
-    public Action OnAttackShot;
-    public Action OnDeath;
-
-    public TankModel(float hp, float maxHp, Transform attackSpawnPoint, Transform target, GameObject bulletPrefab, float attackRate)
-    {
-        this.hp = hp;
-        this.maxHp = maxHp;
-        this.attackSpawnPoint = attackSpawnPoint;
-        this.target = target;
-        this.bulletPrefab = bulletPrefab;
-        this.attackRate = attackRate;
-    }
-
-    public void TakeDamage(float damage)
-    {
-        hp -= damage;
-        if (hp <= maxHp / 2 && !attackRateFlag)
-        {
-            attackRateFlag = true;
-            attackRate /= 2;
-        }
-        if (hp <= 0)
-        {
-            OnDeath?.Invoke();
-            hp = 0;
-        }
-        else OnDamageRecieved?.Invoke(hp, maxHp);
-    }
-
-    public void Attack()
-    {
-        if (hp > 0 && attackCooldown <= Time.fixedTime)
-        {
-            Vector3 dir = target.transform.position - attackSpawnPoint.transform.position;
-            dir.y += 1f;
-
-            GameObject bullet = Instantiate(bulletPrefab);
-            bullet.transform.position = attackSpawnPoint.position;
-            bullet.transform.forward = dir;
-            OnAttackShot?.Invoke();
-
-            attackCooldown = Time.fixedTime + attackRate;
-        }
-    }
+    public float hp;
+    public float maxHp;
+    public Transform attackSpawnPoint;
+    public Transform target;
+    public float attackRate;
+    public float attackCooldown;
 }
