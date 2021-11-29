@@ -9,6 +9,7 @@ public class ObstacleFlyweightPointer : MonoBehaviour
         timeToUpdate = 0.000001f,
         timeToDespawn = 20f
     };
+    
     public static readonly ObstacleFlyweight normalObstacle = new ObstacleFlyweight
     {
         speed = 60f,

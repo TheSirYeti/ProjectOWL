@@ -6,7 +6,7 @@ using UnityEngine;
 //Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN CRUZ CRISTÓFALO
 public class ObstaclesFactory : IFactory<Obstacle>
 {
-    public List<string> obstacles;
+    List<string> obstacles;
     
     public ObstaclesFactory (List<string> strings)
     {

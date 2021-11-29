@@ -7,16 +7,20 @@ public class TankController : MonoBehaviour
 {
     [SerializeField] private TankModel model;
 
+    //Metodos para el View
     public Action<float, float> OnDamageRecieved;
     public Action OnAttackShot;
     public Action OnDeath;
     
+    //ObjectPool
     private Pool<DirectedMissile> _missilePool = null;
     private IFactory<DirectedMissile> _missileFactory = null;
     private int poolSize = 15;
-    [SerializeField] private string missilePrefabName;
     
-    private bool attackRateFlag = false;
+    
+    [SerializeField] private string _missilePrefabName;
+    
+    bool _attackRateFlag = false;
     
     public TankController(TankModel model)
     {
@@ -26,7 +30,7 @@ public class TankController : MonoBehaviour
     private void Start()
     {
         EventManager.Subscribe("OnFootballKicked", OnAttackCollision);
-        _missileFactory = new MissileFactory(missilePrefabName);
+        _missileFactory = new MissileFactory(_missilePrefabName);
         _missilePool = new Pool<DirectedMissile>(_missileFactory.Create, DirectedMissile.TurnOff, DirectedMissile.TurnOn, poolSize);
     }
 
@@ -55,9 +59,9 @@ public class TankController : MonoBehaviour
     public void TakeDamage(float damage)
     {
         model.hp -= damage;
-        if (model.hp <= model.maxHp / 2 && !attackRateFlag)
+        if (model.hp <= model.maxHp / 2 && !_attackRateFlag)
         {
-            attackRateFlag = true;
+            _attackRateFlag = true;
             model.attackRate /= 2;
         }
         if (model.hp <= 0)
