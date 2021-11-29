@@ -17,8 +17,10 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
     private bool _canPlay = true;
     
     [SerializeField] private Observer _playerObserver = null, _groundStatus = null;
-    
 
+    private IAbility ability;
+    private IAbility nextAbility;
+    
     private void Awake()
     {
         _groundStatus.Subscribe(this);
@@ -27,11 +29,14 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
         EventManager.Subscribe("OnHighJumpCollected", ChangeJumpValue);
         EventManager.Subscribe("OnHighJumpOver", ResetJumpValue);
         EventManager.Subscribe("OnPlayerDeath", KillPlayer);
+        EventManager.Subscribe("OnExplosionCoinCollected", LoadAbility);
+        EventManager.Subscribe("OnSlashCoinCollected", LoadAbility);
     }
 
     private void Start()
     {
         _originalJumpForce = jumpForce;
+        ability = new NormalSlide();
     }
 
     public void ChangeLane(int direction)
@@ -55,8 +60,10 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
         }
         else if(direction == -1 && isGrounded && _canPlay)
         {
-            SoundManager.instance.PlaySound(SoundID.SLIDE);
             _playerObserver.NotifySubscribers("Slide");
+            ability.OnSlideDown();
+            if(nextAbility != null)
+                ability = nextAbility;
         }
     }
 
@@ -89,5 +96,12 @@ public class PlayerMovement : MonoBehaviour, ISubscriber
     {
         _canPlay = false;
         _playerObserver.NotifySubscribers("Die");
+    }
+
+    void LoadAbility(object[] parameters)
+    {
+        var upgrade = (IAbility) parameters[0];
+        nextAbility = new NormalSlide();
+        ability = upgrade;
     }
 }

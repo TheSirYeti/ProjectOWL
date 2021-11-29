@@ -4856,6 +4856,8 @@ MonoBehaviour:
   - Heart
   - HighJumpPrefab
   - ShieldPrefab
+  - SlashPrefab
+  - ExplosionPrefab
 --- !u!1 &741466585
 GameObject:
   m_ObjectHideFlags: 0

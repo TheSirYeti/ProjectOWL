@@ -14,6 +14,8 @@ public class ScoreManager : MonoBehaviour, IValueRecorder
         EventManager.Subscribe("OnCoinCollected", AddValue);
         EventManager.Subscribe("OnHighJumpCollected", AddValue);
         EventManager.Subscribe("OnShieldCollected", AddValue);
+        EventManager.Subscribe("OnSlashCoinCollected", AddValue);
+        EventManager.Subscribe("OnExplosionCoinCollected", AddValue);
         EventManager.Subscribe("OnEndGame", SaveValue);
     }
 
