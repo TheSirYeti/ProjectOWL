@@ -4,11 +4,21 @@ using UnityEngine;
 
 public class NormalSlide : MonoBehaviour, IAbility
 {
-    public IAbility next;
+    IAbility next;
 
     public void OnSlideDown()
     {
         SoundManager.instance.PlaySound(SoundID.SLIDE);
         Debug.Log("NORMAL");
+    }
+    
+    public IAbility GetNext()
+    {
+        return next;
+    }
+
+    public void SetNext(IAbility ability)
+    {
+        next = ability;
     }
 }

@@ -47,6 +47,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Game Management/ChallengesScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Game Management/DistanceManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Collectibles/Token.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/UI/PowerUp/AbilityTimer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/UI/PowerUp/ShieldTimer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a278ebd44ab0472bb8e638263e06cd61fe200/65/9f7e1292/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Collectibles/Collectible.cs" root0="FORCE_HIGHLIGHTING" />
@@ -62,6 +63,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/UI/PanelMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Collectibles/ExtraLife.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Patrones/Decorator/SlideSlash.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Player/PlayerAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/LevelManager/PauseManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Collectibles/Football.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Patrones/Decorator/IAbility.cs" root0="FORCE_HIGHLIGHTING" />
@@ -164,7 +166,8 @@
       <workItem from="1638130732449" duration="9323000" />
       <workItem from="1638192159697" duration="2525000" />
       <workItem from="1638220021877" duration="10165000" />
-      <workItem from="1638239411406" duration="7028000" />
+      <workItem from="1638239411406" duration="8512000" />
+      <workItem from="1638294722331" duration="4979000" />
     </task>
     <servers />
   </component>

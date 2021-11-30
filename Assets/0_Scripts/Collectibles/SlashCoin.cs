@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class SlashCoin : Collectible
 {
+    [SerializeField] float time;
     public override void OnCollect()
     {
         SoundManager.instance.PlaySound(SoundID.YEAH);
-        EventManager.Trigger("OnSlashCoinCollected", new SlideSlash(), value);
+        EventManager.Trigger("OnAbilityCollected", new SlideSlash(), value, time);
         TurnOff(this);
     }
 }

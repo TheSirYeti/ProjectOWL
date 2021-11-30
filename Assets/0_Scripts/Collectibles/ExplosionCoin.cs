@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ExplosionCoin : Collectible
 {
+    [SerializeField] float time;
     public override void OnCollect()
     {
         SoundManager.instance.PlaySound(SoundID.YEAH);
-        EventManager.Trigger("OnExplosionCoinCollected", new SlideExplosion(), value);
+        EventManager.Trigger("OnAbilityCollected", new SlideExplosion(), value, time);
         TurnOff(this);
     }
 }
