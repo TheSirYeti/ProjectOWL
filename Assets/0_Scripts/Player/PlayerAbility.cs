@@ -22,9 +22,7 @@ public class PlayerAbility : MonoBehaviour, ISubscriber
 
     void LoadAbility(object[] parameters)
     {
-        Debug.Log("inglessss");
         var upgrade = (IAbility) parameters[0];
-        Debug.Log(upgrade);
         if (ability != upgrade)
         {
             var aux = ability;
@@ -42,7 +40,6 @@ public class PlayerAbility : MonoBehaviour, ISubscriber
     {
         if (eventID == "Slide")
         {
-            Debug.Log("hago slide");
             ability.OnSlideDown();
         }
     }

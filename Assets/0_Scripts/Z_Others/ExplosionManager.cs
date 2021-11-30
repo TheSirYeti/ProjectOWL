@@ -22,7 +22,6 @@ public class ExplosionManager : MonoBehaviour
 
         foreach (var item in targetsInViewRadius)
         {
-            Debug.Log("hola1414");
             item.gameObject.SetActive(false);
         }
     }
