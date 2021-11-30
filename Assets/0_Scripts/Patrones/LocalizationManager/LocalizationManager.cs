@@ -14,35 +14,51 @@ public class LocalizationManager : MonoBehaviour {
     public static SystemLanguage language = SystemLanguage.English;
     
 
-    void Awake(){
-        if (Instance == null) {
+    void Awake()
+    {
+        if (Instance == null)
+        {
             Instance = this;
             LoadTexts();
         }
         else Destroy(this);
     }
 
-    void Start(){
-        Debug.Log("Lenguaje OS: " + Application.systemLanguage);
-        
+    void Start()
+    {
         language = Application.systemLanguage;
+        Debug.Log("Lenguaje OS: " + Application.systemLanguage);
     }
 
-    public void SwitchLanguage(){
-        language = language == SystemLanguage.Spanish ? SystemLanguage.English : SystemLanguage.Spanish;
+    public void SwitchLanguage()
+    {
+        //language = language == SystemLanguage.Spanish ? SystemLanguage.English : SystemLanguage.Spanish;
+        if(language == SystemLanguage.English)
+        {
+            language = SystemLanguage.Spanish;
+            EventManager.Trigger("OnLangChanging");
+        }
+        else
+        {
+            language = SystemLanguage.English;
+            EventManager.Trigger("OnLangChanging");
+        }
     }
 
-    private void LoadTexts(){
+    private void LoadTexts()
+    {
         texts = new Dictionary<SystemLanguage, Dictionary<string, string>>();
         
         var allFiles = new List<string>();
-        foreach (var file in Directory.GetFiles(Application.dataPath + $"{rootDirectory}/", "*.json", SearchOption.AllDirectories)) {
+        foreach (var file in Directory.GetFiles(Application.dataPath + $"{rootDirectory}/", "*.json", SearchOption.AllDirectories))
+        {
             var fileName = file.Substring(file.IndexOf("Localization", StringComparison.Ordinal))
                                .Replace(@"\", @"/");
             allFiles.Add(fileName);
         }
         
-        foreach (var file in allFiles){
+        foreach (var file in allFiles)
+        {
             var asset = Resources.Load<TextAsset>(file.Replace(".json", ""));
             
             var data = asset.text;
@@ -54,24 +70,28 @@ public class LocalizationManager : MonoBehaviour {
         }
     }
 
-    private void SetTexts(Dictionary<string, object> fileContent, string fileName, string language) {
+    private void SetTexts(Dictionary<string, object> fileContent, string fileName, string language)
+    {
         var lang = LanguageMapper.Map(language.ToUpper());
 
-        foreach (var item in fileContent) {
+        foreach (var item in fileContent)
+        {
             if (!texts.ContainsKey(lang)) texts.Add(lang, new Dictionary<string, string>());
             
             texts[lang].Add($"{fileName}/{item.Key}", item.Value.ToString());
-            Debug.Log($"{lang} --- {fileName}/{item.Key} --- {item.Value}");
+            //Debug.Log($"{lang} --- {fileName}/{item.Key} --- {item.Value}");
         }
     }
 
-    public string GetText(string key){
-        if (!texts[language].ContainsKey(key)){
+    public string GetText(string key)
+    {
+        if (!texts[language].ContainsKey(key))
+        {
             Debug.LogError($"Key '{key}' for language '{language}' not found");
             return key;
         }
 
         return texts[language][key];
     }
-    
+
 }
