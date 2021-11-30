@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4540141924520818388}
   - component: {fileID: 7502751299011295138}
   - component: {fileID: 6851942586288007241}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: mesh874016818
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 7234300424867479417}
   - component: {fileID: 3172650888473637001}
   - component: {fileID: 623845255666879559}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: mesh715062615
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 2818430221283656568}
   - component: {fileID: 2781398016572330208}
   - component: {fileID: 7244165518441398408}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: mesh413415826
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 8462454047117532872}
   - component: {fileID: 91828311527320691}
   - component: {fileID: 522816007832757837}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: mesh450465863
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 8471528772611374448}
   - component: {fileID: 7926237787463948029}
   - component: {fileID: 6984436677910613980}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: mesh611164287
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -399,7 +399,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8765636983778799696}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,7 +438,7 @@ GameObject:
   - component: {fileID: 6630547647560911881}
   - component: {fileID: 6343407988074176259}
   - component: {fileID: 4016967712342624718}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: mesh1270301541
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,7 +516,7 @@ GameObject:
   - component: {fileID: 8261093229994009981}
   - component: {fileID: 8261093229994009978}
   - component: {fileID: 8261093229994009980}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Mine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -554,6 +554,7 @@ MonoBehaviour:
   speed: 30
   timeToDespawn: 20
   sinModifier: 0
+  period: 0
   isSinMovement: 0
   movingCondition: 1
   isHeavy: 0
@@ -582,7 +583,7 @@ GameObject:
   - component: {fileID: 9131283388645843051}
   - component: {fileID: 6370459920262556958}
   - component: {fileID: 841223996312431261}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: mesh865683717
   m_TagString: Untagged
   m_Icon: {fileID: 0}

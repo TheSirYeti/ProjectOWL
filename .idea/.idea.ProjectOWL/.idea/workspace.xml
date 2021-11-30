@@ -34,6 +34,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Collectibles/HighJump.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/LevelManager/LoopingFloor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Patrones/ObjectPool_ButBetter/MissileFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Z_Others/SlashAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Player/GroundCheck/GroundStatus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/UI/ChallengeUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/0_Scripts/Sounds/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -162,7 +163,8 @@
       <workItem from="1638052885576" duration="814000" />
       <workItem from="1638130732449" duration="9323000" />
       <workItem from="1638192159697" duration="2525000" />
-      <workItem from="1638220021877" duration="8609000" />
+      <workItem from="1638220021877" duration="10165000" />
+      <workItem from="1638239411406" duration="7028000" />
     </task>
     <servers />
   </component>

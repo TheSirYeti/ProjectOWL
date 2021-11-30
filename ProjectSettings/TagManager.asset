@@ -16,6 +16,7 @@ TagManager:
   - PP
   - Dumpster
   - Rocket
+  - Slash
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - 
   - PP
   - Boss
-  - 
+  - Obstacle
   - 
   - 
   - 

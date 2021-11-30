@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4760527874323742291}
   - component: {fileID: 168846465831399163}
   - component: {fileID: 56103863422938190}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: car_green
   m_TagString: Car
   m_Icon: {fileID: 0}
@@ -108,4 +108,9 @@ MonoBehaviour:
   timeToUpdate: 0.00001
   speed: 60
   timeToDespawn: 20
+  sinModifier: 0
+  period: 0
+  isSinMovement: 0
   movingCondition: 1
+  isHeavy: 0
+  isSlow: 0

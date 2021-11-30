@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 3382434825410551257}
   - component: {fileID: 3382434825410551259}
   - component: {fileID: 3382434825410551256}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Dumpster 1
   m_TagString: Dumpster
   m_Icon: {fileID: 0}
@@ -207,7 +207,12 @@ MonoBehaviour:
   timeToUpdate: 0.00001
   speed: 60
   timeToDespawn: 20
+  sinModifier: 0
+  period: 0
+  isSinMovement: 0
   movingCondition: 1
+  isHeavy: 0
+  isSlow: 0
 --- !u!65 &3382434825410551259
 BoxCollider:
   m_ObjectHideFlags: 0

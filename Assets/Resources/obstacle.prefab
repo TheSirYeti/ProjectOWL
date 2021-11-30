@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5060205511490011296}
   - component: {fileID: 4867256757293625240}
   - component: {fileID: 2444843487830022766}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: obstacle
   m_TagString: Bus
   m_Icon: {fileID: 0}
@@ -108,5 +108,9 @@ MonoBehaviour:
   timeToUpdate: 0.00001
   speed: 60
   timeToDespawn: 20
+  sinModifier: 0
+  period: 0
+  isSinMovement: 0
   movingCondition: 1
   isHeavy: 1
+  isSlow: 0

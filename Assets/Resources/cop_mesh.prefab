@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6204215731303077363}
   - component: {fileID: 1094553455522893205}
   - component: {fileID: 3181369253625311392}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: cop_mesh
   m_TagString: Cop
   m_Icon: {fileID: 0}
@@ -95,7 +95,12 @@ MonoBehaviour:
   timeToUpdate: 0.00001
   speed: 60
   timeToDespawn: 20
+  sinModifier: 0
+  period: 0
+  isSinMovement: 0
   movingCondition: 1
+  isHeavy: 0
+  isSlow: 0
 --- !u!65 &3181369253625311392
 BoxCollider:
   m_ObjectHideFlags: 0

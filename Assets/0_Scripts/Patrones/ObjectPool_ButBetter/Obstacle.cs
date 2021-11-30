@@ -43,6 +43,12 @@ public class Obstacle : MovingObjects
             Obstacle.TurnOff(this);
             EventManager.Trigger("OnObstacleCollision", -damage);
         }
+         
+        else if (other.gameObject.tag.Equals("Slash"))
+        {
+            movingCondition = false;
+            Obstacle.TurnOff(this);
+        }
     }
     
     public override IEnumerator StartMovement()

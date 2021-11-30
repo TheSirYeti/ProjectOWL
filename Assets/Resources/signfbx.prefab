@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6529064012918089994}
   - component: {fileID: 4496023181605662578}
   - component: {fileID: 2732576025679184187}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: signfbx
   m_TagString: Sign
   m_Icon: {fileID: 0}
@@ -95,7 +95,12 @@ MonoBehaviour:
   timeToUpdate: 0.00001
   speed: 60
   timeToDespawn: 20
+  sinModifier: 0
+  period: 0
+  isSinMovement: 0
   movingCondition: 1
+  isHeavy: 0
+  isSlow: 0
 --- !u!65 &2732576025679184187
 BoxCollider:
   m_ObjectHideFlags: 0

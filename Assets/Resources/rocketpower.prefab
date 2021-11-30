@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1757471793816507184}
   - component: {fileID: 1757471793816507186}
   - component: {fileID: 1757471793816507185}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4880,7 +4880,7 @@ GameObject:
   - component: {fileID: 9157299845113720292}
   - component: {fileID: 7200530406948809191}
   - component: {fileID: 3630547057191266194}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4958,7 +4958,7 @@ GameObject:
   - component: {fileID: 6708533333570551623}
   - component: {fileID: 4164174595880871018}
   - component: {fileID: 1757471793865977482}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: rocketpower
   m_TagString: Rocket
   m_Icon: {fileID: 0}
