@@ -15189,7 +15189,7 @@ PrefabInstance:
     - target: {fileID: 4206510030365856654, guid: 4a3b68fb562fa9a4e9037ccc93bcf0c9,
         type: 3}
       propertyPath: explosionRadius
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4206510030365856655, guid: 4a3b68fb562fa9a4e9037ccc93bcf0c9,
         type: 3}
