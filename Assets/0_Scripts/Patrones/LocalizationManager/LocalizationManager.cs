@@ -4,6 +4,8 @@ using System.IO;
 using MiniJSON;
 using UnityEngine;
 
+//Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN CRUZ CRISTÓFALO
+
 public class LocalizationManager : MonoBehaviour {
 
     public string rootDirectory = "/Resources/Localization";
@@ -33,8 +35,6 @@ public class LocalizationManager : MonoBehaviour {
 
     public void SwitchLanguage()
     {
-        //language = language == SystemLanguage.Spanish ? SystemLanguage.English : SystemLanguage.Spanish;
-        Debug.Log(language);
         if(language == SystemLanguage.English)
         {
             language = SystemLanguage.Spanish;

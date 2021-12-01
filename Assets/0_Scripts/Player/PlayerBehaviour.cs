@@ -56,7 +56,6 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void Died(object[] parameters)
     {
-        Debug.Log("Deberia morir");
         hp = 0;
         EventManager.Trigger("OnPlayerDeath", "Die");
     }

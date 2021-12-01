@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+//Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN CRUZ CRISTÓFALO
+
 public static class LanguageMapper {
 
     public static SystemLanguage Map(string lang) {

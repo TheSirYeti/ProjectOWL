@@ -2,6 +2,8 @@
 using System.IO;
 using MiniJSON;
 
+//Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN CRUZ CRISTÓFALO
+
 public static class JsonSerializer 
 {
 
