@@ -28,6 +28,7 @@ public class LocalizationManager : MonoBehaviour {
     {
         language = Application.systemLanguage;
         Debug.Log("Lenguaje OS: " + Application.systemLanguage);
+        DontDestroyOnLoad(gameObject);
     }
 
     public void SwitchLanguage()

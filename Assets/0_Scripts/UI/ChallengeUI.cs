@@ -25,9 +25,9 @@ public class ChallengeUI : MonoBehaviour
 
     public void SetPauseChallengeText(object[] parameters)
     {
-        scoreText.text = "SCORE " + parameters[0] + " POINTS: ";
+        scoreText.text = "             " + parameters[0] ;
 
-        distanceText.text = "RUN " + parameters[1] + " METERS:";
+        distanceText.text = "              " + parameters[1] ;
 
         scoreCheckImage.enabled = false;
         distanceCheckImage.enabled = false;
