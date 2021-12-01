@@ -19635,6 +19635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 8296172669058151770}
+  _poolSize: 15
   _missilePrefabName: rocketpower 1
 --- !u!4 &8302211754330449684
 Transform:

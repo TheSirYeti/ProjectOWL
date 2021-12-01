@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExplosionManager : MonoBehaviour
+
+//Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN PABLO RSHAID
+public class ExplosionManager : MonoBehaviour //Nos encargamos de manejar toda la explosion, incluyendo las particulas.
 {
-    //Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, viewRadius, detectableAgentMask);
     [SerializeField] private float explosionRadius;
     [SerializeField] private LayerMask _layerMask;
     [SerializeField] private ParticleSystem explosionVFX;
@@ -17,7 +18,10 @@ public class ExplosionManager : MonoBehaviour
 
     void Explode(object[] parameters)
     {
-        explosionVFX.Play();
+        explosionVFX.Play(); //Aunque rompemos la S de SOLID encargandonos del efecto visual, no me parecia logico crear
+                                //un script nuevo entero para hacer que una sola particula se reproduzca.
+        
+                                
         Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, explosionRadius, _layerMask);
 
         foreach (var item in targetsInViewRadius)

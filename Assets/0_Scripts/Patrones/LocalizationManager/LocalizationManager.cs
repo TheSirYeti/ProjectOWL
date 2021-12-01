@@ -20,6 +20,7 @@ public class LocalizationManager : MonoBehaviour {
         {
             Instance = this;
             LoadTexts();
+            DontDestroyOnLoad(gameObject);
         }
         else Destroy(this);
     }
@@ -28,12 +29,12 @@ public class LocalizationManager : MonoBehaviour {
     {
         language = Application.systemLanguage;
         Debug.Log("Lenguaje OS: " + Application.systemLanguage);
-        DontDestroyOnLoad(gameObject);
     }
 
     public void SwitchLanguage()
     {
         //language = language == SystemLanguage.Spanish ? SystemLanguage.English : SystemLanguage.Spanish;
+        Debug.Log(language);
         if(language == SystemLanguage.English)
         {
             language = SystemLanguage.Spanish;

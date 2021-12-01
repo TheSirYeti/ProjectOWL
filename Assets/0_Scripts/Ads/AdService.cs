@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Advertisements;
 
+//Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN PABLO RSHAID
+
 public class AdService : MonoBehaviour
 {
     
@@ -19,6 +21,7 @@ public class AdService : MonoBehaviour
             instance = this;
         else Destroy(gameObject);
         
+        //Le asignamos la ID de nuestro proyecto.
         #if UNITY_ANDROID
             id = "4468869";
         #endif
@@ -61,6 +64,8 @@ public class AdService : MonoBehaviour
             OnFailed?.Invoke();
     }
 
+    
+    //Usamos un enum ya que necesitamos saber que tipo de Ad es cuando llamamos al Activate() en el AdsChallenge.
     public enum AdsType
     {
         Interstitial_Android,

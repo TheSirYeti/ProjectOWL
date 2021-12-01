@@ -9,7 +9,7 @@ public class TextChanger : MonoBehaviour
     [SerializeField] string textFile;
     [SerializeField] public TextMeshProUGUI textChanging;
     [SerializeField] public TextMeshProUGUI textChanging2;
-    
+
     private void Start()
     {
         textChanging2.SetText(LocalizationManager.Instance.GetText(textFile));

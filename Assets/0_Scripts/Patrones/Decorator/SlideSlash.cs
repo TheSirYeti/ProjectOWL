@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN PABLO RSHAID
+
 public class SlideSlash : MonoBehaviour, IAbility
 {
     IAbility next;
@@ -10,8 +12,7 @@ public class SlideSlash : MonoBehaviour, IAbility
     public void OnSlideDown()
     {
         EventManager.Trigger("OnSlideSlashTriggered");
-        Debug.Log("SLASH");
-        next.OnSlideDown();
+        next.OnSlideDown();     //Llamamos al siguiente Upgrade que este acumulado
     }
 
     public IAbility GetNext()

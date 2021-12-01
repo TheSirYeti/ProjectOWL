@@ -3,8 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN PABLO RSHAID
+
 public class TankController : MonoBehaviour
 {
+    //Model del MVC
     [SerializeField] private TankModel model;
 
     //Metodos para el View
@@ -12,12 +15,10 @@ public class TankController : MonoBehaviour
     public Action OnAttackShot;
     public Action OnDeath;
     
-    //ObjectPool
+    //ObjectPool del Misil
     private Pool<DirectedMissile> _missilePool = null;
     private IFactory<DirectedMissile> _missileFactory = null;
-    private int poolSize = 15;
-    
-    
+    [SerializeField] private int _poolSize = 15;
     [SerializeField] private string _missilePrefabName;
     
     bool _attackRateFlag = false;
@@ -29,9 +30,9 @@ public class TankController : MonoBehaviour
 
     private void Start()
     {
-        EventManager.Subscribe("OnFootballKicked", OnAttackCollision);
+        EventManager.Subscribe("OnFootballKicked", CollisionReaction);
         _missileFactory = new MissileFactory(_missilePrefabName);
-        _missilePool = new Pool<DirectedMissile>(_missileFactory.Create, DirectedMissile.TurnOff, DirectedMissile.TurnOn, poolSize);
+        _missilePool = new Pool<DirectedMissile>(_missileFactory.Create, DirectedMissile.TurnOff, DirectedMissile.TurnOn, _poolSize);
     }
 
     private void Update()
@@ -39,6 +40,7 @@ public class TankController : MonoBehaviour
         Attack();
     }
 
+    //Generamos un ataque
     public void Attack()
     {
         if (model.hp > 0 && model.attackCooldown <= Time.fixedTime)
@@ -72,7 +74,8 @@ public class TankController : MonoBehaviour
         else OnDamageRecieved?.Invoke(model.hp, model.maxHp);
     }
     
-    void OnAttackCollision(object[] parameters)
+    //Si se triggerea el evento, significa que el Boss tomo daño
+    void CollisionReaction(object[] parameters)
     {
         TakeDamage((float)parameters[0]);
     }
