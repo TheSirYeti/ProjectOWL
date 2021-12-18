@@ -50,10 +50,9 @@ public class LocalizationManager : MonoBehaviour {
     private void LoadTexts()
     {
         texts = new Dictionary<SystemLanguage, Dictionary<string, string>>();
-        
+
         var allFiles = new List<string>();
-        foreach (var file in Directory.GetFiles(Application.dataPath + $"{rootDirectory}/", "*.json", SearchOption.AllDirectories))
-        {
+        foreach (var file in Directory.GetFiles(Application.dataPath + $"{rootDirectory}/", "*.json", SearchOption.AllDirectories)) {
             var fileName = file.Substring(file.IndexOf("Localization", StringComparison.Ordinal))
                                .Replace(@"\", @"/");
             allFiles.Add(fileName);
