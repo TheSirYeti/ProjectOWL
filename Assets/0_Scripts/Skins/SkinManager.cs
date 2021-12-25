@@ -36,7 +36,7 @@ public class SkinManager : MonoBehaviour
             skinStatus[1] = true;
         }
         
-        if (PlayerPrefs.HasKey("HighestTally") && PlayerPrefs.GetInt("HighestTally") == 10)
+        if (PlayerPrefs.HasKey("HighestTally") && PlayerPrefs.GetInt("HighestTally") >= 10)
         {
             skinStatus[2] = true;
         }
