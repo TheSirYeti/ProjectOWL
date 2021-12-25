@@ -616,6 +616,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 545492222}
+        m_MethodName: UpdateSkin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1706041517}
+        m_MethodName: UpdateSkin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &184547647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2087,6 +2109,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 506813724}
   m_CullTransparentMesh: 0
+--- !u!1 &545492221 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3041968457993089087, guid: 38c04221c857fb340a2476bec5909273,
+    type: 3}
+  m_PrefabInstance: {fileID: 876053990}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &545492222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545492221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4118ef9360b8d454c8cf039f8fee3c17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderer: {fileID: 545492223}
+  allSkins:
+  - {fileID: 2100000, guid: 26459e5c6e449d3409f846dea956ea69, type: 2}
+  - {fileID: 2100000, guid: 92312c72ecd8fe14484b1b0c5d6d158b, type: 2}
+  - {fileID: 2100000, guid: 53e7a1244288f084984877534bfa3455, type: 2}
+  - {fileID: 2100000, guid: d44709a8868e98d4bbb5503f343b635b, type: 2}
+--- !u!137 &545492223 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4781298432549387532, guid: 38c04221c857fb340a2476bec5909273,
+    type: 3}
+  m_PrefabInstance: {fileID: 876053990}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &582054439
 GameObject:
   m_ObjectHideFlags: 0
@@ -3317,6 +3369,28 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 545492222}
+        m_MethodName: UpdateSkin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1706041517}
+        m_MethodName: UpdateSkin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4898,6 +4972,28 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 545492222}
+        m_MethodName: UpdateSkin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1706041517}
+        m_MethodName: UpdateSkin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -7316,6 +7412,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699480184}
   m_CullTransparentMesh: 0
+--- !u!1 &1706041516 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4003363299475105805, guid: 38c04221c857fb340a2476bec5909273,
+    type: 3}
+  m_PrefabInstance: {fileID: 876053990}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1706041517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706041516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4118ef9360b8d454c8cf039f8fee3c17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderer: {fileID: 1706041518}
+  allSkins:
+  - {fileID: 2100000, guid: cbd4acfc659cbf94e95410d05b47d552, type: 2}
+  - {fileID: 2100000, guid: 3d0a456719afb204f988e9f001555a29, type: 2}
+  - {fileID: 2100000, guid: 998c03a5149a5f34c868e1eaccc5baa5, type: 2}
+  - {fileID: 2100000, guid: 8a34d82c34297804b91e1df2a93e2991, type: 2}
+--- !u!137 &1706041518 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -8070062332122957111, guid: 38c04221c857fb340a2476bec5909273,
+    type: 3}
+  m_PrefabInstance: {fileID: 876053990}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1720975002
 GameObject:
   m_ObjectHideFlags: 0
@@ -7557,6 +7683,28 @@ MonoBehaviour:
       - m_Target: {fileID: 1054878361}
         m_MethodName: SelectSkin
         m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 545492222}
+        m_MethodName: UpdateSkin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1706041517}
+        m_MethodName: UpdateSkin
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
