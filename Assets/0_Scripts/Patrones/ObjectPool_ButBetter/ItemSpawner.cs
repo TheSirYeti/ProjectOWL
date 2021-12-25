@@ -16,7 +16,7 @@ public class ItemSpawner : MonoBehaviour
     public List<string> obstacles;
 
     public int poolSize;
-    
+    public int collectibleRate;
     private Pool<Obstacle> _obstaclePool = null;
     private IFactory<Obstacle> _obstacleFactory = null;
 
@@ -55,7 +55,7 @@ public class ItemSpawner : MonoBehaviour
                 }
                 else
                 {
-                    int rand = UnityEngine.Random.Range(0, 3); //33% de chance de que spawnee un Collectible
+                    int rand = UnityEngine.Random.Range(0, collectibleRate); //33% de chance de que spawnee un Collectible
                     if (rand == 1)
                     {
                         var collectible = _collectiblePool.Get();

@@ -17,6 +17,7 @@ TagManager:
   - Dumpster
   - Rocket
   - Slash
+  - Canvas
   layers:
   - Default
   - TransparentFX

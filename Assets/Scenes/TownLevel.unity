@@ -4897,6 +4897,7 @@ MonoBehaviour:
   - signfbx
   - rocketpower
   poolSize: 40
+  collectibleRate: 5
   collectibles:
   - CoinPrefab
   - Heart
@@ -19382,6 +19383,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 569604278}
+    - target: {fileID: 5178592578523298702, guid: d9470f79d0b3e7c46bd262355dbc96c3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5178592578773961435, guid: d9470f79d0b3e7c46bd262355dbc96c3,
         type: 3}
       propertyPath: m_IsActive
@@ -19392,6 +19398,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1933339773}
+    - target: {fileID: 5178592579169287018, guid: d9470f79d0b3e7c46bd262355dbc96c3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6085266992576855208, guid: d9470f79d0b3e7c46bd262355dbc96c3,
         type: 3}
       propertyPath: m_AnchorMax.x

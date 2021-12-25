@@ -12,7 +12,7 @@ public class ChallengeUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreText = null;
     [SerializeField] private TextMeshProUGUI distanceText = null;
 
-    [Header("Images")] 
+
     [SerializeField] private Image scoreCheckImage = null, scoreCrossImage = null;
     [SerializeField] private Image distanceCheckImage = null, distanceCrossImage = null;
 

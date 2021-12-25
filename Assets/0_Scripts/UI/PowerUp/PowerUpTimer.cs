@@ -15,6 +15,12 @@ public abstract class PowerUpTimer : MonoBehaviour
     private float timer;
     private float totalTimerValue;
 
+    private void Start()
+    {
+        timerImage = gameObject.GetComponent<Image>();
+        timerImage.enabled = false;
+    }
+
     public void StartTimer(object[] parameters)
     {
         timerImage.enabled = true;

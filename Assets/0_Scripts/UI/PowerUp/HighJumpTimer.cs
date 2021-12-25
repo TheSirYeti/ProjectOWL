@@ -8,6 +8,7 @@ public class HighJumpTimer : PowerUpTimer
 {
     private void Start()
     {
+        
         EventManager.Subscribe("OnHighJumpCollected", StartTimer);
     }
 

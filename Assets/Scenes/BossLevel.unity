@@ -6910,6 +6910,7 @@ MonoBehaviour:
   obstacles:
   - Mine
   poolSize: 40
+  collectibleRate: 6
   collectibles:
   - Football
 --- !u!4 &760842923

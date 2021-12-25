@@ -1485,6 +1485,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 5178592578343578963}
   distanceText: {fileID: 5178592578172790297}
+  check1: {fileID: 5178592579236354345}
+  check2: {fileID: 5178592578545683673}
+  cross1: {fileID: 5178592578995357566}
+  cross2: {fileID: 5178592578373241372}
   scoreCheckImage: {fileID: 5178592579236354343}
   scoreCrossImage: {fileID: 5178592578995357564}
   distanceCheckImage: {fileID: 5178592578545683671}
