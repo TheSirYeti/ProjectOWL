@@ -19503,6 +19503,36 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5178592578689817637, guid: d9470f79d0b3e7c46bd262355dbc96c3,
+        type: 3}
+      propertyPath: m_text
+      value: "Return to\r\nmain menu"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5178592578689817637, guid: d9470f79d0b3e7c46bd262355dbc96c3,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5178592578689817637, guid: d9470f79d0b3e7c46bd262355dbc96c3,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5178592578689817637, guid: d9470f79d0b3e7c46bd262355dbc96c3,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5178592578689817637, guid: d9470f79d0b3e7c46bd262355dbc96c3,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5178592578689817637, guid: d9470f79d0b3e7c46bd262355dbc96c3,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5178592578773961435, guid: d9470f79d0b3e7c46bd262355dbc96c3,
         type: 3}
       propertyPath: m_IsActive

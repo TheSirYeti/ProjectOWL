@@ -61,7 +61,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1881749934527837729}
-  - component: {fileID: 2872187622367122000}
   m_Layer: 5
   m_Name: Challenge2GO
   m_TagString: Untagged
@@ -90,21 +89,6 @@ RectTransform:
   m_AnchoredPosition: {x: -226.44666, y: -245.6918}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2872187622367122000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2733517301500811066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe235d957e0826f4eace69cb95942bc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textFile: PausedButtonText/ScoreButtonText
-  textChanging: {fileID: 7310599886929752846}
-  textChanging2: {fileID: 7310599886929752846}
 --- !u!1 &3411245362632352524
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +152,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 'Run             Meters:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d2f4d8c220d08445be65ddedee84120, type: 2}
   m_sharedMaterial: {fileID: -3661725920087017848, guid: 2d2f4d8c220d08445be65ddedee84120,
@@ -238,13 +222,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 7310599886929752846}
-    characterCount: 0
+    characterCount: 23
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 13
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -324,7 +308,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 'Score             Points:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d2f4d8c220d08445be65ddedee84120, type: 2}
   m_sharedMaterial: {fileID: -3661725920087017848, guid: 2d2f4d8c220d08445be65ddedee84120,
@@ -394,13 +378,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2339979777432095058}
-    characterCount: 0
+    characterCount: 25
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 13
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -478,7 +462,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2100363583873567307}
-  - component: {fileID: 3794193601364672050}
   m_Layer: 5
   m_Name: GamePausedGO
   m_TagString: Untagged
@@ -506,21 +489,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 440}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3794193601364672050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4288638701260786797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe235d957e0826f4eace69cb95942bc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textFile: PausedButtonText/PausedButtonText
-  textChanging: {fileID: 8096934818711050869}
-  textChanging2: {fileID: 8096934818711050869}
 --- !u!1 &4594367506217503510
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,10 +1453,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 5178592578343578963}
   distanceText: {fileID: 5178592578172790297}
-  check1: {fileID: 5178592579236354345}
-  check2: {fileID: 5178592578545683673}
-  cross1: {fileID: 5178592578995357566}
-  cross2: {fileID: 5178592578373241372}
   scoreCheckImage: {fileID: 5178592579236354343}
   scoreCrossImage: {fileID: 5178592578995357564}
   distanceCheckImage: {fileID: 5178592578545683671}
@@ -1794,7 +1758,6 @@ GameObject:
   - component: {fileID: 5178592577649357670}
   - component: {fileID: 5178592577649357673}
   - component: {fileID: 5178592577649357672}
-  - component: {fileID: 7412033719985556204}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -1912,21 +1875,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7412033719985556204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5178592577649357674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe235d957e0826f4eace69cb95942bc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textFile: PausedButtonText/RestartButtonText
-  textChanging: {fileID: 5178592578731670580}
-  textChanging2: {fileID: 5178592578731670580}
 --- !u!1 &5178592577668279235
 GameObject:
   m_ObjectHideFlags: 0
@@ -2301,7 +2249,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 'Objectives:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d2f4d8c220d08445be65ddedee84120, type: 2}
   m_sharedMaterial: {fileID: -3661725920087017848, guid: 2d2f4d8c220d08445be65ddedee84120,
@@ -2371,13 +2319,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 5178592577878983123}
-    characterCount: 0
+    characterCount: 11
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -3990,7 +3938,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "Return to\r\nmain menu"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d2f4d8c220d08445be65ddedee84120, type: 2}
   m_sharedMaterial: {fileID: -3661725920087017848, guid: 2d2f4d8c220d08445be65ddedee84120,
@@ -4060,13 +4008,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 5178592578689817637}
-    characterCount: 0
+    characterCount: 20
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 3
+    wordCount: 4
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 2
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -4147,7 +4095,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "Restart the\r\ngame"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d2f4d8c220d08445be65ddedee84120, type: 2}
   m_sharedMaterial: {fileID: -3661725920087017848, guid: 2d2f4d8c220d08445be65ddedee84120,
@@ -4217,13 +4165,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 5178592578731670580}
-    characterCount: 0
+    characterCount: 17
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 2
+    wordCount: 3
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 2
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -6212,7 +6160,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 38982576319333437}
-  - component: {fileID: 4835450872673646594}
   m_Layer: 5
   m_Name: Challenge1GO
   m_TagString: Untagged
@@ -6241,21 +6188,6 @@ RectTransform:
   m_AnchoredPosition: {x: -226.44666, y: -158.59688}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4835450872673646594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7028996194689807456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe235d957e0826f4eace69cb95942bc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textFile: PausedButtonText/RunButtonText
-  textChanging: {fileID: 2339979777432095058}
-  textChanging2: {fileID: 2339979777432095058}
 --- !u!1 &7461599490861308576
 GameObject:
   m_ObjectHideFlags: 0
@@ -6333,7 +6265,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Game Paused
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d2f4d8c220d08445be65ddedee84120, type: 2}
   m_sharedMaterial: {fileID: -3661725920087017848, guid: 2d2f4d8c220d08445be65ddedee84120,
@@ -6403,13 +6335,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 8096934818711050869}
-    characterCount: 0
+    characterCount: 11
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -6435,7 +6367,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5449801815426992034}
-  - component: {fileID: 7740656915647094405}
   m_Layer: 5
   m_Name: ReturnToMenuGO
   m_TagString: Untagged
@@ -6463,21 +6394,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7740656915647094405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7508038924617625135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe235d957e0826f4eace69cb95942bc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textFile: PausedButtonText/ReturnButtonText
-  textChanging: {fileID: 5178592578689817637}
-  textChanging2: {fileID: 5178592578689817637}
 --- !u!1 &7934431501714798530
 GameObject:
   m_ObjectHideFlags: 0
@@ -6487,7 +6403,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 333902154539749986}
-  - component: {fileID: 835450950794251826}
   m_Layer: 5
   m_Name: ObjectiveGO
   m_TagString: Untagged
@@ -6515,21 +6430,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 324.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &835450950794251826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7934431501714798530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe235d957e0826f4eace69cb95942bc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textFile: PausedButtonText/ObjectivesButtonText
-  textChanging: {fileID: 5178592577878983123}
-  textChanging2: {fileID: 5178592577878983123}
 --- !u!1001 &4451918127548098500
 PrefabInstance:
   m_ObjectHideFlags: 0
