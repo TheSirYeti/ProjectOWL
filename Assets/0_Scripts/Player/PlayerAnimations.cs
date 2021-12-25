@@ -14,6 +14,7 @@ public class PlayerAnimations : MonoBehaviour, ISubscriber
     
     private void Start()
     {
+
         _playerObserver.Subscribe(this);
         _groundStatus.Subscribe(this);
         

@@ -19009,6 +19009,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2191594208136180942}
   - component: {fileID: 6710157581985184485}
+  - component: {fileID: 3851403832667731927}
   m_Layer: 0
   m_Name: Boxing Glove.003
   m_TagString: Untagged
@@ -19016,6 +19017,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3851403832667731927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3851403832667731926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4118ef9360b8d454c8cf039f8fee3c17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderer: {fileID: 6710157581985184485}
+  allSkins:
+  - {fileID: 2100000, guid: 26459e5c6e449d3409f846dea956ea69, type: 2}
+  - {fileID: 2100000, guid: 92312c72ecd8fe14484b1b0c5d6d158b, type: 2}
+  - {fileID: 2100000, guid: 53e7a1244288f084984877534bfa3455, type: 2}
+  - {fileID: 2100000, guid: d44709a8868e98d4bbb5503f343b635b, type: 2}
 --- !u!4 &3906974869496236548
 Transform:
   m_ObjectHideFlags: 0
@@ -19677,6 +19696,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1110968034184652828}
   - component: {fileID: 1100198013926571296}
+  - component: {fileID: 6283897078411251739}
   m_Layer: 0
   m_Name: corpo:Mesh
   m_TagString: Untagged
@@ -19684,6 +19704,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6283897078411251739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6283897078411251738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4118ef9360b8d454c8cf039f8fee3c17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderer: {fileID: 1100198013926571296}
+  allSkins:
+  - {fileID: 2100000, guid: cbd4acfc659cbf94e95410d05b47d552, type: 2}
+  - {fileID: 2100000, guid: 3d0a456719afb204f988e9f001555a29, type: 2}
+  - {fileID: 2100000, guid: 998c03a5149a5f34c868e1eaccc5baa5, type: 2}
+  - {fileID: 2100000, guid: 8a34d82c34297804b91e1df2a93e2991, type: 2}
 --- !u!1 &6370616929529176717
 GameObject:
   m_ObjectHideFlags: 0

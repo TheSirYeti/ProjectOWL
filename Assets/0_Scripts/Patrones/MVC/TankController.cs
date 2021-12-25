@@ -70,6 +70,7 @@ public class TankController : MonoBehaviour
         {
             OnDeath?.Invoke();
             model.hp = 0;
+            PlayerPrefs.SetInt("BeatBoss", 1);
         }
         else OnDamageRecieved?.Invoke(model.hp, model.maxHp);
     }
