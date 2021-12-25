@@ -30,6 +30,12 @@ public class FadeManager : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    public void FadeOutToMinigame()
+    {
+        animator.Play("fadeOutToMinigame");
+        Time.timeScale = 1f;
+    }
+    
     public void FadeToLevel(int sceneID)
     {
         EventManager.Trigger("OnFadeOutOver", sceneID);

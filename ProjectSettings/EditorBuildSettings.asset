@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BossLevel.unity
     guid: 545ca7c93a070a049a534c0df69201fd
+  - enabled: 1
+    path: Assets/Scenes/MiniGameScene.unity
+    guid: 21d2dd5fb1e713248a1b7f946c278f3c
   m_configObjects: {}

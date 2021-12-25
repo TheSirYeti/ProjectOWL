@@ -15,6 +15,7 @@ public class PauseManager : MonoBehaviour
     private void Awake()
     {
         EventManager.Subscribe("OnEndGame", DisablePause);
+        EventManager.Subscribe("OnMiniGameEnd", StopMinigameUI);
         EventManager.Subscribe("OnAdFailed", StopPause);
         EventManager.Subscribe("OnAdFinished", StopPause);
         EventManager.Subscribe("OnNoMoreLives", OutOfLivesPause);
@@ -60,6 +61,13 @@ public class PauseManager : MonoBehaviour
         resumeButton.SetActive(false);
         pauseButton.SetActive(false);
         EventManager.Trigger("OnPauseGame");
+    }
+    
+    public void StopMinigameUI(object[] parameters)
+    {
+        resumeButton.SetActive(false);
+        pauseButton.SetActive(false);
+        gameOverPanel.transform.position = originalPanelPosition.position;
     }
     
     public void DisablePause(object[] parameters)

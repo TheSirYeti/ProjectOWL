@@ -23,18 +23,24 @@ public class SpawnTargets : MonoBehaviour
     {
         ResetOccupiedStatus();
         ResetTargets();
+        StartCoroutine(DoTargetCountdown());
+        
+        EventManager.Subscribe("OnGoodTargetHit", OnGoodTargetHit);
+        EventManager.Subscribe("OnBadTargetHit", OnBadTargetHit);
     }
 
-    public void OnBadTargetHit()
+    public void OnBadTargetHit(object[] parameters)
     {
-        StopCoroutine(CheckForHits());
         ResetTargets();
+        EventManager.Trigger("OnMiniGameEnd");
     }
 
-    public void OnGoodTargetHit()
+    public void OnGoodTargetHit(object[] parameters)
     {
-        StopCoroutine(CheckForHits());
+        hasHit = true;
+        ResetOccupiedStatus();
         ResetTargets();
+        StartCoroutine(DoTargetCountdown());
     }
 
     public void GenerateTargets()
@@ -93,12 +99,7 @@ public class SpawnTargets : MonoBehaviour
         yield return new WaitForSeconds(reactionTime);
         if (hasHit == false)
         {
-            OnBadTargetHit();
-        }
-        else
-        {
-            ResetOccupiedStatus();
-            ResetTargets();
+            OnBadTargetHit(null);
         }
     }
 
@@ -112,6 +113,15 @@ public class SpawnTargets : MonoBehaviour
         }
 
         currentTargets = new List<GameObject>();
-        StartCoroutine(DoTargetCountdown());
+
+        if (waitTime > 0.5f)
+        {
+            waitTime -= 0.1f;
+        }
+
+        if (reactionTime > 0.1f)
+        {
+            reactionTime -= 0.1f;
+        }
     }
 }
