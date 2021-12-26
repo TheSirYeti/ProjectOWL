@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -8,7 +9,7 @@ using UnityEngine.UI;
 public class BestTime : MonoBehaviour
 {
     public float timer;
-    public Text timeUI;
+    public TextMeshProUGUI timeUI;
     
     private void Update()
     {

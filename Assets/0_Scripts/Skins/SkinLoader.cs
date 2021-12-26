@@ -11,11 +11,13 @@ public class SkinLoader : MonoBehaviour
 
     private void Start()
     {
-        renderer.material = allSkins[SkinManager.instance.currentSkin];
+        if(SkinManager.instance != null)
+            renderer.material = allSkins[SkinManager.instance.currentSkin];
     }
 
     public void UpdateSkin()
     {
-        renderer.material = allSkins[SkinManager.instance.currentSkin];
+        if(SkinManager.instance != null)
+            renderer.material = allSkins[SkinManager.instance.currentSkin];
     }
 }

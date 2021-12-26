@@ -21,12 +21,12 @@ public class HUDStats : MonoBehaviour
 
     void UpdateScoreText(object[] parameters)
     {
-        scoreText.text = "               : " + parameters[0];
+        scoreText.text = "Points: " + parameters[0];
     }
     
     void UpdateDistanceText(object[] parameters)
     {
-        distanceText.text = "                   : " + parameters[0] +  "m";
+        distanceText.text = "Distance: " + parameters[0] +  "m";
     }
 
     void UpdateHpText(object[] parameters)
