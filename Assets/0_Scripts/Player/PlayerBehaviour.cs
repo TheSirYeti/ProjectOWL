@@ -47,6 +47,11 @@ public class PlayerBehaviour : MonoBehaviour
             }
             EventManager.Trigger("OnHPChange", hp);
         }
+
+        if (shield)
+        {
+            SoundManager.instance.PlaySound(SoundID.IMPACT);
+        }
     }
 
     public void SetShield(object[] parameters)

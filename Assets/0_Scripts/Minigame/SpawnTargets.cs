@@ -13,7 +13,7 @@ public class SpawnTargets : MonoBehaviour
     public List<Transform> allPosiitons;
     private List<bool> occupiedStatus;
     
-    public GameObject goodPrefab, badPrefab;
+    public List<GameObject> goodPrefabs, badPrefabs;
 
     public float reactionTime, waitTime;
     public int targetAmount, targetSize;
@@ -56,11 +56,11 @@ public class SpawnTargets : MonoBehaviour
             GameObject target;
             if (i == rand)
             {
-                target = Instantiate(goodPrefab);
+                target = Instantiate(goodPrefabs[Random.Range(0, goodPrefabs.Count)]);
             }
             else
             {
-                target = Instantiate(badPrefab);
+                target = Instantiate(badPrefabs[Random.Range(0, badPrefabs.Count)]);
             }
 
             target.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
@@ -77,6 +77,11 @@ public class SpawnTargets : MonoBehaviour
         foreach (GameObject target in currentTargets)
         {
             target.SetActive(true);
+        }
+
+        if (targetAmount <= 5)
+        {
+            targetAmount++;
         }
     }
 

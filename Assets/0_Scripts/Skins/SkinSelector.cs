@@ -29,6 +29,7 @@ public class SkinSelector : MonoBehaviour
 
     public void SelectSkin(int id)
     {
+        SoundManager.instance.PlaySound(SoundID.YEAH_2);
         SkinManager.instance.currentSkin = id;
     }
 }

@@ -19358,6 +19358,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4833245391746390880, guid: d9470f79d0b3e7c46bd262355dbc96c3,
+        type: 3}
+      propertyPath: m_text
+      value: Distance
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833245391746390880, guid: d9470f79d0b3e7c46bd262355dbc96c3,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833245391746390880, guid: d9470f79d0b3e7c46bd262355dbc96c3,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833245391746390880, guid: d9470f79d0b3e7c46bd262355dbc96c3,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833245391746390880, guid: d9470f79d0b3e7c46bd262355dbc96c3,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833245391746390880, guid: d9470f79d0b3e7c46bd262355dbc96c3,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5178592577605632184, guid: d9470f79d0b3e7c46bd262355dbc96c3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19478,6 +19508,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1933339773}
+    - target: {fileID: 5178592578172790296, guid: d9470f79d0b3e7c46bd262355dbc96c3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 105
+      objectReference: {fileID: 0}
+    - target: {fileID: 5178592578343578962, guid: d9470f79d0b3e7c46bd262355dbc96c3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 132
+      objectReference: {fileID: 0}
+    - target: {fileID: 5178592578343578963, guid: d9470f79d0b3e7c46bd262355dbc96c3,
+        type: 3}
+      propertyPath: m_textAlignment
+      value: 514
+      objectReference: {fileID: 0}
     - target: {fileID: 5178592578424963655, guid: d9470f79d0b3e7c46bd262355dbc96c3,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
