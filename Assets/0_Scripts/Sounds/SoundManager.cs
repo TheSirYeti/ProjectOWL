@@ -195,7 +195,9 @@ public enum SoundID
     YEAH,
     SHOT,
     KICK,
-    HIT
+    HIT,
+    MINIGAME_W,
+    MINIGAME_L
 }
 
 public enum MusicID

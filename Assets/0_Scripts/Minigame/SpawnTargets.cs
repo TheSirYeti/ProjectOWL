@@ -32,7 +32,9 @@ public class SpawnTargets : MonoBehaviour
     public void OnBadTargetHit(object[] parameters)
     {
         ResetTargets();
+        SoundManager.instance.PlaySound(SoundID.MINIGAME_L);
         EventManager.Trigger("OnMiniGameEnd");
+        EventManager.Trigger("OnTargetPressed");
     }
 
     public void OnGoodTargetHit(object[] parameters)
@@ -41,6 +43,7 @@ public class SpawnTargets : MonoBehaviour
         ResetOccupiedStatus();
         ResetTargets();
         StartCoroutine(DoTargetCountdown());
+        EventManager.Trigger("OnTargetPressed");
     }
 
     public void GenerateTargets()
@@ -95,6 +98,7 @@ public class SpawnTargets : MonoBehaviour
 
     IEnumerator CheckForHits()
     {
+        EventManager.Trigger("OnStartScan", reactionTime);
         hasHit = false;
         yield return new WaitForSeconds(reactionTime);
         if (hasHit == false)

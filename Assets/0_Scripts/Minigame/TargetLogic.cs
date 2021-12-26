@@ -11,6 +11,7 @@ public class TargetLogic : MonoBehaviour
         if (amGood)
         {
             EventManager.Trigger("OnGoodTargetHit");
+            SoundManager.instance.PlaySound(SoundID.MINIGAME_W);
         }
         else
         {
