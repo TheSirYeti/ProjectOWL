@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3214976329325726386}
-  - component: {fileID: 5537687631135009564}
   m_Layer: 5
   m_Name: YouDiedGO
   m_TagString: Untagged
@@ -37,21 +36,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 382.99997}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5537687631135009564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1431160149790198807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe235d957e0826f4eace69cb95942bc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textFile: PausedButtonText/YouDiedButtonText
-  textChanging: {fileID: 5178592579153166024}
-  textChanging2: {fileID: 5178592579153166024}
 --- !u!1 &2733517301500811066
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,7 +833,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Stop this Run
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d2f4d8c220d08445be65ddedee84120, type: 2}
   m_sharedMaterial: {fileID: -3661725920087017848, guid: 2d2f4d8c220d08445be65ddedee84120,
@@ -1078,7 +1062,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "would you like to watch\r\nan ad to continue playing?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d2f4d8c220d08445be65ddedee84120, type: 2}
   m_sharedMaterial: {fileID: -3661725920087017848, guid: 2d2f4d8c220d08445be65ddedee84120,
@@ -1525,7 +1509,6 @@ GameObject:
   - component: {fileID: 5178592577626579414}
   - component: {fileID: 5178592577626579417}
   - component: {fileID: 5178592577626579416}
-  - component: {fileID: 7800224832053658098}
   m_Layer: 5
   m_Name: WatchAd
   m_TagString: Untagged
@@ -1643,21 +1626,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7800224832053658098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5178592577626579418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe235d957e0826f4eace69cb95942bc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textFile: PausedButtonText/WatchButtonText
-  textChanging: {fileID: 5178592578949476543}
-  textChanging2: {fileID: 5178592578949476543}
 --- !u!1 &5178592577632738058
 GameObject:
   m_ObjectHideFlags: 0
@@ -4577,7 +4545,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Watch an AD
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d2f4d8c220d08445be65ddedee84120, type: 2}
   m_sharedMaterial: {fileID: -3661725920087017848, guid: 2d2f4d8c220d08445be65ddedee84120,
@@ -4682,7 +4650,6 @@ GameObject:
   - component: {fileID: 5178592578980013289}
   - component: {fileID: 5178592578980013288}
   - component: {fileID: 5178592578980013291}
-  - component: {fileID: 4320941095043426454}
   m_Layer: 5
   m_Name: StopRun
   m_TagString: Untagged
@@ -4800,21 +4767,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4320941095043426454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5178592578980013293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe235d957e0826f4eace69cb95942bc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textFile: PausedButtonText/StopButtonText
-  textChanging: {fileID: 5178592577471982083}
-  textChanging2: {fileID: 5178592577471982083}
 --- !u!1 &5178592578995357566
 GameObject:
   m_ObjectHideFlags: 0
@@ -5043,7 +4995,6 @@ GameObject:
   - component: {fileID: 5178592579153166027}
   - component: {fileID: 5178592579153166025}
   - component: {fileID: 5178592579153166024}
-  - component: {fileID: 6831023807443414281}
   m_Layer: 5
   m_Name: Objectives
   m_TagString: Untagged
@@ -5097,7 +5048,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: You died!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d2f4d8c220d08445be65ddedee84120, type: 2}
   m_sharedMaterial: {fileID: -3661725920087017848, guid: 2d2f4d8c220d08445be65ddedee84120,
@@ -5190,21 +5141,6 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &6831023807443414281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5178592579153166026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe235d957e0826f4eace69cb95942bc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textFile: PausedButtonText/AdButtonText
-  textChanging: {fileID: 5178592577571641455}
-  textChanging2: {fileID: 5178592577571641455}
 --- !u!1 &5178592579169287020
 GameObject:
   m_ObjectHideFlags: 0
