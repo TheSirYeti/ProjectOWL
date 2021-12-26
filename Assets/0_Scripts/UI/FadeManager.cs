@@ -1,15 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //Modelos y Algoritmos 1 / Aplicacion de Motores 2 - JUAN PABLO RSHAID
 public class FadeManager : MonoBehaviour
 {
     public Animator animator;
-
+    public GameObject loading;
+    
     public void FadeIn()
     {
         animator.Play("FadeIn");
+        loading.SetActive(false);
     }
     
     public void FadeOutToMenu()
@@ -39,5 +42,10 @@ public class FadeManager : MonoBehaviour
     public void FadeToLevel(int sceneID)
     {
         EventManager.Trigger("OnFadeOutOver", sceneID);
+    }
+
+    public void EnableLoading()
+    {
+        loading.SetActive(true);
     }
 }
