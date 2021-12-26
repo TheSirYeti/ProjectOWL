@@ -202,5 +202,6 @@ public enum MusicID
 {
     MAIN_THEME,
     GAME_THEME,
-    MEGALOVANIA
+    MEGALOVANIA,
+    FIGHT
 }
