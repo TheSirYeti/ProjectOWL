@@ -410,7 +410,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2691476198000390023}
-  - component: {fileID: 1046307669584522286}
   m_Layer: 5
   m_Name: ScoreGO
   m_TagString: Untagged
@@ -438,21 +437,6 @@ RectTransform:
   m_AnchoredPosition: {x: -309.1, y: 818.19}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1046307669584522286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4093433030649231037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe235d957e0826f4eace69cb95942bc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textFile: HUDButtonText/ScoreButtonText
-  textChanging: {fileID: 1082670115170811808}
-  textChanging2: {fileID: 1082670115170811808}
 --- !u!1 &4288638701260786797
 GameObject:
   m_ObjectHideFlags: 0
@@ -4398,7 +4382,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\t     : 0"
+  m_text: 'Points : 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d2f4d8c220d08445be65ddedee84120, type: 2}
   m_sharedMaterial: {fileID: -3661725920087017848, guid: 2d2f4d8c220d08445be65ddedee84120,
@@ -4468,9 +4452,9 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 5178592578892090976}
-    characterCount: 9
+    characterCount: 10
     spriteCount: 0
-    spaceCount: 7
+    spaceCount: 2
     wordCount: 2
     linkCount: 0
     lineCount: 1
@@ -5859,7 +5843,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\t\t: 0m"
+  m_text: 'Distance : 0m'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d2f4d8c220d08445be65ddedee84120, type: 2}
   m_sharedMaterial: {fileID: -3661725920087017848, guid: 2d2f4d8c220d08445be65ddedee84120,
@@ -5929,9 +5913,9 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 5178592579301539867}
-    characterCount: 6
+    characterCount: 13
     spriteCount: 0
-    spaceCount: 3
+    spaceCount: 2
     wordCount: 2
     linkCount: 0
     lineCount: 1
@@ -6107,7 +6091,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1004122967811020411}
-  - component: {fileID: 3408815703686687172}
   m_Layer: 5
   m_Name: DistanceGO
   m_TagString: Untagged
@@ -6136,21 +6119,6 @@ RectTransform:
   m_AnchoredPosition: {x: -309.10007, y: 747.0002}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3408815703686687172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6395139961806432631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe235d957e0826f4eace69cb95942bc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textFile: HUDButtonText/DistanceButtonText
-  textChanging: {fileID: 4833245391746390880}
-  textChanging2: {fileID: 4833245391746390880}
 --- !u!1 &7028996194689807456
 GameObject:
   m_ObjectHideFlags: 0
